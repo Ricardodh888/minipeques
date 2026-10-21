@@ -504,7 +504,8 @@ section.blk { display: flex; flex-direction: column; gap: 14px; scroll-margin-to
           cart('carrito');
           toast('Lo sentimos, alguien apartó ' + (nombres.length ? 'esta pieza: ' + nombres.join(', ') : 'una pieza de tu pedido') + ' justo antes que tú. La quitamos de tu carrito.');
         });
-      } else falla('No se pudo enviar el pedido. Intenta otra vez.');
+      } else if (d.error === 'datos_incompletos') falla('Faltan datos del pedido. Vuelve a «Tus datos», revisa nombre y teléfono, e intenta otra vez.');
+      else falla('No se pudo enviar el pedido. Intenta otra vez.');
     }).catch(() => falla('No se pudo enviar el pedido. Revisa tu conexión e intenta otra vez.'));
   }
   function close() { const was = S.open; S.open = -1; S.mode = ''; $('#lb').hidden = true; $('#lb').innerHTML = ''; const c = document.querySelector('.card[data-i="' + was + '"]'); if (c) c.focus(); }
