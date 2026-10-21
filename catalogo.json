@@ -1,0 +1,43 @@
+{
+ "tienda": {
+  "nombre": "MiniPeques",
+  "whatsapp": "",
+  "pedidos_url": "https://script.google.com/macros/s/AKfycbze9pGuFu_A5LA1AfAz-Dy5n03pqIazQ-9LBZEMwg_Cye95tZxk5R5_-3jiORfjHgLwYQ/exec"
+ },
+ "actualizado": "2026-10-19",
+ "piezas": [
+  {
+   "id": "fd8b8e0f4da5",
+   "foto": "fotos/fd8b8e0f4da5.jpg",
+   "nombre": "Blusa ok!e dokie",
+   "precio": 6.99,
+   "edad": "2T",
+   "orden_edad": 24,
+   "genero": "Niña",
+   "fecha": "2026-10-19",
+   "origen": "2T/Niña/Blusa ok!e dokie 6.99.jpg"
+  },
+  {
+   "id": "b58eddd73218",
+   "foto": "fotos/b58eddd73218.jpg",
+   "nombre": "Conjunto nannette",
+   "precio": 12.99,
+   "edad": "3T",
+   "orden_edad": 36,
+   "genero": "Niña",
+   "fecha": "2026-10-19",
+   "origen": "3T/Niña/Conjunto Nannette 12.99.jpg"
+  },
+  {
+   "id": "f99ae3565530",
+   "foto": "fotos/f99ae3565530.jpg",
+   "nombre": "Blusa thereabouts",
+   "precio": 7.0,
+   "edad": "4-5T",
+   "orden_edad": 48,
+   "genero": "Niña",
+   "fecha": "2026-10-19",
+   "origen": "4-5T/Niña/Blusa Thereabouts 7.jpg"
+  }
+ ]
+}
