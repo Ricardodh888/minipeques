@@ -77,6 +77,9 @@ header.top { align-items: center; }
 .opt input { accent-color: var(--accent); width: 18px; height: 18px; margin: 0; }
 .opt .ol { flex: 1; font-weight: 600; }
 .opt .oc { font-weight: 700; font-variant-numeric: tabular-nums; }
+.opt .ol small { display: block; font-weight: 400; color: var(--muted); font-size: 12.5px; }
+.paylbl { font-weight: 700; font-size: 14px; margin: 4px 0 -2px; }
+.okmark.warn { background: #f3c96b; }
 .sum { display: grid; grid-template-columns: 1fr auto; gap: 4px 12px; font-size: 14px; border-top: 1px solid var(--line); padding-top: 10px; }
 .sum span:nth-child(even) { text-align: right; font-variant-numeric: tabular-nums; }
 .sum .tot { font-family: var(--display); font-weight: 700; font-size: 20px; padding-top: 4px; }
@@ -347,6 +350,9 @@ section.blk { display: flex; flex-direction: column; gap: 14px; scroll-margin-to
   const loadC = () => { try { return JSON.parse(localStorage.getItem(LS)) || {}; } catch (e) { return {}; } };
   const saveC = (c) => { try { localStorage.setItem(LS, JSON.stringify(c)); return true; } catch (e) { return false; } };
   const waNum = () => { const n = String((S.cat.tienda || {}).whatsapp || '').replace(/\D/g, ''); return n ? (n.length === 8 ? '503' + n : n) : ''; };
+  const LP = 'minipeques-pago';
+  const loadP = () => { try { const o = JSON.parse(localStorage.getItem(LP)); return o && Date.now() - o.t < 30 * 60000 ? o : null; } catch (e) { return null; } };
+  const saveP = (o) => { try { if (o) localStorage.setItem(LP, JSON.stringify(o)); else localStorage.removeItem(LP); } catch (e) {} };
   const LK = 'minipeques-carrito';
   const loadCart = () => { try { const a = JSON.parse(localStorage.getItem(LK)); return Array.isArray(a) ? a : []; } catch (e) { return []; } };
   const saveCart = () => { try { localStorage.setItem(LK, JSON.stringify(S.cart)); } catch (e) {} };
@@ -414,11 +420,21 @@ section.blk { display: flex; flex-direction: column; gap: 14px; scroll-margin-to
   function cartBody() {
     const its = items(); const c = loadC(); const k = cuenta(its);
     const resumen = '<div class="sum"><span>Subtotal · ' + piezasTxt(its.length) + '</span><span>' + money(k.sub) + (k.ask ? ' + a consultar' : '') + '</span></div>';
+    if (S.step === 'verificando') {
+      return '<span class="name" id="lbName">Confirmando tu pago…</span><p>Un momento, estamos revisando el pago con Wompi.</p>';
+    }
+    if (S.step === 'nopago') {
+      const pp = S.pend || {};
+      return '<span class="name" id="lbName">Tu pago no se completó</span><div class="okmark warn" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 7v6M12 17h.01"/></svg></div>' +
+        '<p>Tu pedido de <b>' + esc(pp.piezasTxt || '') + '</b> está apartado por 30 minutos. Puedes intentar pagar otra vez o pagar en efectivo cuando lo recibas.</p>' +
+        (pp.url ? '<a class="btn buy" href="' + esc(pp.url) + '">Intentar pagar otra vez</a>' : '') +
+        '<p class="err" id="cerr" role="alert"></p><div class="lbnav"><button class="btn btn2" type="button" id="aEfectivo">Mejor pago al recibir</button></div>';
+    }
     if (S.step === 'hecho') {
       const o = S.ultimo || {};
-      return '<span class="name" id="lbName">¡Compra realizada!</span><div class="okmark" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12.5l4.2 4.2L19 7"/></svg></div>' +
-        '<p>Gracias, ' + esc(o.nombre || c.nombre) + '. MiniPeques recibió tu pedido de <b>' + esc(o.piezasTxt || '') + '</b> por <b>' + esc(o.total || '') + '</b> (' + esc(o.entrega || '') + ').</p>' +
-        '<p class="note">Te contactaremos al ' + esc(o.telefono || c.telefono) + ' para coordinar la entrega.</p>' +
+      return '<span class="name" id="lbName">' + (o.pagado ? '¡Pago recibido!' : '¡Compra realizada!') + '</span><div class="okmark" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12.5l4.2 4.2L19 7"/></svg></div>' +
+        '<p>Gracias, ' + esc(o.nombre || c.nombre) + '. MiniPeques recibió tu pedido de <b>' + esc(o.piezasTxt || '') + '</b> por <b>' + esc(o.total || '') + '</b>' + (o.entrega ? ' (' + esc(o.entrega) + ')' : '') + '.</p>' +
+        '<p class="note">' + (o.pagado ? 'Tu pago con tarjeta quedó confirmado: no tienes que pagar nada al recibir. ' : o.pagoError ? 'No pudimos abrir el pago con tarjeta, así que pagas en efectivo al recibir. ' : 'Pagas en efectivo al recibir tu pedido. ') + 'Te contactaremos al ' + esc(o.telefono || c.telefono) + ' para coordinar la entrega.</p>' +
         '<button class="btn buy" type="button" data-nav="x">Seguir viendo la tienda</button>';
     }
     if (S.step === 'listo') {
@@ -441,9 +457,11 @@ section.blk { display: flex; flex-direction: column; gap: 14px; scroll-margin-to
       const env = S.envio || c.envio || 'domicilio';
       return '<span class="name" id="lbName">Entrega</span><span class="step">Paso 3 de 3</span><fieldset class="opts"><legend style="position:absolute;left:-9999px">Forma de entrega</legend>' +
         Object.keys(ENVIO).map((key) => '<label class="opt"><input type="radio" name="envio" value="' + key + '"' + (key === env ? ' checked' : '') + '><span class="ol">' + ENVIO[key].label + '</span><span class="oc">+' + money(ENVIO[key].costo) + '</span></label>').join('') + '</fieldset>' +
+        (S.wompi && !cuenta(its).ask ? '<p class="paylbl">Forma de pago</p><fieldset class="opts"><legend style="position:absolute;left:-9999px">Forma de pago</legend>' +
+          [['wompi', 'Pagar ahora con tarjeta', 'Crédito o débito, en la página segura de Wompi'], ['contraentrega', 'Pagar al recibir', 'En efectivo cuando te llegue el pedido']].map((o) => '<label class="opt"><input type="radio" name="pago" value="' + o[0] + '"' + (o[0] === (S.pago || c.pago || 'wompi') ? ' checked' : '') + '><span class="ol">' + o[1] + '<small>' + o[2] + '</small></span></label>').join('') + '</fieldset>' : '') +
         '<div class="sum" id="sum"></div>' +
         '<div class="who">' + esc(c.nombre) + ' · ' + esc(c.telefono) + '<br>' + esc(c.direccion) + ' <button class="linkbtn" type="button" data-cart="datos">Cambiar</button></div>' +
-        (pedUrl() ? '<button class="btn buy" type="button" id="conf">Confirmar compra</button><p class="err" id="cerr" role="alert"></p><p class="note">Al confirmar, tu pedido le llega directo a MiniPeques.</p>' : waNum() ? '<a class="btn buy" id="go" href="#" target="_blank" rel="noopener">Enviar pedido por WhatsApp</a>'
+        (pedUrl() ? '<button class="btn buy" type="button" id="conf">Confirmar compra</button><p class="err" id="cerr" role="alert"></p><p class="note" id="cnote">Al confirmar, tu pedido le llega directo a MiniPeques.</p>' : waNum() ? '<a class="btn buy" id="go" href="#" target="_blank" rel="noopener">Enviar pedido por WhatsApp</a>'
           : '<p class="note">Copia tu pedido y envíalo a la tienda por mensaje.</p><textarea class="order" id="ord" readonly></textarea><button class="btn buy" type="button" id="copy">Copiar pedido</button>') +
         '<div class="lbnav"><button class="btn btn2" type="button" data-cart="datos">← Volver</button></div>';
     }
@@ -456,6 +474,7 @@ section.blk { display: flex; flex-direction: column; gap: 14px; scroll-margin-to
     const its = items(); const c = loadC(); const sel = document.querySelector('input[name="envio"]:checked'); if (!sel || !$('#sum')) return;
     const env = sel.value; S.envio = env; if (c.envio !== env) { c.envio = env; saveC(c); }
     const e = ENVIO[env]; const k = cuenta(its);
+    const ps = document.querySelector('input[name="pago"]:checked'); const pago = ps ? ps.value : 'contraentrega'; if (ps) { S.pago = pago; if (c.pago !== pago) { c.pago = pago; saveC(c); } }
     $('#sum').innerHTML = '<span>' + piezasTxt(its.length) + '</span><span>' + money(k.sub) + (k.ask ? ' + a consultar' : '') + '</span><span>' + e.label + '</span><span>' + money(e.costo) + '</span>' +
       '<span class="tot">Total</span><span class="tot">' + money(k.sub + e.costo) + (k.ask ? ' + a consultar' : '') + '</span>';
     S.lastTxt = pedidoTxt(its, c, env);
@@ -464,8 +483,11 @@ section.blk { display: flex; flex-direction: column; gap: 14px; scroll-margin-to
     const cf = $('#conf'); if (cf) { if (!S.oid) S.oid = nuevoId(); const tot = money(k.sub + e.costo) + (k.ask ? ' + a consultar' : '');
       const q = { id: S.oid, nombre: c.nombre, telefono: c.telefono, direccion: c.direccion, entrega: env, total: String(Math.round((k.sub + e.costo) * 100) / 100),
         piezas: JSON.stringify(its.map((p) => ({ id: p.id, nombre: titulo(p), edad: p.edad, genero: p.genero, precio: p.precio }))), texto: S.lastTxt.slice(0, 1800) };
+      q.pago = pago;
       S.envioUrl = pedUrl() + '?' + Object.keys(q).map((x) => x + '=' + encodeURIComponent(q[x])).join('&') + '&formato=json';
-      S.ultimo = { nombre: c.nombre, telefono: c.telefono, piezasTxt: piezasTxt(its.length), total: tot, entrega: e.label.toLowerCase() }; }
+      S.ultimo = { nombre: c.nombre, telefono: c.telefono, piezasTxt: piezasTxt(its.length), total: tot, entrega: e.label.toLowerCase(), id: S.oid };
+      if (!cf.disabled) cf.textContent = pago === 'wompi' ? 'Ir a pagar ' + tot : 'Confirmar compra';
+      const nt = $('#cnote'); if (nt) nt.textContent = pago === 'wompi' ? 'Te llevamos a la página segura de Wompi para pagar con tarjeta.' : 'Al confirmar, tu pedido le llega directo a MiniPeques.'; }
   }
   function cart(step) {
     S.mode = 'cart'; S.open = -1; S.step = step || 'carrito'; const lb = $('#lb');
@@ -486,15 +508,17 @@ section.blk { display: flex; flex-direction: column; gap: 14px; scroll-margin-to
   }
   function cargarApartadas() {
     if (!pedUrl()) return Promise.resolve();
-    return fetch(pedUrl() + '?accion=apartadas', { cache: 'no-store' }).then((r) => r.json()).then((d) => { marcar(idsDe(d)); }).catch(() => {});
+    return fetch(pedUrl() + '?accion=apartadas', { cache: 'no-store' }).then((r) => r.json()).then((d) => { S.wompi = !!(d && d.wompi); marcar(idsDe(d)); }).catch(() => {});
   }
   function confirmar(btn) {
     const its = items(); const err = $('#cerr'); if (!its.length || btn.disabled || !S.envioUrl) return;
     btn.disabled = true; btn.textContent = 'Enviando…'; if (err) err.textContent = '';
-    const falla = (msg) => { btn.disabled = false; btn.textContent = 'Confirmar compra'; const e2 = $('#cerr'); if (e2) e2.textContent = msg; };
+    const falla = (msg) => { btn.disabled = false; btn.textContent = S.pago === 'wompi' && $('input[name="pago"]') ? 'Ir a pagar' : 'Confirmar compra'; const e2 = $('#cerr'); if (e2) e2.textContent = msg; };
+    if (S.pago === 'wompi' && $('input[name="pago"]')) btn.textContent = 'Abriendo el pago…';
     fetch(S.envioUrl, { cache: 'no-store' }).then((r) => r.json()).then((d) => {
       const bad = d && (d.error || d.ok === false || d.exito === false);
-      if (!bad) { S.cart = []; S.oid = ''; saveCart(); cargarApartadas().then(() => { render(); badges(); cart('hecho'); }); return; }
+      if (!bad && d.pagoUrl) { saveP(Object.assign({}, S.ultimo, { url: d.pagoUrl, total: d.total ? money(+d.total) : S.ultimo.total, t: Date.now() })); S.cart = []; S.oid = ''; saveCart(); location.href = d.pagoUrl; return; }
+      if (!bad) { S.ultimo.pagoError = !!d.pagoError; S.cart = []; S.oid = ''; saveCart(); cargarApartadas().then(() => { render(); badges(); cart('hecho'); }); return; }
       if (/ocupad/i.test(String(d.error || d.mensaje || ''))) {
         cargarApartadas().then(() => {
           const ids = idsDe(d); if (ids.length) { ids.forEach((id) => { const p = byId(id); if (p && p.estado !== 'vendida') p.estado = 'apartada'; }); }
@@ -519,12 +543,18 @@ section.blk { display: flex; flex-direction: column; gap: 14px; scroll-margin-to
     const ct = e.target.closest('[data-cart]'); if (ct) { cart(ct.getAttribute('data-cart')); return; }
     if (e.target.id === 'copy') { const o = $('#ord'); o.select(); const ok = () => { e.target.textContent = 'Pedido copiado ✓'; }; if (navigator.clipboard) navigator.clipboard.writeText(o.value).then(ok, () => { try { document.execCommand('copy'); ok(); } catch (x) {} }); else { try { document.execCommand('copy'); ok(); } catch (x) {} } return; }
     if (e.target.id === 'conf' && S.step === 'envio') { confirmar(e.target); return; }
+    if (e.target.id === 'aEfectivo' && S.pend) { const b = e.target; b.disabled = true; b.textContent = 'Un momento…';
+      fetch(pedUrl() + '?accion=contraentrega&id=' + encodeURIComponent(S.pend.id), { cache: 'no-store' }).then((r) => r.json()).then((d) => {
+        if (d && d.ok) { S.ultimo = Object.assign({}, S.pend, { pagado: false }); saveP(null); S.pend = null; cart('hecho'); }
+        else { b.disabled = false; b.textContent = 'Mejor pago al recibir'; $('#cerr').textContent = 'Ya pasaron los 30 minutos y alguien más pidió una de las piezas. Vuelve a la tienda para ver otras.'; saveP(null); }
+      }).catch(() => { b.disabled = false; b.textContent = 'Mejor pago al recibir'; $('#cerr').textContent = 'No se pudo cambiar. Revisa tu conexión e intenta otra vez.'; });
+      return; }
     if (e.target.id === 'go' && S.step === 'envio') { setTimeout(() => { S.cart = []; saveCart(); badges(); cart('listo'); }, 300); return; }
     const n = e.target.closest('[data-nav]'); if (n) { const v = n.getAttribute('data-nav'); if (v === 'x') close(); else show(S.open + +v); return; }
     if (e.target.id === 'lb') close();
   });
   document.addEventListener('input', (e) => { if (e.target.id === 'q') { S.q = e.target.value; render(); return; } const f = e.target.form; if (!f || f.id !== 'fDatos') return; const c = loadC(); c[e.target.name] = e.target.value; if (saveC(c)) { const s = $('#saved'); if (s) s.textContent = 'Guardado en este dispositivo ✓'; } });
-  document.addEventListener('change', (e) => { if (e.target.name === 'envio') totals(); if (e.target.id === 'orden') { S.orden = e.target.value; render(); } });
+  document.addEventListener('change', (e) => { if (e.target.name === 'envio' || e.target.name === 'pago') totals(); if (e.target.id === 'orden') { S.orden = e.target.value; render(); } });
   document.addEventListener('submit', (e) => { if (e.target.id !== 'fDatos') return; e.preventDefault(); const f = e.target; const c = loadC();
     c.nombre = f.nombre.value.trim(); c.telefono = f.telefono.value.trim(); c.direccion = f.direccion.value.trim(); saveC(c);
     const err = !c.nombre ? ['Escribe tu nombre.', f.nombre] : (c.telefono.replace(/\D/g, '').length < 8) ? ['Escribe un teléfono de al menos 8 dígitos.', f.telefono] : !c.direccion ? ['Escribe la dirección de envío.', f.direccion] : null;
@@ -541,6 +571,20 @@ section.blk { display: flex; flex-direction: column; gap: 14px; scroll-margin-to
     $('#upd').textContent = S.cat.actualizado ? 'Actualizado el ' + fecha(S.cat.actualizado) : '';
     render(); badges();
     cargarApartadas().then(() => { S.cart = S.cart.filter((id) => byId(id) && libre(byId(id))); saveCart(); render(); badges(); });
+    volverDePago();
+  }
+  function volverDePago() {
+    const u = new URLSearchParams(location.search); const pend = loadP();
+    const id = u.get('identificadorEnlaceComercio') || (pend && pend.id); const tx = u.get('idTransaccion');
+    if (u.has('idTransaccion') || u.has('identificadorEnlaceComercio')) { try { history.replaceState(null, '', location.pathname); } catch (e) {} }
+    if (!id || !pedUrl() || (!tx && !pend)) return;
+    S.pend = pend || { id: id }; cart('verificando');
+    const pedir = (n) => fetch(pedUrl() + '?accion=pago&id=' + encodeURIComponent(id) + (tx ? '&tx=' + encodeURIComponent(tx) : ''), { cache: 'no-store' }).then((r) => r.json()).then((d) => {
+      if (d && d.pagado) { S.ultimo = Object.assign({}, S.pend, { pagado: true }); saveP(null); S.pend = null; cargarApartadas().then(() => { render(); badges(); cart('hecho'); }); }
+      else if (tx && n < 3) setTimeout(() => pedir(n + 1), 2500);
+      else cart('nopago');
+    }).catch(() => cart('nopago'));
+    pedir(0);
   }
   fetch('catalogo.json', { cache: 'no-cache' }).then((r) => (r.ok ? r.json() : null)).then(start).catch(() => start(null));
 })();
