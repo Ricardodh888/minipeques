@@ -1,17 +1,19 @@
 <!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<meta name="color-scheme" content="only light">
 <title>MiniPeques</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;600;700&family=Nunito+Sans:opsz,wght@6..12,400;6..12,600;6..12,700&display=swap">
 <style>
+:root, html, body { color-scheme: only light; }
 /* Layout: vitrina de catálogo. Cabecera breve, una fila de filtros (edad, género) y una cuadrícula de fotos que manda; ficha ampliada al tocar. */
 :root {
   --bg: #f9f0e7; --surface: #fffaf5; --ink: #3f3832; --ink2: #6f655c; --muted: #8f857c; --line: #eadfd3;
   --accent: #5e7a4c; --accent-ink: #ffffff; --soft: #eef1e6; --badge: #e3aa9f; --badge-ink: #3f2620; --brand-blue: #9db8cb; --pink-ink: #c0705f;
   --display: "Quicksand", "Nunito Sans", system-ui, sans-serif; --body: "Nunito Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
 }
-@media (prefers-color-scheme: dark) {
+@media not all {
   :root:not([data-theme="light"]) { --bg: #1b1815; --surface: #24201c; --ink: #f4ece3; --ink2: #c9bdb1; --muted: #9a8f84; --line: #3a332d; --accent: #a9c294; --accent-ink: #1b2215; --soft: #2a2f24; --badge: #e3aa9f; --badge-ink: #3f2620; --pink-ink: #eab3a7; color-scheme: dark; }
 }
-:root[data-theme="dark"] { --bg: #1b1815; --surface: #24201c; --ink: #f4ece3; --ink2: #c9bdb1; --muted: #9a8f84; --line: #3a332d; --accent: #a9c294; --accent-ink: #1b2215; --soft: #2a2f24; --badge: #e3aa9f; --badge-ink: #3f2620; --pink-ink: #eab3a7; color-scheme: dark; }
+:root[data-theme="never"] { --bg: #1b1815; --surface: #24201c; --ink: #f4ece3; --ink2: #c9bdb1; --muted: #9a8f84; --line: #3a332d; --accent: #a9c294; --accent-ink: #1b2215; --soft: #2a2f24; --badge: #e3aa9f; --badge-ink: #3f2620; --pink-ink: #eab3a7; color-scheme: dark; }
 * { box-sizing: border-box; }
 body { background: var(--bg); color: var(--ink); font-family: var(--body); font-size: 15px; line-height: 1.5; }
 .wrap { max-width: 1160px; margin: 0 auto; padding-inline: 16px; padding-block: 28px 56px; display: flex; flex-direction: column; gap: 20px; }
@@ -69,7 +71,7 @@ header.top { align-items: center; }
 .fld input:focus, .fld textarea:focus { outline: 2px solid var(--accent); outline-offset: 0; border-color: var(--accent); }
 .err { color: #b3261e; font-size: 13px; font-weight: 600; min-height: 0; }
 :root[data-theme="dark"] .err { color: #f2b8b5; }
-@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .err { color: #f2b8b5; } }
+@media not all { :root:not([data-theme="light"]) .err { color: #f2b8b5; } }
 .saved { color: var(--muted); font-size: 12px; }
 .opts { display: flex; flex-direction: column; gap: 8px; border: 0; margin: 0; padding: 0; }
 .opt { display: flex; align-items: center; gap: 10px; border: 1px solid var(--line); border-radius: 12px; padding: 11px 13px; cursor: pointer; }
@@ -121,17 +123,30 @@ section.blk { display: flex; flex-direction: column; gap: 14px; scroll-margin-to
 /* categorías por edad como mosaicos */
 .filters { background: none; border: 0; padding: 0; gap: 14px; }
 .flab { display: none; }
-#fEdad { display: grid; grid-template-columns: repeat(auto-fill, minmax(118px, 1fr)); gap: 10px; width: 100%; }
-#fEdad .chip { display: flex; flex-direction: column; align-items: flex-start; gap: 2px; border: 0; border-radius: 20px; padding: 16px 14px; min-height: 92px; justify-content: flex-end; font-family: var(--display); font-size: 22px; font-weight: 700; color: var(--ink); background: var(--t, var(--soft)); transition: transform .15s; }
-#fEdad .chip:nth-child(4n+1) { --t: color-mix(in srgb, #93a87e 30%, var(--surface)); }
-#fEdad .chip:nth-child(4n+2) { --t: color-mix(in srgb, #e3aa9f 38%, var(--surface)); }
-#fEdad .chip:nth-child(4n+3) { --t: color-mix(in srgb, #9db8cb 40%, var(--surface)); }
-#fEdad .chip:nth-child(4n+4) { --t: color-mix(in srgb, #f3c96b 30%, var(--surface)); }
-#fEdad .chip:hover { transform: translateY(-2px); }
-#fEdad .chip .n { font-family: var(--body); font-size: 13px; font-weight: 600; margin: 0; order: 2; opacity: .8; }
-#fEdad .chip[aria-pressed="true"] { background: var(--accent); color: var(--accent-ink); box-shadow: 0 10px 22px -14px rgba(0, 0, 0, .5); }
+#fEtapa { display: grid; grid-template-columns: repeat(var(--nEt, 3), minmax(0, 1fr)); gap: 8px; width: 100%; }
+#fEtapa .chip { display: flex; flex-direction: column; align-items: flex-start; gap: 2px; border: 0; border-radius: 20px; padding: 16px 14px; min-height: 92px; justify-content: flex-end; font-family: var(--display); font-size: 22px; font-weight: 700; color: var(--ink); background: var(--t, var(--soft)); transition: transform .15s; }
+#fEtapa .chip:nth-child(4n+1) { --t: color-mix(in srgb, #93a87e 30%, var(--surface)); }
+#fEtapa .chip:nth-child(4n+2) { --t: color-mix(in srgb, #e3aa9f 38%, var(--surface)); }
+#fEtapa .chip:nth-child(4n+3) { --t: color-mix(in srgb, #9db8cb 40%, var(--surface)); }
+#fEtapa .chip:nth-child(4n+4) { --t: color-mix(in srgb, #f3c96b 30%, var(--surface)); }
+#fEtapa .chip:hover { transform: translateY(-2px); }
+#fEtapa .chip { text-align: left; line-height: 1.1; font-size: clamp(16px, 4.6vw, 22px); padding: 14px 12px; min-height: 76px; min-width: 0; overflow-wrap: anywhere; }
+#fEtapa .chip .sub2, #fEtapa .chip .n { font-size: 12px; }
+#fEtapa .chip .sub2 { font-family: var(--body); font-size: 13px; font-weight: 600; opacity: .75; margin: 0; }
+#fEtapa .chip .n { font-family: var(--body); font-size: 13px; font-weight: 600; margin: 0; order: 2; opacity: .8; }
+#fEtapa .chip[aria-pressed="true"] { background: var(--accent); color: var(--accent-ink); box-shadow: 0 10px 22px -14px rgba(0, 0, 0, .5); }
 .tools { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px; }
 .sort select { font: inherit; font-size: 14px; font-weight: 600; color: var(--ink); background: var(--surface); border: 1px solid var(--line); border-radius: 999px; padding: 7px 12px; }
+#fEdad { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 10px; }
+.filters { gap: 10px; }
+.chip { padding: 4px 12px; }
+#fEdad:empty { display: none; }
+.tallatit { font-size: 13px; font-weight: 700; color: var(--ink2); width: 100%; margin: 0; }
+details.como > summary { list-style: none; cursor: pointer; display: flex; align-items: center; justify-content: flex-start; gap: 10px; }
+details.como > summary::-webkit-details-marker { display: none; }
+details.como .flecha { width: 12px; height: 12px; border-right: 2.5px solid var(--ink2); border-bottom: 2.5px solid var(--ink2); transform: rotate(45deg); margin-top: -6px; transition: transform .2s; }
+details.como[open] .flecha { transform: rotate(-135deg); margin-top: 4px; }
+details.como[open] .steps { margin-top: 14px; }
 /* carrusel */
 .rail { display: flex; gap: 14px; overflow-x: auto; scroll-snap-type: x mandatory; padding: 4px 2px 12px; scrollbar-width: thin; }
 .rail .card { flex: 0 0 min(64%, 240px); scroll-snap-align: start; }
@@ -159,7 +174,7 @@ section.blk { display: flex; flex-direction: column; gap: 14px; scroll-margin-to
 .lb { backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px); z-index: 30; }
 @media (max-width: 700px) { .lb { align-items: flex-end; padding: 0; padding-top: calc(24px + env(safe-area-inset-top, 0px)); } .lbbox { border-radius: 24px 24px 0 0; padding-bottom: env(safe-area-inset-bottom, 0px); animation: up .28s cubic-bezier(.2, .8, .2, 1); } }
 @keyframes up { from { transform: translateY(60px); } to { transform: none; } }
-@media (prefers-reduced-motion: reduce) { .lbbox { animation: none; } .card, #fEdad .chip { transition: none; } .card:hover, #fEdad .chip:hover { transform: none; } }
+@media (prefers-reduced-motion: reduce) { .lbbox { animation: none; } .card, #fEtapa .chip { transition: none; } .card:hover, #fEtapa .chip:hover { transform: none; } }
 .lbbox { position: relative; }
 .aseg { display: inline-flex; align-self: flex-start; padding: 4px; border-radius: 999px; background: var(--soft); gap: 2px; }
 .aseg button { font: inherit; font-weight: 700; font-size: 14px; border: 0; background: transparent; color: var(--ink2); padding: 8px 18px; border-radius: 999px; cursor: pointer; }
@@ -311,21 +326,21 @@ section.blk { display: flex; flex-direction: column; gap: 14px; scroll-margin-to
     </div>
   </header>
   <section class="blk" id="catalogo" aria-labelledby="cTit">
-    <div class="sechead"><h2 id="cTit">Compra por edad</h2><span class="sub"><span id="count" role="status"></span> <span id="upd"></span></span></div>
+    <div class="sechead"><h2 id="cTit">Compra por talla</h2><span class="sub" hidden><span id="count" role="status"></span> <span id="upd"></span></span></div>
     <section class="filters" id="filters" aria-label="Filtros" hidden>
-      <div role="group" aria-labelledby="labEdad"><span class="flab" id="labEdad">Edad</span><div id="fEdad"></div></div>
+      <div role="group" aria-labelledby="labEdad"><span class="flab" id="labEdad">Talla</span><div id="fEtapa"></div><div id="fEdad"></div></div>
       <div class="tools"><div class="frow" role="group" aria-labelledby="labGen"><span class="flab" id="labGen">Para</span><div class="frow" id="fGen"></div></div>
       <label class="sort" for="orden"><select id="orden" aria-label="Ordenar"><option value="nuevo">Lo más nuevo</option><option value="asc">Menor precio</option><option value="desc">Mayor precio</option></select></label></div>
     </section>
     <main id="grid" class="grid" aria-live="polite"></main>
   </section>
   <section class="blk" id="como" aria-labelledby="comoTit">
-    <div class="sechead"><h2 id="comoTit">Cómo comprar</h2></div>
+    <details class="como" id="comoBox"><summary class="sechead"><h2 id="comoTit">Cómo comprar</h2><span class="flecha" aria-hidden="true"></span></summary>
     <ol class="steps">
       <li><b>Elige tu pieza</b><span>Toca la foto y pulsa «Comprar».</span></li>
       <li><b>Deja tus datos</b><span>Nombre, teléfono y dirección. Se guardan en tu teléfono para la próxima vez.</span></li>
       <li><b>Elige la entrega</b><span>A domicilio por $3 o en punto de entrega por $1. Ves el total antes de enviar.</span></li>
-    </ol>
+    </ol></details>
   </section>
   <footer class="foot"><img src="logo.png" alt="MiniPeques" width="1022" height="517"></footer>
 </div>
@@ -340,7 +355,7 @@ section.blk { display: flex; flex-direction: column; gap: 14px; scroll-margin-to
   const esc = (s) => String(s == null ? '' : s).replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
   const MES = ['enero', 'febrero', 'marzo', 'abril', 'mayo', 'junio', 'julio', 'agosto', 'septiembre', 'octubre', 'noviembre', 'diciembre'];
   const GEN = ['Niña', 'Niño', 'Unisex'];
-  const S = { cat: null, edad: '*', gen: '*', list: [], open: -1, orden: 'nuevo', q: '' };
+  const S = { cat: null, etapa: '*', edad: '*', gen: '*', list: [], open: -1, orden: 'nuevo', q: '' };
   const money = (n) => '$' + n.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
   const fecha = (f) => { const p = f.split('-'); return +p[2] + ' de ' + MES[+p[1] - 1]; };
   const titulo = (p) => p.nombre || ('Ropa de ' + (p.genero === 'Unisex' ? 'bebé' : p.genero.toLowerCase()) + ' · ' + p.edad);
@@ -376,8 +391,12 @@ section.blk { display: flex; flex-direction: column; gap: 14px; scroll-margin-to
   function add(p) { if (!inCart(p)) { S.cart.push(p.id); saveCart(); } badges(); toast('Agregado al carrito'); }
   function quitar(id) { S.cart = S.cart.filter((x) => x !== id); saveCart(); badges(); }
 
+  const ETAPAS = [['bebe', 'Bebés', '0 a 24 meses'], ['peque', 'Niños pequeños', '2T a 5T'], ['ninos', 'Niños', '6 años en adelante'], ['otras', 'Otras tallas', '']];
+  const etapaDe = (p) => { const o = +p.orden_edad; return isNaN(o) || o >= 9999 ? 'otras' : o < 24 ? 'bebe' : o < 72 ? 'peque' : 'ninos'; };
+  const enEtapa = (p) => S.etapa === '*' || etapaDe(p) === S.etapa;
+  document.addEventListener('click', (e) => { const a = e.target.closest('a[href="#como"]'); if (a) { const d = document.getElementById('comoBox'); if (d) d.open = true; } });
   function chips(el, items, cur, key) {
-    el.innerHTML = items.map((x) => '<button class="chip" type="button" data-' + key + '="' + esc(x[0]) + '" aria-pressed="' + (cur === x[0]) + '">' + esc(x[1]) + '<span class="n">' + x[2] + (key === 'edad' ? (x[2] === 1 ? ' pieza' : ' piezas') : '') + '</span></button>').join('');
+    el.innerHTML = items.filter((x) => x[0] !== '*').map((x) => '<button class="chip" type="button" data-' + key + '="' + esc(x[0]) + '" aria-pressed="' + (cur === x[0]) + '">' + esc(x[1]) + '</button>').join('');
   }
   function render() {
     const all = S.cat.piezas.slice().sort((a, b) => (a.fecha < b.fecha ? 1 : a.fecha > b.fecha ? -1 : a.orden_edad - b.orden_edad));
@@ -389,19 +408,24 @@ section.blk { display: flex; flex-direction: column; gap: 14px; scroll-margin-to
     }
     $('#filters').hidden = false;
     const byGen = all.filter((p) => S.gen === '*' || p.genero === S.gen);
-    const byEdad = all.filter((p) => S.edad === '*' || p.edad === S.edad);
+    const byEdad = all.filter((p) => enEtapa(p) && (S.edad === '*' || p.edad === S.edad));
     const edades = []; const seen = {};
-    all.slice().sort((a, b) => a.orden_edad - b.orden_edad || a.edad.localeCompare(b.edad)).forEach((p) => { if (!seen[p.edad]) { seen[p.edad] = 1; edades.push(p.edad); } });
-    chips($('#fEdad'), [['*', 'Todas', byGen.length]].concat(edades.map((e) => [e, e, byGen.filter((p) => p.edad === e).length])), S.edad, 'edad');
+    all.filter(enEtapa).sort((a, b) => a.orden_edad - b.orden_edad || a.edad.localeCompare(b.edad)).forEach((p) => { if (!seen[p.edad]) { seen[p.edad] = 1; edades.push(p.edad); } });
+    const pz = (n) => n + (n === 1 ? ' pieza' : ' piezas');
+    const ets = ETAPAS.filter((e) => all.some((p) => etapaDe(p) === e[0]));
+    $('#fEtapa').style.setProperty('--nEt', ets.length || 1);
+    $('#fEtapa').innerHTML = ets.map((e) => { const n = byGen.filter((p) => etapaDe(p) === e[0]).length; return '<button class="chip" type="button" data-etapa="' + e[0] + '" aria-pressed="' + (S.etapa === e[0]) + '">' + esc(e[1]) + (e[2] ? '<span class="sub2">' + esc(e[2]) + '</span>' : '') + '</button>'; }).join('');
+    if (S.etapa === '*' || edades.length < 2) $('#fEdad').innerHTML = '';
+    else { chips($('#fEdad'), [['*', 'Todas', byGen.filter(enEtapa).length]].concat(edades.map((e) => [e, e, byGen.filter((p) => p.edad === e).length])), S.edad, 'edad'); }
     chips($('#fGen'), [['*', 'Todos', byEdad.length]].concat(GEN.filter((g) => all.some((p) => p.genero === g)).map((g) => [g, g, byEdad.filter((p) => p.genero === g).length])), S.gen, 'gen');
     const nq = (t) => String(t || '').normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
     const q = nq(S.q).trim();
-    S.list = all.filter((p) => (S.edad === '*' || p.edad === S.edad) && (S.gen === '*' || p.genero === S.gen) && (!q || nq(titulo(p) + ' ' + p.edad + ' ' + p.genero).includes(q)));
+    S.list = all.filter((p) => enEtapa(p) && (S.edad === '*' || p.edad === S.edad) && (S.gen === '*' || p.genero === S.gen) && (!q || nq(titulo(p) + ' ' + p.edad + ' ' + p.genero).includes(q)));
     if (S.orden !== 'nuevo') { const d = S.orden === 'asc' ? 1 : -1; S.list.sort((a, b) => (a.precio == null) - (b.precio == null) || d * ((a.precio || 0) - (b.precio || 0))); }
     S.list = S.list.filter(libre).concat(S.list.filter((p) => p.estado === 'apartada'), S.list.filter((p) => p.estado === 'vendida'));
     $('#count').textContent = S.list.length ? S.list.length + (S.list.length === 1 ? ' pieza' : ' piezas') + (S.cat.actualizado ? ' ·' : '') : '';
     $('#grid').innerHTML = S.list.length ? S.list.map((p, i) => '<button class="card' + (inCart(p) ? ' incart' : '') + (libre(p) ? '' : ' off') + '" type="button" data-i="' + i + '" aria-label="' + esc(titulo(p)) + '"><span class="ph"><img src="' + esc(p.foto) + '" alt="' + esc(titulo(p)) + '" loading="lazy">' + (p.estado === 'vendida' ? '<span class="badge sold">Vendida</span>' : p.estado === 'apartada' ? '<span class="badge held">Apartada</span>' : p.fecha === nuevo ? '<span class="badge">Nuevo</span>' : '') + '</span>' + (p.nombre ? '<span class="name">' + esc(p.nombre) + '</span>' : '') + '<span class="pricerow"><span class="meta">' + esc(p.genero) + ' · ' + esc(p.edad) + '</span>' + precio(p) + '</span></button>').join('')
-      : '<div class="empty" style="grid-column:1/-1"><h2>Nada por aquí</h2><p>No hay piezas con esa búsqueda o filtro. Prueba con otra edad o borra la búsqueda.</p></div>';
+      : '<div class="empty" style="grid-column:1/-1"><h2>Nada por aquí</h2><p>No hay piezas con esa búsqueda o filtro. Prueba con otra talla o borra la búsqueda.</p></div>';
   }
   const X = '<button class="lbx" type="button" data-nav="x" aria-label="Cerrar"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button>';
   function info(p, i) {
@@ -535,8 +559,9 @@ section.blk { display: flex; flex-direction: column; gap: 14px; scroll-margin-to
   function close() { const was = S.open; S.open = -1; S.mode = ''; $('#lb').hidden = true; $('#lb').innerHTML = ''; const c = document.querySelector('.card[data-i="' + was + '"]'); if (c) c.focus(); }
 
   document.addEventListener('click', (e) => {
-    const c = e.target.closest('[data-edad]'); if (c) { S.edad = c.getAttribute('data-edad'); render(); return; }
-    const g = e.target.closest('[data-gen]'); if (g) { S.gen = g.getAttribute('data-gen'); render(); return; }
+    const et = e.target.closest('[data-etapa]'); if (et) { const v = et.getAttribute('data-etapa'); S.etapa = S.etapa === v ? '*' : v; S.edad = '*'; render(); return; }
+    const c = e.target.closest('[data-edad]'); if (c) { const v = c.getAttribute('data-edad'); S.edad = S.edad === v ? '*' : v; render(); return; }
+    const g = e.target.closest('[data-gen]'); if (g) { const v = g.getAttribute('data-gen'); S.gen = S.gen === v ? '*' : v; render(); return; }
     const k = e.target.closest('.card'); if (k) { show(+k.getAttribute('data-i')); return; }
     const a = e.target.closest('[data-add]'); if (a) { const p = byId(a.getAttribute('data-add')); if (p) { add(p); show(S.open); } return; }
     const r = e.target.closest('[data-remove]'); if (r) { quitar(r.getAttribute('data-remove')); if (S.mode === 'item') show(S.open); else cart('carrito'); return; }
