@@ -49,6 +49,16 @@
    "orden_edad": 0,
    "genero": "Niño",
    "fecha": "2026-10-21"
+  },
+  {
+   "id": "3196982ee659",
+   "foto": "fotos/3196982ee659.jpg",
+   "nombre": "Short okie dokie",
+   "precio": 9.99,
+   "edad": "3-6 meses",
+   "orden_edad": 3,
+   "genero": "Niño",
+   "fecha": "2026-10-21"
   }
  ]
 }
