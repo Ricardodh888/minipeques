@@ -59,6 +59,16 @@
    "orden_edad": 3,
    "genero": "Niño",
    "fecha": "2026-10-21"
+  },
+  {
+   "id": "b453842f08b6",
+   "foto": "fotos/b453842f08b6.jpg",
+   "nombre": "Short V·Gold",
+   "precio": 10.99,
+   "edad": "6-7 años",
+   "orden_edad": 72,
+   "genero": "Niña",
+   "fecha": "2026-10-21"
   }
  ]
 }
