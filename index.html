@@ -130,7 +130,7 @@ section.blk { display: flex; flex-direction: column; gap: 14px; scroll-margin-to
 #fEtapa .chip:nth-child(4n+3) { --t: color-mix(in srgb, #9db8cb 40%, var(--surface)); }
 #fEtapa .chip:nth-child(4n+4) { --t: color-mix(in srgb, #f3c96b 30%, var(--surface)); }
 #fEtapa .chip:hover { transform: translateY(-2px); }
-#fEtapa .chip { text-align: left; line-height: 1.1; font-size: clamp(16px, 4.6vw, 22px); padding: 14px 12px; min-height: 76px; min-width: 0; overflow-wrap: anywhere; }
+#fEtapa .chip { text-align: center; align-items: center; justify-content: center; line-height: 1.1; font-size: clamp(16px, 4.6vw, 22px); padding: 14px 12px; min-height: 76px; min-width: 0; overflow-wrap: anywhere; }
 #fEtapa .chip .sub2, #fEtapa .chip .n { font-size: 12px; }
 #fEtapa .chip .sub2 { font-family: var(--body); font-size: 13px; font-weight: 600; opacity: .75; margin: 0; }
 #fEtapa .chip .n { font-family: var(--body); font-size: 13px; font-weight: 600; margin: 0; order: 2; opacity: .8; }
@@ -391,7 +391,7 @@ details.como[open] .steps { margin-top: 14px; }
   function add(p) { if (!inCart(p)) { S.cart.push(p.id); saveCart(); } badges(); toast('Agregado al carrito'); }
   function quitar(id) { S.cart = S.cart.filter((x) => x !== id); saveCart(); badges(); }
 
-  const ETAPAS = [['bebe', 'Bebés', '0 a 24 meses'], ['peque', 'Niños pequeños', '2T a 5T'], ['ninos', 'Niños', '6 años en adelante'], ['otras', 'Otras tallas', '']];
+  const ETAPAS = [['bebe', 'Bebés', '0 a 24 meses'], ['peque', 'Niños pequeños', '2T a 5T'], ['ninos', 'Niños grandes', '6 años en adelante'], ['otras', 'Otras tallas', '']];
   const etapaDe = (p) => { const o = +p.orden_edad; return isNaN(o) || o >= 9999 ? 'otras' : o < 24 ? 'bebe' : o < 72 ? 'peque' : 'ninos'; };
   const enEtapa = (p) => S.etapa === '*' || etapaDe(p) === S.etapa;
   document.addEventListener('click', (e) => { const a = e.target.closest('a[href="#como"]'); if (a) { const d = document.getElementById('comoBox'); if (d) d.open = true; } });
@@ -559,7 +559,7 @@ details.como[open] .steps { margin-top: 14px; }
   function close() { const was = S.open; S.open = -1; S.mode = ''; $('#lb').hidden = true; $('#lb').innerHTML = ''; const c = document.querySelector('.card[data-i="' + was + '"]'); if (c) c.focus(); }
 
   document.addEventListener('click', (e) => {
-    const et = e.target.closest('[data-etapa]'); if (et) { const v = et.getAttribute('data-etapa'); S.etapa = S.etapa === v ? '*' : v; S.edad = '*'; render(); return; }
+    const et = e.target.closest('[data-etapa]'); if (et) { const v = et.getAttribute('data-etapa'); S.etapa = S.etapa === v ? '*' : v; S.edad = '*'; S.gen = '*'; render(); return; }
     const c = e.target.closest('[data-edad]'); if (c) { const v = c.getAttribute('data-edad'); S.edad = S.edad === v ? '*' : v; render(); return; }
     const g = e.target.closest('[data-gen]'); if (g) { const v = g.getAttribute('data-gen'); S.gen = S.gen === v ? '*' : v; render(); return; }
     const k = e.target.closest('.card'); if (k) { show(+k.getAttribute('data-i')); return; }
