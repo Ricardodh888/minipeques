@@ -55,6 +55,36 @@
    "orden_edad": 84,
    "genero": "Niño",
    "fecha": "2026-10-23"
+  },
+  {
+   "id": "ac9ca1af2b43",
+   "foto": "fotos/ac9ca1af2b43.jpg",
+   "nombre": "Short new balance",
+   "precio": 12.99,
+   "edad": "XL",
+   "orden_edad": 168,
+   "genero": "Niño",
+   "fecha": "2026-10-23"
+  },
+  {
+   "id": "9c9d6cdad04c",
+   "foto": "fotos/9c9d6cdad04c.jpg",
+   "nombre": "Short Eddie Bauer",
+   "precio": 12.99,
+   "edad": "M",
+   "orden_edad": 108,
+   "genero": "Niño",
+   "fecha": "2026-10-23"
+  },
+  {
+   "id": "7ca9ae3830a9",
+   "foto": "fotos/7ca9ae3830a9.jpg",
+   "nombre": "Short 7 for all mankind",
+   "precio": 12.99,
+   "edad": "14",
+   "orden_edad": 168,
+   "genero": "Niño",
+   "fecha": "2026-10-23"
   }
  ]
 }
