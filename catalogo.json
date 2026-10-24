@@ -11,8 +11,8 @@
    "foto": "fotos/388a6563594f.jpg",
    "nombre": "Conjunto de pijama peyton & parker",
    "precio": 12.99,
-   "edad": "2T",
-   "orden_edad": 24,
+   "edad": "4T",
+   "orden_edad": 48,
    "genero": "Niño",
    "fecha": "2026-10-23"
   },
@@ -21,8 +21,8 @@
    "foto": "fotos/18e14dd3d268.jpg",
    "nombre": "Camisa Adidas",
    "precio": 11.99,
-   "edad": "2T",
-   "orden_edad": 24,
+   "edad": "M",
+   "orden_edad": 108,
    "genero": "Niño",
    "fecha": "2026-10-23"
   },
@@ -31,8 +31,8 @@
    "foto": "fotos/38fb58a77cd8.jpg",
    "nombre": "Short Thereabouts",
    "precio": 12.99,
-   "edad": "2T",
-   "orden_edad": 24,
+   "edad": "M",
+   "orden_edad": 108,
    "genero": "Niño",
    "fecha": "2026-10-23"
   },
@@ -41,8 +41,8 @@
    "foto": "fotos/db5f0f287ad3.jpg",
    "nombre": "Short Thereabouts",
    "precio": 15.99,
-   "edad": "2T",
-   "orden_edad": 24,
+   "edad": "XL",
+   "orden_edad": 168,
    "genero": "Niño",
    "fecha": "2026-10-23"
   },
@@ -51,8 +51,8 @@
    "foto": "fotos/2388273718e3.jpg",
    "nombre": "Camisa Grom",
    "precio": 9.99,
-   "edad": "2T",
-   "orden_edad": 24,
+   "edad": "S",
+   "orden_edad": 84,
    "genero": "Niño",
    "fecha": "2026-10-23"
   }
