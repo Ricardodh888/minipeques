@@ -85,6 +85,996 @@
    "orden_edad": 168,
    "genero": "Niño",
    "fecha": "2026-10-23"
+  },
+  {
+   "id": "f9b8166ad356",
+   "foto": "fotos/f9b8166ad356.jpg",
+   "nombre": "Pantalón Cat & Jack",
+   "precio": 10,
+   "edad": "4",
+   "orden_edad": 48,
+   "genero": "Niño",
+   "fecha": "2026-10-23"
+  },
+  {
+   "id": "10861d5f2b8a",
+   "foto": "fotos/10861d5f2b8a.jpg",
+   "nombre": "Conjunto de verano Eddie Bauer",
+   "precio": 15,
+   "edad": "3T",
+   "orden_edad": 36,
+   "genero": "Niño",
+   "fecha": "2026-10-23"
+  },
+  {
+   "id": "99b44bdd3db5",
+   "foto": "fotos/99b44bdd3db5.jpg",
+   "nombre": "Sudadera True Religion sobre fondo beige",
+   "precio": 20,
+   "edad": "2T",
+   "orden_edad": 24,
+   "genero": "Niño",
+   "fecha": "2026-10-23"
+  },
+  {
+   "id": "fc75c58d5fce",
+   "foto": "fotos/fc75c58d5fce.jpg",
+   "nombre": "Short Okie Dokie",
+   "precio": 10,
+   "edad": "2T",
+   "orden_edad": 24,
+   "genero": "Niño",
+   "fecha": "2026-10-23"
+  },
+  {
+   "id": "c1e91f277f0f",
+   "foto": "fotos/c1e91f277f0f.jpg",
+   "nombre": "Conjunto short y camisa Okie Dokie",
+   "precio": 15,
+   "edad": "3T",
+   "orden_edad": 36,
+   "genero": "Niño",
+   "fecha": "2026-10-23"
+  },
+  {
+   "id": "a3644f846399",
+   "foto": "fotos/a3644f846399.jpg",
+   "nombre": "Licra de niña Vigoss",
+   "precio": 9.99,
+   "edad": "5T",
+   "orden_edad": 60,
+   "genero": "Niño",
+   "fecha": "2026-10-23"
+  },
+  {
+   "id": "7ccb9002fcaa",
+   "foto": "fotos/7ccb9002fcaa.jpg",
+   "nombre": "Blusa ok!e dokie",
+   "precio": 9.99,
+   "edad": "2T",
+   "orden_edad": 24,
+   "genero": "Niño",
+   "fecha": "2026-10-23"
+  },
+  {
+   "id": "5a0ef8e0475f",
+   "foto": "fotos/5a0ef8e0475f.jpg",
+   "nombre": "Pantalón Garanimals",
+   "precio": 10,
+   "edad": "2T y 4T",
+   "orden_edad": 24,
+   "genero": "Niño",
+   "fecha": "2026-10-23"
+  },
+  {
+   "id": "55eedb4ba172",
+   "foto": "fotos/55eedb4ba172.jpg",
+   "nombre": "Camisa Wonder Nation",
+   "precio": 9.99,
+   "edad": "3T",
+   "orden_edad": 36,
+   "genero": "Niño",
+   "fecha": "2026-10-23"
+  },
+  {
+   "id": "6ab335561608",
+   "foto": "fotos/6ab335561608.jpg",
+   "nombre": "Camisa sin mangas Okie Dokie",
+   "precio": 9.99,
+   "edad": "3T",
+   "orden_edad": 36,
+   "genero": "Niño",
+   "fecha": "2026-10-23"
+  },
+  {
+   "id": "cc6be57041b8",
+   "foto": "fotos/cc6be57041b8.jpg",
+   "nombre": "Short JCPenney",
+   "precio": 10,
+   "edad": "5T",
+   "orden_edad": 60,
+   "genero": "Niño",
+   "fecha": "2026-10-23"
+  },
+  {
+   "id": "8f3b8d2aa0c2",
+   "foto": "fotos/8f3b8d2aa0c2.jpg",
+   "nombre": "Camisa sin mangas Okie Dokie",
+   "precio": 10,
+   "edad": "4T",
+   "orden_edad": 48,
+   "genero": "Niño",
+   "fecha": "2026-10-23"
+  },
+  {
+   "id": "6bb5708db3c3",
+   "foto": "fotos/6bb5708db3c3.jpg",
+   "nombre": "Pantalón Thereabouts",
+   "precio": 10,
+   "edad": "5",
+   "orden_edad": 60,
+   "genero": "Niño",
+   "fecha": "2026-10-23"
+  },
+  {
+   "id": "8dc7852665dd",
+   "foto": "fotos/8dc7852665dd.jpg",
+   "nombre": "Short unisex Okie Dokie",
+   "precio": 9.99,
+   "edad": "5T",
+   "orden_edad": 60,
+   "genero": "Niño",
+   "fecha": "2026-10-23"
+  },
+  {
+   "id": "c699198b054a",
+   "foto": "fotos/c699198b054a.jpg",
+   "nombre": "Camisa manga larga TFW",
+   "precio": 12,
+   "edad": "4/5",
+   "orden_edad": 48,
+   "genero": "Niño",
+   "fecha": "2026-10-23"
+  },
+  {
+   "id": "e59d067a32b5",
+   "foto": "fotos/e59d067a32b5.jpg",
+   "nombre": "Pans umbro",
+   "precio": 15.99,
+   "edad": "L",
+   "orden_edad": 132,
+   "genero": "Niña",
+   "fecha": "2026-10-23"
+  },
+  {
+   "id": "8e0e5a8bd465",
+   "foto": "fotos/8e0e5a8bd465.jpg",
+   "nombre": "Camisa sin mangas New Balance",
+   "precio": 10.99,
+   "edad": "8-10",
+   "orden_edad": 96,
+   "genero": "Niña",
+   "fecha": "2026-10-23"
+  },
+  {
+   "id": "c58a8f4baa1d",
+   "foto": "fotos/c58a8f4baa1d.jpg",
+   "nombre": "Licra deportiva UMBRO",
+   "precio": 11.99,
+   "edad": "6-7",
+   "orden_edad": 72,
+   "genero": "Niña",
+   "fecha": "2026-10-23"
+  },
+  {
+   "id": "872e8664a82e",
+   "foto": "fotos/872e8664a82e.jpg",
+   "nombre": "Short Thereabouts",
+   "precio": 10.99,
+   "edad": "14-16",
+   "orden_edad": 168,
+   "genero": "Niña",
+   "fecha": "2026-10-23"
+  },
+  {
+   "id": "328bde1069e2",
+   "foto": "fotos/328bde1069e2.jpg",
+   "nombre": "Camisa new balance",
+   "precio": 9.99,
+   "edad": "14-16",
+   "orden_edad": 168,
+   "genero": "Niña",
+   "fecha": "2026-10-23"
+  },
+  {
+   "id": "2084ca391a98",
+   "foto": "fotos/2084ca391a98.jpg",
+   "nombre": "Camisa GROM",
+   "precio": 13.99,
+   "edad": "18T",
+   "orden_edad": 216,
+   "genero": "Niña",
+   "fecha": "2026-10-23"
+  },
+  {
+   "id": "3635559752f5",
+   "foto": "fotos/3635559752f5.jpg",
+   "nombre": "Pans Hurley",
+   "precio": 10.99,
+   "edad": "8-10",
+   "orden_edad": 96,
+   "genero": "Niña",
+   "fecha": "2026-10-23"
+  },
+  {
+   "id": "8b80b1efe6b5",
+   "foto": "fotos/8b80b1efe6b5.jpg",
+   "nombre": "Camisa tipo polo IZOD",
+   "precio": 12.99,
+   "edad": "8-10",
+   "orden_edad": 96,
+   "genero": "Niña",
+   "fecha": "2026-10-23"
+  },
+  {
+   "id": "7c9f64740ddb",
+   "foto": "fotos/7c9f64740ddb.jpg",
+   "nombre": "Camisa Grom",
+   "precio": 9.99,
+   "edad": "M",
+   "orden_edad": 108,
+   "genero": "Niña",
+   "fecha": "2026-10-23"
+  },
+  {
+   "id": "00ea37eb2242",
+   "foto": "fotos/00ea37eb2242.jpg",
+   "nombre": "Pantalón Thereabouts",
+   "precio": 10.99,
+   "edad": "12",
+   "orden_edad": 144,
+   "genero": "Niña",
+   "fecha": "2026-10-23"
+  },
+  {
+   "id": "2be670aaf23d",
+   "foto": "fotos/2be670aaf23d.jpg",
+   "nombre": "Short umbro",
+   "precio": 11.99,
+   "edad": "L",
+   "orden_edad": 132,
+   "genero": "Niña",
+   "fecha": "2026-10-23"
+  },
+  {
+   "id": "e00db80124c8",
+   "foto": "fotos/e00db80124c8.jpg",
+   "nombre": "Camisa Grom",
+   "precio": 9.99,
+   "edad": "L",
+   "orden_edad": 132,
+   "genero": "Niña",
+   "fecha": "2026-10-23"
+  },
+  {
+   "id": "7ec75ad15991",
+   "foto": "fotos/7ec75ad15991.jpg",
+   "nombre": "Short Eddie Bauer",
+   "precio": 12.99,
+   "edad": "L 14/16",
+   "orden_edad": 168,
+   "genero": "Niña",
+   "fecha": "2026-10-23"
+  },
+  {
+   "id": "7fe5b0f07a31",
+   "foto": "fotos/7fe5b0f07a31.jpg",
+   "nombre": "Short Champion",
+   "precio": 12.99,
+   "edad": "14-16",
+   "orden_edad": 168,
+   "genero": "Niña",
+   "fecha": "2026-10-23"
+  },
+  {
+   "id": "e550ef8541e0",
+   "foto": "fotos/e550ef8541e0.jpg",
+   "nombre": "Camisa THEREABOUTS",
+   "precio": 10.99,
+   "edad": "14-16",
+   "orden_edad": 168,
+   "genero": "Niña",
+   "fecha": "2026-10-23"
+  },
+  {
+   "id": "ad6277c81a10",
+   "foto": "fotos/ad6277c81a10.jpg",
+   "nombre": "Camisa 3Brand",
+   "precio": 9.99,
+   "edad": "M",
+   "orden_edad": 108,
+   "genero": "Niña",
+   "fecha": "2026-10-23"
+  },
+  {
+   "id": "9570a2ac0410",
+   "foto": "fotos/9570a2ac0410.jpg",
+   "nombre": "Camisa Bendy",
+   "precio": 9.99,
+   "edad": "XL",
+   "orden_edad": 168,
+   "genero": "Niña",
+   "fecha": "2026-10-23"
+  },
+  {
+   "id": "2e30cae2ad80",
+   "foto": "fotos/2e30cae2ad80.jpg",
+   "nombre": "Short Thereabouts",
+   "precio": 15.99,
+   "edad": "M",
+   "orden_edad": 108,
+   "genero": "Niña",
+   "fecha": "2026-10-23"
+  },
+  {
+   "id": "69aa6c60c919",
+   "foto": "fotos/69aa6c60c919.jpg",
+   "nombre": "Camisa manga larga Thereabouts",
+   "precio": 10.99,
+   "edad": "L 14",
+   "orden_edad": 168,
+   "genero": "Niña",
+   "fecha": "2026-10-23"
+  },
+  {
+   "id": "68b9bf7c985e",
+   "foto": "fotos/68b9bf7c985e.jpg",
+   "nombre": "Pantalón 7 for all mankind",
+   "precio": 12.99,
+   "edad": "6",
+   "orden_edad": 72,
+   "genero": "Niña",
+   "fecha": "2026-10-23"
+  },
+  {
+   "id": "a94b2568361b",
+   "foto": "fotos/a94b2568361b.jpg",
+   "nombre": "Chumpa Eddie Bauer",
+   "precio": 14.99,
+   "edad": "XXS",
+   "orden_edad": 72,
+   "genero": "Niña",
+   "fecha": "2026-10-23"
+  },
+  {
+   "id": "01a36709e7e3",
+   "foto": "fotos/01a36709e7e3.jpg",
+   "nombre": "Licra Vigoss",
+   "precio": 9.99,
+   "edad": "4T",
+   "orden_edad": 48,
+   "genero": "Niña",
+   "fecha": "2026-10-23"
+  },
+  {
+   "id": "31eb2cb8b291",
+   "foto": "fotos/31eb2cb8b291.jpg",
+   "nombre": "Pantalón de lona Vigoss",
+   "precio": 9.99,
+   "edad": "5T",
+   "orden_edad": 60,
+   "genero": "Niña",
+   "fecha": "2026-10-23"
+  },
+  {
+   "id": "daf454e7a5d9",
+   "foto": "fotos/daf454e7a5d9.jpg",
+   "nombre": "Falda IZOD",
+   "precio": 9.99,
+   "edad": "4T",
+   "orden_edad": 48,
+   "genero": "Niña",
+   "fecha": "2026-10-23"
+  },
+  {
+   "id": "e23382ee8a70",
+   "foto": "fotos/e23382ee8a70.jpg",
+   "nombre": "Pantalón The Skinny",
+   "precio": 9.99,
+   "edad": "4T",
+   "orden_edad": 48,
+   "genero": "Niña",
+   "fecha": "2026-10-23"
+  },
+  {
+   "id": "b0989ae47704",
+   "foto": "fotos/b0989ae47704.jpg",
+   "nombre": "Licra de niña Vigoss",
+   "precio": 10,
+   "edad": "5",
+   "orden_edad": 60,
+   "genero": "Niña",
+   "fecha": "2026-10-23"
+  },
+  {
+   "id": "c31818397e3a",
+   "foto": "fotos/c31818397e3a.jpg",
+   "nombre": "Blusa Thereabouts",
+   "precio": 9.99,
+   "edad": "XXS 4/5",
+   "orden_edad": 72,
+   "genero": "Niña",
+   "fecha": "2026-10-23"
+  },
+  {
+   "id": "fb744d937f40",
+   "foto": "fotos/fb744d937f40.jpg",
+   "nombre": "Licra Vigoss",
+   "precio": 9.99,
+   "edad": "4T",
+   "orden_edad": 48,
+   "genero": "Niña",
+   "fecha": "2026-10-23"
+  },
+  {
+   "id": "4107a028d0f1",
+   "foto": "fotos/4107a028d0f1.jpg",
+   "nombre": "Short Vigoss",
+   "precio": 15,
+   "edad": "5T",
+   "orden_edad": 60,
+   "genero": "Niña",
+   "fecha": "2026-10-23"
+  },
+  {
+   "id": "a0083705a05d",
+   "foto": "fotos/a0083705a05d.jpg",
+   "nombre": "Blusa Thereabouts",
+   "precio": 10,
+   "edad": "XXS 4/5",
+   "orden_edad": 72,
+   "genero": "Niña",
+   "fecha": "2026-10-23"
+  },
+  {
+   "id": "b042861f4c2c",
+   "foto": "fotos/b042861f4c2c.jpg",
+   "nombre": "Conjunto Hello Kitty",
+   "precio": 14.99,
+   "edad": "4T",
+   "orden_edad": 48,
+   "genero": "Niña",
+   "fecha": "2026-10-23"
+  },
+  {
+   "id": "48e507cd88b4",
+   "foto": "fotos/48e507cd88b4.jpg",
+   "nombre": "Conjunto Young Hearts",
+   "precio": 14.99,
+   "edad": "4T",
+   "orden_edad": 48,
+   "genero": "Niña",
+   "fecha": "2026-10-23"
+  },
+  {
+   "id": "bb4777ae6e3e",
+   "foto": "fotos/bb4777ae6e3e.jpg",
+   "nombre": "Pantalón de pijama JCPenney",
+   "precio": 9.99,
+   "edad": "2T/2/A",
+   "orden_edad": 24,
+   "genero": "Niña",
+   "fecha": "2026-10-23"
+  },
+  {
+   "id": "795bd5e76221",
+   "foto": "fotos/795bd5e76221.jpg",
+   "nombre": "Short Thereabouts",
+   "precio": 12,
+   "edad": "4T",
+   "orden_edad": 48,
+   "genero": "Niña",
+   "fecha": "2026-10-23"
+  },
+  {
+   "id": "b2ec03e13faf",
+   "foto": "fotos/b2ec03e13faf.jpg",
+   "nombre": "Blusa Thereabouts",
+   "precio": 12,
+   "edad": "4/5",
+   "orden_edad": 48,
+   "genero": "Niña",
+   "fecha": "2026-10-23"
+  },
+  {
+   "id": "0653a4332a6a",
+   "foto": "fotos/0653a4332a6a.jpg",
+   "nombre": "Pans Lee",
+   "precio": 9.99,
+   "edad": "4T",
+   "orden_edad": 48,
+   "genero": "Niña",
+   "fecha": "2026-10-23"
+  },
+  {
+   "id": "6a8912efb308",
+   "foto": "fotos/6a8912efb308.jpg",
+   "nombre": "Camisa manga larga Bluey",
+   "precio": 9.99,
+   "edad": "4T",
+   "orden_edad": 48,
+   "genero": "Niña",
+   "fecha": "2026-10-23"
+  },
+  {
+   "id": "4a5e3bb6663c",
+   "foto": "fotos/4a5e3bb6663c.jpg",
+   "nombre": "Licra Vigoss",
+   "precio": 9.99,
+   "edad": "4T",
+   "orden_edad": 48,
+   "genero": "Niña",
+   "fecha": "2026-10-23"
+  },
+  {
+   "id": "3241c0afe44f",
+   "foto": "fotos/3241c0afe44f.jpg",
+   "nombre": "Licra Nickelodeon",
+   "precio": 10,
+   "edad": "2T",
+   "orden_edad": 24,
+   "genero": "Niña",
+   "fecha": "2026-10-23"
+  },
+  {
+   "id": "147d5fa7c3cd",
+   "foto": "fotos/147d5fa7c3cd.jpg",
+   "nombre": "Licra Vigoss",
+   "precio": 9.99,
+   "edad": "5T",
+   "orden_edad": 60,
+   "genero": "Niña",
+   "fecha": "2026-10-23"
+  },
+  {
+   "id": "0c9df4431e52",
+   "foto": "fotos/0c9df4431e52.jpg",
+   "nombre": "Conjunto Nannette",
+   "precio": 12.99,
+   "edad": "3T",
+   "orden_edad": 36,
+   "genero": "Niña",
+   "fecha": "2026-10-23"
+  },
+  {
+   "id": "b69e8d249d23",
+   "foto": "fotos/b69e8d249d23.jpg",
+   "nombre": "Vestido DotDot Smile",
+   "precio": 12,
+   "edad": "2T",
+   "orden_edad": 24,
+   "genero": "Niña",
+   "fecha": "2026-10-23"
+  },
+  {
+   "id": "c7c799094ff9",
+   "foto": "fotos/c7c799094ff9.jpg",
+   "nombre": "Conjunto para niña Carter's",
+   "precio": 12.5,
+   "edad": "2T/2A",
+   "orden_edad": 24,
+   "genero": "Niña",
+   "fecha": "2026-10-23"
+  },
+  {
+   "id": "2f553f3a0301",
+   "foto": "fotos/2f553f3a0301.jpg",
+   "nombre": "Licra de niña Nannette Kidd",
+   "precio": 9.99,
+   "edad": "5",
+   "orden_edad": 60,
+   "genero": "Niña",
+   "fecha": "2026-10-23"
+  },
+  {
+   "id": "fdf39fbb2861",
+   "foto": "fotos/fdf39fbb2861.jpg",
+   "nombre": "Suéter de niña",
+   "precio": 9.99,
+   "edad": "5T",
+   "orden_edad": 60,
+   "genero": "Niña",
+   "fecha": "2026-10-23"
+  },
+  {
+   "id": "880680b2ddc5",
+   "foto": "fotos/880680b2ddc5.jpg",
+   "nombre": "Blusa French Toast",
+   "precio": 10,
+   "edad": "3T",
+   "orden_edad": 36,
+   "genero": "Niña",
+   "fecha": "2026-10-23"
+  },
+  {
+   "id": "ea77d5516e9d",
+   "foto": "fotos/ea77d5516e9d.jpg",
+   "nombre": "Pantalón Studio V",
+   "precio": 9.99,
+   "edad": "3T",
+   "orden_edad": 36,
+   "genero": "Niña",
+   "fecha": "2026-10-23"
+  },
+  {
+   "id": "322d498ad319",
+   "foto": "fotos/322d498ad319.jpg",
+   "nombre": "Licra Vigoss",
+   "precio": 9.99,
+   "edad": "5T",
+   "orden_edad": 60,
+   "genero": "Niña",
+   "fecha": "2026-10-23"
+  },
+  {
+   "id": "55cb0acd3e17",
+   "foto": "fotos/55cb0acd3e17.jpg",
+   "nombre": "Conjunto Cat y Jack",
+   "precio": 14.99,
+   "edad": "5T",
+   "orden_edad": 60,
+   "genero": "Niña",
+   "fecha": "2026-10-23"
+  },
+  {
+   "id": "2c3729dac6f4",
+   "foto": "fotos/2c3729dac6f4.jpg",
+   "nombre": "Short ok!e dokie",
+   "precio": 9.99,
+   "edad": "3T",
+   "orden_edad": 36,
+   "genero": "Niña",
+   "fecha": "2026-10-23"
+  },
+  {
+   "id": "3d452a5776a4",
+   "foto": "fotos/3d452a5776a4.jpg",
+   "nombre": "Short de lona D & F",
+   "precio": 12,
+   "edad": "5",
+   "orden_edad": 60,
+   "genero": "Niña",
+   "fecha": "2026-10-23"
+  },
+  {
+   "id": "cdf889b47b0a",
+   "foto": "fotos/cdf889b47b0a.jpg",
+   "nombre": "Licra Xersion",
+   "precio": 9.99,
+   "edad": "XXS 4/5",
+   "orden_edad": 72,
+   "genero": "Niña",
+   "fecha": "2026-10-23"
+  },
+  {
+   "id": "f302cfe09359",
+   "foto": "fotos/f302cfe09359.jpg",
+   "nombre": "Conjunto Nannette",
+   "precio": 12.99,
+   "edad": "3T",
+   "orden_edad": 36,
+   "genero": "Niña",
+   "fecha": "2026-10-23"
+  },
+  {
+   "id": "e86a219635cd",
+   "foto": "fotos/e86a219635cd.jpg",
+   "nombre": "Licra Vigoss",
+   "precio": 9.99,
+   "edad": "4T",
+   "orden_edad": 48,
+   "genero": "Niña",
+   "fecha": "2026-10-23"
+  },
+  {
+   "id": "77c361fb54c8",
+   "foto": "fotos/77c361fb54c8.jpg",
+   "nombre": "Short Carter's",
+   "precio": 9.99,
+   "edad": "18M",
+   "orden_edad": 18,
+   "genero": "Niña",
+   "fecha": "2026-10-23"
+  },
+  {
+   "id": "00948b44cc9f",
+   "foto": "fotos/00948b44cc9f.jpg",
+   "nombre": "Mameluco okie dokie",
+   "precio": 9.99,
+   "edad": "3M",
+   "orden_edad": 3,
+   "genero": "Niña",
+   "fecha": "2026-10-23"
+  },
+  {
+   "id": "037664d366ac",
+   "foto": "fotos/037664d366ac.jpg",
+   "nombre": "Short okie dokie",
+   "precio": 9.99,
+   "edad": "12M",
+   "orden_edad": 12,
+   "genero": "Niña",
+   "fecha": "2026-10-23"
+  },
+  {
+   "id": "52f8919ff483",
+   "foto": "fotos/52f8919ff483.jpg",
+   "nombre": "Short okie dokie",
+   "precio": 9.99,
+   "edad": "NB",
+   "orden_edad": 0,
+   "genero": "Niña",
+   "fecha": "2026-10-23"
+  },
+  {
+   "id": "038150437ff9",
+   "foto": "fotos/038150437ff9.jpg",
+   "nombre": "Mameluco okie dokie",
+   "precio": 9.99,
+   "edad": "NB",
+   "orden_edad": 0,
+   "genero": "Niña",
+   "fecha": "2026-10-23"
+  },
+  {
+   "id": "3759e4c626ea",
+   "foto": "fotos/3759e4c626ea.jpg",
+   "nombre": "Short okie dokie",
+   "precio": 9.99,
+   "edad": "12M",
+   "orden_edad": 12,
+   "genero": "Niña",
+   "fecha": "2026-10-23"
+  },
+  {
+   "id": "c878ee67c3af",
+   "foto": "fotos/c878ee67c3af.jpg",
+   "nombre": "Short okie dokie",
+   "precio": 9.99,
+   "edad": "3M",
+   "orden_edad": 3,
+   "genero": "Niña",
+   "fecha": "2026-10-23"
+  },
+  {
+   "id": "07947327c5e1",
+   "foto": "fotos/07947327c5e1.jpg",
+   "nombre": "Mameluco Rockets of awesome",
+   "precio": 9.99,
+   "edad": "3-6M",
+   "orden_edad": 3,
+   "genero": "Niña",
+   "fecha": "2026-10-23"
+  },
+  {
+   "id": "cf2d55ef276f",
+   "foto": "fotos/cf2d55ef276f.jpg",
+   "nombre": "Mameluco okie dokie",
+   "precio": 9.99,
+   "edad": "3M",
+   "orden_edad": 3,
+   "genero": "Niña",
+   "fecha": "2026-10-23"
+  },
+  {
+   "id": "517952ab8cf3",
+   "foto": "fotos/517952ab8cf3.jpg",
+   "nombre": "Mameluco okie dokie",
+   "precio": 9.99,
+   "edad": "3M",
+   "orden_edad": 3,
+   "genero": "Niña",
+   "fecha": "2026-10-23"
+  },
+  {
+   "id": "d40d5a5f610c",
+   "foto": "fotos/d40d5a5f610c.jpg",
+   "nombre": "Mameluco okie dokie",
+   "precio": 9.99,
+   "edad": "5-8 lbs",
+   "orden_edad": 0,
+   "genero": "Niña",
+   "fecha": "2026-10-23"
+  },
+  {
+   "id": "4cfd97b3ad0c",
+   "foto": "fotos/4cfd97b3ad0c.jpg",
+   "nombre": "Mameluco Carter's",
+   "precio": 9.99,
+   "edad": "12M",
+   "orden_edad": 12,
+   "genero": "Niña",
+   "fecha": "2026-10-23"
+  },
+  {
+   "id": "fe97ff6e35c0",
+   "foto": "fotos/fe97ff6e35c0.jpg",
+   "nombre": "Pantalón Carter's",
+   "precio": 9.99,
+   "edad": "18M",
+   "orden_edad": 18,
+   "genero": "Niña",
+   "fecha": "2026-10-23"
+  },
+  {
+   "id": "aa792491ec6d",
+   "foto": "fotos/aa792491ec6d.jpg",
+   "nombre": "Mameluco Hope & Wonder",
+   "precio": 9.99,
+   "edad": "NB",
+   "orden_edad": 0,
+   "genero": "Niña",
+   "fecha": "2026-10-23"
+  },
+  {
+   "id": "bcb86c93ff9c",
+   "foto": "fotos/bcb86c93ff9c.jpg",
+   "nombre": "Pantalón okie dokie",
+   "precio": 9.99,
+   "edad": "12M",
+   "orden_edad": 12,
+   "genero": "Niña",
+   "fecha": "2026-10-23"
+  },
+  {
+   "id": "e909b6ebbe5d",
+   "foto": "fotos/e909b6ebbe5d.jpg",
+   "nombre": "Body manga larga Carter's",
+   "precio": 9.99,
+   "edad": "18M",
+   "orden_edad": 18,
+   "genero": "Niña",
+   "fecha": "2026-10-23"
+  },
+  {
+   "id": "28b4bcda18d7",
+   "foto": "fotos/28b4bcda18d7.jpg",
+   "nombre": "Short okie dokie",
+   "precio": 9.99,
+   "edad": "12M",
+   "orden_edad": 12,
+   "genero": "Niña",
+   "fecha": "2026-10-23"
+  },
+  {
+   "id": "91f3dd0ec792",
+   "foto": "fotos/91f3dd0ec792.jpg",
+   "nombre": "Camisa okie dokie",
+   "precio": 9.99,
+   "edad": "12M",
+   "orden_edad": 12,
+   "genero": "Niña",
+   "fecha": "2026-10-23"
+  },
+  {
+   "id": "3351d5497927",
+   "foto": "fotos/3351d5497927.jpg",
+   "nombre": "Conjunto body con short okie dokie",
+   "precio": 9.99,
+   "edad": "3M",
+   "orden_edad": 3,
+   "genero": "Niña",
+   "fecha": "2026-10-23"
+  },
+  {
+   "id": "3860aa405795",
+   "foto": "fotos/3860aa405795.jpg",
+   "nombre": "Sudadera Carter's",
+   "precio": 12.99,
+   "edad": "6M",
+   "orden_edad": 6,
+   "genero": "Niña",
+   "fecha": "2026-10-23"
+  },
+  {
+   "id": "4caf6482f715",
+   "foto": "fotos/4caf6482f715.jpg",
+   "nombre": "Short okie dokie",
+   "precio": 9.99,
+   "edad": "12M",
+   "orden_edad": 12,
+   "genero": "Niña",
+   "fecha": "2026-10-23"
+  },
+  {
+   "id": "a964501121fb",
+   "foto": "fotos/a964501121fb.jpg",
+   "nombre": "Body mangas largas okie dokie",
+   "precio": 9.99,
+   "edad": "3M",
+   "orden_edad": 3,
+   "genero": "Niña",
+   "fecha": "2026-10-23"
+  },
+  {
+   "id": "61c1664a7c7a",
+   "foto": "fotos/61c1664a7c7a.jpg",
+   "nombre": "Body manga corta okie dokie",
+   "precio": 9.99,
+   "edad": "9M",
+   "orden_edad": 9,
+   "genero": "Niña",
+   "fecha": "2026-10-23"
+  },
+  {
+   "id": "d60a0cebe9a2",
+   "foto": "fotos/d60a0cebe9a2.jpg",
+   "nombre": "Camisa okie dokie",
+   "precio": 9.99,
+   "edad": "12M",
+   "orden_edad": 12,
+   "genero": "Niña",
+   "fecha": "2026-10-23"
+  },
+  {
+   "id": "02d33c2e5b2f",
+   "foto": "fotos/02d33c2e5b2f.jpg",
+   "nombre": "Short okie dokie",
+   "precio": 9.99,
+   "edad": "18M",
+   "orden_edad": 18,
+   "genero": "Niña",
+   "fecha": "2026-10-23"
+  },
+  {
+   "id": "429b35d2e7b9",
+   "foto": "fotos/429b35d2e7b9.jpg",
+   "nombre": "Mameluco okie dokie",
+   "precio": 9.99,
+   "edad": "3M",
+   "orden_edad": 3,
+   "genero": "Niña",
+   "fecha": "2026-10-23"
+  },
+  {
+   "id": "961457726f9f",
+   "foto": "fotos/961457726f9f.jpg",
+   "nombre": "Short okie dokie",
+   "precio": 9.99,
+   "edad": "18M",
+   "orden_edad": 18,
+   "genero": "Niña",
+   "fecha": "2026-10-23"
+  },
+  {
+   "id": "180211839876",
+   "foto": "fotos/180211839876.jpg",
+   "nombre": "Short okie dokie",
+   "precio": 9.99,
+   "edad": "NB",
+   "orden_edad": 0,
+   "genero": "Niña",
+   "fecha": "2026-10-23"
+  },
+  {
+   "id": "9199801a5095",
+   "foto": "fotos/9199801a5095.jpg",
+   "nombre": "Body manga corta PatPat",
+   "precio": 12.99,
+   "edad": "3-6M",
+   "orden_edad": 3,
+   "genero": "Niña",
+   "fecha": "2026-10-23"
+  },
+  {
+   "id": "9afa48bd6197",
+   "foto": "fotos/9afa48bd6197.jpg",
+   "nombre": "Conjunto body con short okie dokie",
+   "precio": 10,
+   "edad": "9M",
+   "orden_edad": 9,
+   "genero": "Niña",
+   "fecha": "2026-10-23"
   }
  ]
 }
