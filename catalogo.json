@@ -4,81 +4,57 @@
   "whatsapp": "",
   "pedidos_url": "https://script.google.com/macros/s/AKfycbze9pGuFu_A5LA1AfAz-Dy5n03pqIazQ-9LBZEMwg_Cye95tZxk5R5_-3jiORfjHgLwYQ/exec"
  },
- "actualizado": "2026-10-21",
+ "actualizado": "2026-10-23",
  "piezas": [
   {
-   "id": "fd8b8e0f4da5",
-   "foto": "fotos/fd8b8e0f4da5.jpg",
-   "nombre": "Blusa ok!e dokie",
-   "precio": 6.99,
+   "id": "388a6563594f",
+   "foto": "fotos/388a6563594f.jpg",
+   "nombre": "Conjunto de pijama peyton & parker",
+   "precio": 12.99,
    "edad": "2T",
    "orden_edad": 24,
-   "genero": "Niña",
-   "fecha": "2026-10-19",
-   "origen": "2T/Niña/Blusa ok!e dokie 6.99.jpg"
-  },
-  {
-   "id": "b58eddd73218",
-   "foto": "fotos/b58eddd73218.jpg",
-   "nombre": "Conjunto nannette",
-   "precio": 12.99,
-   "edad": "3T",
-   "orden_edad": 36,
-   "genero": "Niña",
-   "fecha": "2026-10-19",
-   "origen": "3T/Niña/Conjunto Nannette 12.99.jpg"
-  },
-  {
-   "id": "f99ae3565530",
-   "foto": "fotos/f99ae3565530.jpg",
-   "nombre": "Blusa thereabouts",
-   "precio": 7.0,
-   "edad": "4-5T",
-   "orden_edad": 48,
-   "genero": "Niña",
-   "fecha": "2026-10-19",
-   "origen": "4-5T/Niña/Blusa Thereabouts 7.jpg"
-  },
-  {
-   "id": "ecec5eae9ba6",
-   "foto": "fotos/ecec5eae9ba6.jpg",
-   "nombre": "Mameluco okie dokie",
-   "precio": 9.99,
-   "edad": "0-3 meses",
-   "orden_edad": 0,
    "genero": "Niño",
-   "fecha": "2026-10-21"
+   "fecha": "2026-10-23"
   },
   {
-   "id": "3196982ee659",
-   "foto": "fotos/3196982ee659.jpg",
-   "nombre": "Short okie dokie",
-   "precio": 9.99,
-   "edad": "3-6 meses",
-   "orden_edad": 3,
+   "id": "18e14dd3d268",
+   "foto": "fotos/18e14dd3d268.jpg",
+   "nombre": "Camisa Adidas",
+   "precio": 11.99,
+   "edad": "2T",
+   "orden_edad": 24,
    "genero": "Niño",
-   "fecha": "2026-10-21",
-   "estado": "apartada"
+   "fecha": "2026-10-23"
   },
   {
-   "id": "b453842f08b6",
-   "foto": "fotos/b453842f08b6.jpg",
-   "nombre": "Short V·Gold",
-   "precio": 10.99,
-   "edad": "6-7 años",
-   "orden_edad": 72,
-   "genero": "Niña",
-   "fecha": "2026-10-21"
-  },
-  {
-   "id": "1a381feed976",
-   "foto": "fotos/1a381feed976.jpg",
-   "nombre": "Short Vigoss",
+   "id": "38fb58a77cd8",
+   "foto": "fotos/38fb58a77cd8.jpg",
+   "nombre": "Short Thereabouts",
    "precio": 12.99,
-   "edad": "16T",
-   "orden_edad": 192,
-   "genero": "Niña",
-   "fecha": "2026-10-21"
+   "edad": "2T",
+   "orden_edad": 24,
+   "genero": "Niño",
+   "fecha": "2026-10-23"
+  },
+  {
+   "id": "db5f0f287ad3",
+   "foto": "fotos/db5f0f287ad3.jpg",
+   "nombre": "Short Thereabouts",
+   "precio": 15.99,
+   "edad": "2T",
+   "orden_edad": 24,
+   "genero": "Niño",
+   "fecha": "2026-10-23"
+  },
+  {
+   "id": "2388273718e3",
+   "foto": "fotos/2388273718e3.jpg",
+   "nombre": "Camisa Grom",
+   "precio": 9.99,
+   "edad": "2T",
+   "orden_edad": 24,
+   "genero": "Niño",
+   "fecha": "2026-10-23"
   }
  ]
 }
