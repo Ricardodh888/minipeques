@@ -4,7 +4,7 @@
   "whatsapp": "",
   "pedidos_url": "https://script.google.com/macros/s/AKfycbze9pGuFu_A5LA1AfAz-Dy5n03pqIazQ-9LBZEMwg_Cye95tZxk5R5_-3jiORfjHgLwYQ/exec"
  },
- "actualizado": "2026-10-26",
+ "actualizado": "2026-10-27",
  "piezas": [
   {
    "id": "388a6563594f",
@@ -2065,6 +2065,516 @@
    "orden_edad": 168,
    "genero": "Niño",
    "fecha": "2026-10-26"
+  },
+  {
+   "id": "518237ad1e4f",
+   "foto": "fotos/518237ad1e4f.jpg",
+   "nombre": "Camiseta nike",
+   "precio": 9.99,
+   "edad": "M 10/12",
+   "orden_edad": 120,
+   "genero": "Niño",
+   "fecha": "2026-10-27"
+  },
+  {
+   "id": "0da14de965a2",
+   "foto": "fotos/0da14de965a2.jpg",
+   "nombre": "Short thereabouts",
+   "precio": 11.99,
+   "edad": "L 10/12",
+   "orden_edad": 132,
+   "genero": "Niño",
+   "fecha": "2026-10-27"
+  },
+  {
+   "id": "c5954bfbc9d7",
+   "foto": "fotos/c5954bfbc9d7.jpg",
+   "nombre": "Pantalón thereabouts",
+   "precio": 12.99,
+   "edad": "M 8/10",
+   "orden_edad": 108,
+   "genero": "Niño",
+   "fecha": "2026-10-27"
+  },
+  {
+   "id": "1de4b0fe0120",
+   "foto": "fotos/1de4b0fe0120.jpg",
+   "nombre": "Camiseta grom",
+   "precio": 9.99,
+   "edad": "L 10/12",
+   "orden_edad": 132,
+   "genero": "Niño",
+   "fecha": "2026-10-27"
+  },
+  {
+   "id": "806f62546e4b",
+   "foto": "fotos/806f62546e4b.jpg",
+   "nombre": "Camiseta adidas",
+   "precio": 11.99,
+   "edad": "M 8/10",
+   "orden_edad": 108,
+   "genero": "Niño",
+   "fecha": "2026-10-27"
+  },
+  {
+   "id": "8594289fec81",
+   "foto": "fotos/8594289fec81.jpg",
+   "nombre": "Short travis mathew",
+   "precio": 11.99,
+   "edad": "L 10/12",
+   "orden_edad": 132,
+   "genero": "Niño",
+   "fecha": "2026-10-27"
+  },
+  {
+   "id": "485d13dc57f8",
+   "foto": "fotos/485d13dc57f8.jpg",
+   "nombre": "Short thereabouts",
+   "precio": 11.99,
+   "edad": "M 8/10",
+   "orden_edad": 108,
+   "genero": "Niño",
+   "fecha": "2026-10-27"
+  },
+  {
+   "id": "3e855a53a3ca",
+   "foto": "fotos/3e855a53a3ca.jpg",
+   "nombre": "Camiseta grom",
+   "precio": 9.99,
+   "edad": "L 10/12",
+   "orden_edad": 132,
+   "genero": "Niño",
+   "fecha": "2026-10-27"
+  },
+  {
+   "id": "6252abfcdebe",
+   "foto": "fotos/6252abfcdebe.jpg",
+   "nombre": "Short IZOD",
+   "precio": 11.99,
+   "edad": "L 10/12",
+   "orden_edad": 132,
+   "genero": "Niño",
+   "fecha": "2026-10-27"
+  },
+  {
+   "id": "1b048f4e4c57",
+   "foto": "fotos/1b048f4e4c57.jpg",
+   "nombre": "Short umbro",
+   "precio": 9.99,
+   "edad": "L 10/12",
+   "orden_edad": 132,
+   "genero": "Niño",
+   "fecha": "2026-10-27"
+  },
+  {
+   "id": "5bcc9511caef",
+   "foto": "fotos/5bcc9511caef.jpg",
+   "nombre": "Pantalón thereabouts",
+   "precio": 12.99,
+   "edad": "S 6/7",
+   "orden_edad": 84,
+   "genero": "Niño",
+   "fecha": "2026-10-27"
+  },
+  {
+   "id": "e519490bdba1",
+   "foto": "fotos/e519490bdba1.jpg",
+   "nombre": "Short billabonic",
+   "precio": 9.99,
+   "edad": "XS 4/5",
+   "orden_edad": 72,
+   "genero": "Niño",
+   "fecha": "2026-10-27"
+  },
+  {
+   "id": "de30b4fbf40c",
+   "foto": "fotos/de30b4fbf40c.jpg",
+   "nombre": "Short umbro",
+   "precio": 9.99,
+   "edad": "M 8/10",
+   "orden_edad": 108,
+   "genero": "Niño",
+   "fecha": "2026-10-27"
+  },
+  {
+   "id": "e647c1f426ad",
+   "foto": "fotos/e647c1f426ad.jpg",
+   "nombre": "Suéter adidas",
+   "precio": 14.99,
+   "edad": "S 6/7",
+   "orden_edad": 84,
+   "genero": "Niño",
+   "fecha": "2026-10-27"
+  },
+  {
+   "id": "743001339381",
+   "foto": "fotos/743001339381.jpg",
+   "nombre": "Camisa TFW",
+   "precio": 12.99,
+   "edad": "XL 14/16",
+   "orden_edad": 168,
+   "genero": "Niño",
+   "fecha": "2026-10-27"
+  },
+  {
+   "id": "76b60ad1474c",
+   "foto": "fotos/76b60ad1474c.jpg",
+   "nombre": "Short thereabouts",
+   "precio": 10.99,
+   "edad": "S 6/7",
+   "orden_edad": 84,
+   "genero": "Niño",
+   "fecha": "2026-10-27"
+  },
+  {
+   "id": "254383da08d0",
+   "foto": "fotos/254383da08d0.jpg",
+   "nombre": "Camisa Grom",
+   "precio": 9.99,
+   "edad": "M 8/10",
+   "orden_edad": 108,
+   "genero": "Niño",
+   "fecha": "2026-10-27"
+  },
+  {
+   "id": "bc0c93b6d835",
+   "foto": "fotos/bc0c93b6d835.jpg",
+   "nombre": "Pantalón for all mankind",
+   "precio": 13.99,
+   "edad": "S 6/7 años",
+   "orden_edad": 84,
+   "genero": "Niño",
+   "fecha": "2026-10-27"
+  },
+  {
+   "id": "fdc2ec759a04",
+   "foto": "fotos/fdc2ec759a04.jpg",
+   "nombre": "Chaleco Van Heusen",
+   "precio": 10.99,
+   "edad": "M 8/10",
+   "orden_edad": 108,
+   "genero": "Niño",
+   "fecha": "2026-10-27"
+  },
+  {
+   "id": "be9512d33e75",
+   "foto": "fotos/be9512d33e75.jpg",
+   "nombre": "Short xersion",
+   "precio": 10.99,
+   "edad": "L 10/12",
+   "orden_edad": 132,
+   "genero": "Niño",
+   "fecha": "2026-10-27"
+  },
+  {
+   "id": "4c009bb24f25",
+   "foto": "fotos/4c009bb24f25.jpg",
+   "nombre": "Camiseta Levi's",
+   "precio": 9.99,
+   "edad": "L 10/12",
+   "orden_edad": 132,
+   "genero": "Niño",
+   "fecha": "2026-10-27"
+  },
+  {
+   "id": "6e221e3f1982",
+   "foto": "fotos/6e221e3f1982.jpg",
+   "nombre": "Pantalón Thereabouts",
+   "precio": 12.99,
+   "edad": "XL 14/16",
+   "orden_edad": 168,
+   "genero": "Niño",
+   "fecha": "2026-10-27"
+  },
+  {
+   "id": "737278ae6735",
+   "foto": "fotos/737278ae6735.jpg",
+   "nombre": "Short travis mathew",
+   "precio": 11.99,
+   "edad": "L 10/12",
+   "orden_edad": 132,
+   "genero": "Niño",
+   "fecha": "2026-10-27"
+  },
+  {
+   "id": "4d8db102c1fb",
+   "foto": "fotos/4d8db102c1fb.jpg",
+   "nombre": "Short Sticks Stones",
+   "precio": 10.99,
+   "edad": "XS 5/6",
+   "orden_edad": 72,
+   "genero": "Niño",
+   "fecha": "2026-10-27"
+  },
+  {
+   "id": "8cf90f7c1a8a",
+   "foto": "fotos/8cf90f7c1a8a.jpg",
+   "nombre": "Suéter New Balance",
+   "precio": 24.99,
+   "edad": "XL 14/16",
+   "orden_edad": 168,
+   "genero": "Niño",
+   "fecha": "2026-10-27"
+  },
+  {
+   "id": "c8b953593607",
+   "foto": "fotos/c8b953593607.jpg",
+   "nombre": "Conjunto Eddie Bauer",
+   "precio": 14.99,
+   "edad": "S 6/7",
+   "orden_edad": 84,
+   "genero": "Niño",
+   "fecha": "2026-10-27"
+  },
+  {
+   "id": "933ff9d2de7d",
+   "foto": "fotos/933ff9d2de7d.jpg",
+   "nombre": "Pantalón adidas",
+   "precio": 11.99,
+   "edad": "S 6/7",
+   "orden_edad": 84,
+   "genero": "Niño",
+   "fecha": "2026-10-27"
+  },
+  {
+   "id": "5965d82393eb",
+   "foto": "fotos/5965d82393eb.jpg",
+   "nombre": "Short thereabouts",
+   "precio": 11.99,
+   "edad": "L 10/12",
+   "orden_edad": 132,
+   "genero": "Niño",
+   "fecha": "2026-10-27"
+  },
+  {
+   "id": "9868263e9958",
+   "foto": "fotos/9868263e9958.jpg",
+   "nombre": "Camiseta Tootsie Roll",
+   "precio": 9.99,
+   "edad": "M 8/10",
+   "orden_edad": 108,
+   "genero": "Niño",
+   "fecha": "2026-10-27"
+  },
+  {
+   "id": "56371cd0131b",
+   "foto": "fotos/56371cd0131b.jpg",
+   "nombre": "Camisa sticks & stones",
+   "precio": 10.99,
+   "edad": "XS 5/6",
+   "orden_edad": 72,
+   "genero": "Niño",
+   "fecha": "2026-10-27"
+  },
+  {
+   "id": "d4b65132c8a1",
+   "foto": "fotos/d4b65132c8a1.jpg",
+   "nombre": "Pantalón Izod",
+   "precio": 13.99,
+   "edad": "2",
+   "orden_edad": 24,
+   "genero": "Niña",
+   "fecha": "2026-10-27"
+  },
+  {
+   "id": "d62ffc9abefe",
+   "foto": "fotos/d62ffc9abefe.jpg",
+   "nombre": "Short thereabouts",
+   "precio": 9.99,
+   "edad": "S 7/8",
+   "orden_edad": 84,
+   "genero": "Niña",
+   "fecha": "2026-10-27"
+  },
+  {
+   "id": "01b3df1c72e3",
+   "foto": "fotos/01b3df1c72e3.jpg",
+   "nombre": "Blusa adidas",
+   "precio": 9.99,
+   "edad": "XL",
+   "orden_edad": 168,
+   "genero": "Niña",
+   "fecha": "2026-10-27"
+  },
+  {
+   "id": "ead5e4d918f2",
+   "foto": "fotos/ead5e4d918f2.jpg",
+   "nombre": "Licra thereabouts",
+   "precio": 9.99,
+   "edad": "S 7/8",
+   "orden_edad": 84,
+   "genero": "Niña",
+   "fecha": "2026-10-27"
+  },
+  {
+   "id": "d81a4719a283",
+   "foto": "fotos/d81a4719a283.jpg",
+   "nombre": "Blusa Thereabouts",
+   "precio": 11.99,
+   "edad": "L 14T",
+   "orden_edad": 168,
+   "genero": "Niña",
+   "fecha": "2026-10-27"
+  },
+  {
+   "id": "52cd0c66f492",
+   "foto": "fotos/52cd0c66f492.jpg",
+   "nombre": "Camisa sin mangas Xersion",
+   "precio": 9.99,
+   "edad": "13-14+ años",
+   "orden_edad": 156,
+   "genero": "Niña",
+   "fecha": "2026-10-27"
+  },
+  {
+   "id": "5f97e5f3e2fd",
+   "foto": "fotos/5f97e5f3e2fd.jpg",
+   "nombre": "Licra xersion",
+   "precio": 11.99,
+   "edad": "15 - 16+ años",
+   "orden_edad": 180,
+   "genero": "Niña",
+   "fecha": "2026-10-27"
+  },
+  {
+   "id": "1ddb5da485b3",
+   "foto": "fotos/1ddb5da485b3.jpg",
+   "nombre": "Conjunto Peyton & Parker",
+   "precio": 14.99,
+   "edad": "XS 6T",
+   "orden_edad": 72,
+   "genero": "Niña",
+   "fecha": "2026-10-27"
+  },
+  {
+   "id": "17bb42eac0fe",
+   "foto": "fotos/17bb42eac0fe.jpg",
+   "nombre": "Vestido Knit Works",
+   "precio": 16.99,
+   "edad": "16T",
+   "orden_edad": 192,
+   "genero": "Niña",
+   "fecha": "2026-10-27"
+  },
+  {
+   "id": "6bde956f52a1",
+   "foto": "fotos/6bde956f52a1.jpg",
+   "nombre": "Licra faded glory",
+   "precio": 9.99,
+   "edad": "M 7/10",
+   "orden_edad": 108,
+   "genero": "Niña",
+   "fecha": "2026-10-27"
+  },
+  {
+   "id": "be1526fda599",
+   "foto": "fotos/be1526fda599.jpg",
+   "nombre": "Short Xersion",
+   "precio": 9.99,
+   "edad": "S 7/8",
+   "orden_edad": 84,
+   "genero": "Niña",
+   "fecha": "2026-10-27"
+  },
+  {
+   "id": "4d7219b965ad",
+   "foto": "fotos/4d7219b965ad.jpg",
+   "nombre": "Blusa thereabouts",
+   "precio": 11.99,
+   "edad": "S 7/8",
+   "orden_edad": 84,
+   "genero": "Niña",
+   "fecha": "2026-10-27"
+  },
+  {
+   "id": "c9fb0508ea76",
+   "foto": "fotos/c9fb0508ea76.jpg",
+   "nombre": "Short land's end",
+   "precio": 9.99,
+   "edad": "6-7 T",
+   "orden_edad": 72,
+   "genero": "Niña",
+   "fecha": "2026-10-27"
+  },
+  {
+   "id": "bf3f5d4b98d9",
+   "foto": "fotos/bf3f5d4b98d9.jpg",
+   "nombre": "Suéter Thereabouts",
+   "precio": 14.99,
+   "edad": "20T",
+   "orden_edad": 240,
+   "genero": "Niña",
+   "fecha": "2026-10-27"
+  },
+  {
+   "id": "e0849c2f71ae",
+   "foto": "fotos/e0849c2f71ae.jpg",
+   "nombre": "Licra Vigoss",
+   "precio": 12.99,
+   "edad": "16 años",
+   "orden_edad": 192,
+   "genero": "Niña",
+   "fecha": "2026-10-27"
+  },
+  {
+   "id": "5d9ebb2b104e",
+   "foto": "fotos/5d9ebb2b104e.jpg",
+   "nombre": "Camisa manga larga Young Hearts",
+   "precio": 10.99,
+   "edad": "4T",
+   "orden_edad": 48,
+   "genero": "Niña",
+   "fecha": "2026-10-27"
+  },
+  {
+   "id": "4156be696cc7",
+   "foto": "fotos/4156be696cc7.jpg",
+   "nombre": "Short Thereabouts",
+   "precio": 9.99,
+   "edad": "S 7/8",
+   "orden_edad": 84,
+   "genero": "Niña",
+   "fecha": "2026-10-27"
+  },
+  {
+   "id": "fa4cd3afde62",
+   "foto": "fotos/fa4cd3afde62.jpg",
+   "nombre": "Short xersion",
+   "precio": 9.99,
+   "edad": "XL 16",
+   "orden_edad": 192,
+   "genero": "Niña",
+   "fecha": "2026-10-27"
+  },
+  {
+   "id": "a812b39886aa",
+   "foto": "fotos/a812b39886aa.jpg",
+   "nombre": "Camisa umbro",
+   "precio": 9.99,
+   "edad": "8-10T",
+   "orden_edad": 96,
+   "genero": "Niña",
+   "fecha": "2026-10-27"
+  },
+  {
+   "id": "f6a42a488045",
+   "foto": "fotos/f6a42a488045.jpg",
+   "nombre": "Short Vigoss",
+   "precio": 11.99,
+   "edad": "8",
+   "orden_edad": 96,
+   "genero": "Niña",
+   "fecha": "2026-10-27"
+  },
+  {
+   "id": "adbf7e715176",
+   "foto": "fotos/adbf7e715176.jpg",
+   "nombre": "Suéter",
+   "precio": 9.99,
+   "edad": "8-10T",
+   "orden_edad": 96,
+   "genero": "Niña",
+   "fecha": "2026-10-27"
   }
  ]
 }
