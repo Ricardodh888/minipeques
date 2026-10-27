@@ -410,14 +410,14 @@ details.como[open] .steps { margin-top: 14px; }
     const byGen = all.filter((p) => S.gen === '*' || p.genero === S.gen);
     const byEdad = all.filter((p) => enEtapa(p) && (S.edad === '*' || p.edad === S.edad));
     const edades = []; const seen = {};
-    all.filter(enEtapa).sort((a, b) => a.orden_edad - b.orden_edad || a.edad.localeCompare(b.edad)).forEach((p) => { if (!seen[p.edad]) { seen[p.edad] = 1; edades.push(p.edad); } });
+    byGen.filter(enEtapa).sort((a, b) => a.orden_edad - b.orden_edad || a.edad.localeCompare(b.edad)).forEach((p) => { if (!seen[p.edad]) { seen[p.edad] = 1; edades.push(p.edad); } });
     const pz = (n) => n + (n === 1 ? ' pieza' : ' piezas');
-    const ets = ETAPAS.filter((e) => all.some((p) => etapaDe(p) === e[0]));
+    const ets = ETAPAS.filter((e) => byGen.some((p) => etapaDe(p) === e[0]));
     $('#fEtapa').style.setProperty('--nEt', ets.length || 1);
     $('#fEtapa').innerHTML = ets.map((e) => { const n = byGen.filter((p) => etapaDe(p) === e[0]).length; return '<button class="chip" type="button" data-etapa="' + e[0] + '" aria-pressed="' + (S.etapa === e[0]) + '">' + esc(e[1]) + (e[2] ? '<span class="sub2">' + esc(e[2]) + '</span>' : '') + '</button>'; }).join('');
     if (S.etapa === '*' || edades.length < 2) $('#fEdad').innerHTML = '';
     else { chips($('#fEdad'), [['*', 'Todas', byGen.filter(enEtapa).length]].concat(edades.map((e) => [e, e, byGen.filter((p) => p.edad === e).length])), S.edad, 'edad'); }
-    chips($('#fGen'), [['*', 'Todos', byEdad.length]].concat(GEN.filter((g) => all.some((p) => p.genero === g)).map((g) => [g, g, byEdad.filter((p) => p.genero === g).length])), S.gen, 'gen');
+    chips($('#fGen'), [['*', 'Todos', byEdad.length]].concat(GEN.filter((g) => byEdad.some((p) => p.genero === g)).map((g) => [g, g, byEdad.filter((p) => p.genero === g).length])), S.gen, 'gen');
     const nq = (t) => String(t || '').normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
     const q = nq(S.q).trim();
     S.list = all.filter((p) => enEtapa(p) && (S.edad === '*' || p.edad === S.edad) && (S.gen === '*' || p.genero === S.gen) && (!q || nq(titulo(p) + ' ' + p.edad + ' ' + p.genero).includes(q)));
