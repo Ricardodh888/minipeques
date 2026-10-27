@@ -2575,6 +2575,416 @@
    "orden_edad": 96,
    "genero": "Niña",
    "fecha": "2026-10-27"
+  },
+  {
+   "id": "4ce9bc0eac8c",
+   "foto": "fotos/4ce9bc0eac8c.jpg",
+   "nombre": "Camisa manga larga Thereabouts",
+   "precio": 9.99,
+   "edad": "S 6/8",
+   "orden_edad": 84,
+   "genero": "Niña",
+   "fecha": "2026-10-27"
+  },
+  {
+   "id": "9b645b0a0994",
+   "foto": "fotos/9b645b0a0994.jpg",
+   "nombre": "Bañador Roxy",
+   "precio": 5.99,
+   "edad": "L 14/16",
+   "orden_edad": 168,
+   "genero": "Niña",
+   "fecha": "2026-10-27"
+  },
+  {
+   "id": "7a4b509d1f76",
+   "foto": "fotos/7a4b509d1f76.jpg",
+   "nombre": "Licra Vigoss",
+   "precio": 10.99,
+   "edad": "XL 14/16",
+   "orden_edad": 168,
+   "genero": "Niña",
+   "fecha": "2026-10-27"
+  },
+  {
+   "id": "43862c6f3a01",
+   "foto": "fotos/43862c6f3a01.jpg",
+   "nombre": "Skinny jean Arizona Jean Co'",
+   "precio": 13.99,
+   "edad": "Sin edad",
+   "orden_edad": 9999,
+   "genero": "Niña",
+   "fecha": "2026-10-27"
+  },
+  {
+   "id": "dc1691ea66d1",
+   "foto": "fotos/dc1691ea66d1.jpg",
+   "nombre": "Pantalón thereabouts",
+   "precio": 12.99,
+   "edad": "S 6/8",
+   "orden_edad": 84,
+   "genero": "Niña",
+   "fecha": "2026-10-27"
+  },
+  {
+   "id": "f65187651fd4",
+   "foto": "fotos/f65187651fd4.jpg",
+   "nombre": "Blusa Thereabouts",
+   "precio": 10.99,
+   "edad": "3XL 18/20+",
+   "orden_edad": 216,
+   "genero": "Niña",
+   "fecha": "2026-10-27"
+  },
+  {
+   "id": "268a4ce07d49",
+   "foto": "fotos/268a4ce07d49.jpg",
+   "nombre": "Blusa Thereabouts",
+   "precio": 10.99,
+   "edad": "XXL 18/20",
+   "orden_edad": 216,
+   "genero": "Niña",
+   "fecha": "2026-10-27"
+  },
+  {
+   "id": "35aa9bf0a3ea",
+   "foto": "fotos/35aa9bf0a3ea.jpg",
+   "nombre": "Camisa Lands' End",
+   "precio": 9.99,
+   "edad": "M 10/12",
+   "orden_edad": 120,
+   "genero": "Niña",
+   "fecha": "2026-10-27"
+  },
+  {
+   "id": "1725e2c21d5b",
+   "foto": "fotos/1725e2c21d5b.jpg",
+   "nombre": "Camisa manga larga Thereabouts",
+   "precio": 9.99,
+   "edad": "L 14/16",
+   "orden_edad": 168,
+   "genero": "Niña",
+   "fecha": "2026-10-27"
+  },
+  {
+   "id": "f5a8d7787af1",
+   "foto": "fotos/f5a8d7787af1.jpg",
+   "nombre": "Camisa polo IZOD",
+   "precio": 10.99,
+   "edad": "L 10/12",
+   "orden_edad": 132,
+   "genero": "Niña",
+   "fecha": "2026-10-27"
+  },
+  {
+   "id": "c54572141fdb",
+   "foto": "fotos/c54572141fdb.jpg",
+   "nombre": "Romper Slep Steem",
+   "precio": 12.99,
+   "edad": "L 14/16",
+   "orden_edad": 168,
+   "genero": "Niña",
+   "fecha": "2026-10-27"
+  },
+  {
+   "id": "7022b8545acc",
+   "foto": "fotos/7022b8545acc.jpg",
+   "nombre": "Blusa thereabouts",
+   "precio": 10.99,
+   "edad": "XL 14/16",
+   "orden_edad": 168,
+   "genero": "Niña",
+   "fecha": "2026-10-27"
+  },
+  {
+   "id": "88983dd4ed3b",
+   "foto": "fotos/88983dd4ed3b.jpg",
+   "nombre": "Camisa IZOD",
+   "precio": 10.99,
+   "edad": "M 8/10",
+   "orden_edad": 108,
+   "genero": "Niña",
+   "fecha": "2026-10-27"
+  },
+  {
+   "id": "cb711dfab0bd",
+   "foto": "fotos/cb711dfab0bd.jpg",
+   "nombre": "Top deportivo Umbro",
+   "precio": 11.99,
+   "edad": "S",
+   "orden_edad": 84,
+   "genero": "Niña",
+   "fecha": "2026-10-27"
+  },
+  {
+   "id": "0799501cb855",
+   "foto": "fotos/0799501cb855.jpg",
+   "nombre": "Camisa Xersion",
+   "precio": 9.99,
+   "edad": "S 6/8",
+   "orden_edad": 84,
+   "genero": "Niña",
+   "fecha": "2026-10-27"
+  },
+  {
+   "id": "e82314762c4b",
+   "foto": "fotos/e82314762c4b.jpg",
+   "nombre": "Conjunto Peyton & Parker",
+   "precio": 13.99,
+   "edad": "XS 4/6",
+   "orden_edad": 72,
+   "genero": "Niña",
+   "fecha": "2026-10-27"
+  },
+  {
+   "id": "31f35cdd6655",
+   "foto": "fotos/31f35cdd6655.jpg",
+   "nombre": "Pantalón Thereabouts",
+   "precio": 13.99,
+   "edad": "XXL 18/20",
+   "orden_edad": 216,
+   "genero": "Niña",
+   "fecha": "2026-10-27"
+  },
+  {
+   "id": "775ade364fce",
+   "foto": "fotos/775ade364fce.jpg",
+   "nombre": "Short VIGOSS",
+   "precio": 11.99,
+   "edad": "M 8/10",
+   "orden_edad": 108,
+   "genero": "Niña",
+   "fecha": "2026-10-27"
+  },
+  {
+   "id": "976f3c820961",
+   "foto": "fotos/976f3c820961.jpg",
+   "nombre": "Short IZOD",
+   "precio": 11.99,
+   "edad": "L 14/16",
+   "orden_edad": 168,
+   "genero": "Niña",
+   "fecha": "2026-10-27"
+  },
+  {
+   "id": "c30e50f6bde1",
+   "foto": "fotos/c30e50f6bde1.jpg",
+   "nombre": "Falda IZOD",
+   "precio": 10.99,
+   "edad": "L 14/16",
+   "orden_edad": 168,
+   "genero": "Niña",
+   "fecha": "2026-10-27"
+  },
+  {
+   "id": "2386a6ea8f7c",
+   "foto": "fotos/2386a6ea8f7c.jpg",
+   "nombre": "Short umbro",
+   "precio": 9.99,
+   "edad": "L 14/16",
+   "orden_edad": 168,
+   "genero": "Niña",
+   "fecha": "2026-10-27"
+  },
+  {
+   "id": "93adddc4c3ce",
+   "foto": "fotos/93adddc4c3ce.jpg",
+   "nombre": "Camisa manga larga ROXY",
+   "precio": 9.99,
+   "edad": "S 6/8",
+   "orden_edad": 84,
+   "genero": "Niña",
+   "fecha": "2026-10-27"
+  },
+  {
+   "id": "6a6ec3c233ce",
+   "foto": "fotos/6a6ec3c233ce.jpg",
+   "nombre": "Camisa Xersion",
+   "precio": 9.99,
+   "edad": "L 14/16",
+   "orden_edad": 168,
+   "genero": "Niña",
+   "fecha": "2026-10-27"
+  },
+  {
+   "id": "050592be591e",
+   "foto": "fotos/050592be591e.jpg",
+   "nombre": "Short umbro",
+   "precio": 9.99,
+   "edad": "L 12/14",
+   "orden_edad": 144,
+   "genero": "Niña",
+   "fecha": "2026-10-27"
+  },
+  {
+   "id": "5fe9ab5a196b",
+   "foto": "fotos/5fe9ab5a196b.jpg",
+   "nombre": "Pantalón Rare Editions",
+   "precio": 12.99,
+   "edad": "L 14-16",
+   "orden_edad": 168,
+   "genero": "Niña",
+   "fecha": "2026-10-27"
+  },
+  {
+   "id": "8424e5c39062",
+   "foto": "fotos/8424e5c39062.jpg",
+   "nombre": "Licra No Boundaries",
+   "precio": 9.99,
+   "edad": "XL 14/16",
+   "orden_edad": 168,
+   "genero": "Niña",
+   "fecha": "2026-10-27"
+  },
+  {
+   "id": "04488fa81140",
+   "foto": "fotos/04488fa81140.jpg",
+   "nombre": "Licra Thereabouts",
+   "precio": 10.99,
+   "edad": "M 10/12",
+   "orden_edad": 120,
+   "genero": "Niña",
+   "fecha": "2026-10-27"
+  },
+  {
+   "id": "ee44ac5ee892",
+   "foto": "fotos/ee44ac5ee892.jpg",
+   "nombre": "Short Thereabouts",
+   "precio": 9.99,
+   "edad": "XS 4/6",
+   "orden_edad": 72,
+   "genero": "Niña",
+   "fecha": "2026-10-27"
+  },
+  {
+   "id": "0e490cd17769",
+   "foto": "fotos/0e490cd17769.jpg",
+   "nombre": "Short VIGOSS",
+   "precio": 12.99,
+   "edad": "L 14/16",
+   "orden_edad": 168,
+   "genero": "Niña",
+   "fecha": "2026-10-27"
+  },
+  {
+   "id": "fef89dfb6a81",
+   "foto": "fotos/fef89dfb6a81.jpg",
+   "nombre": "Camisa Young Hearts",
+   "precio": 12.99,
+   "edad": "S 6/8",
+   "orden_edad": 84,
+   "genero": "Niña",
+   "fecha": "2026-10-27"
+  },
+  {
+   "id": "04519aeb228f",
+   "foto": "fotos/04519aeb228f.jpg",
+   "nombre": "Pants umbro",
+   "precio": 14.99,
+   "edad": "L 14/16",
+   "orden_edad": 168,
+   "genero": "Niña",
+   "fecha": "2026-10-27"
+  },
+  {
+   "id": "45530281a31b",
+   "foto": "fotos/45530281a31b.jpg",
+   "nombre": "Falda IZOD",
+   "precio": 9.99,
+   "edad": "S 6/8",
+   "orden_edad": 84,
+   "genero": "Niña",
+   "fecha": "2026-10-27"
+  },
+  {
+   "id": "e463a2869be9",
+   "foto": "fotos/e463a2869be9.jpg",
+   "nombre": "Short V Gold",
+   "precio": 10.99,
+   "edad": "S 6/8",
+   "orden_edad": 84,
+   "genero": "Niña",
+   "fecha": "2026-10-27"
+  },
+  {
+   "id": "9d7e56268124",
+   "foto": "fotos/9d7e56268124.jpg",
+   "nombre": "Camisa Xersion",
+   "precio": 9.99,
+   "edad": "3XL 18/20+",
+   "orden_edad": 216,
+   "genero": "Niña",
+   "fecha": "2026-10-27"
+  },
+  {
+   "id": "092be3e44c5a",
+   "foto": "fotos/092be3e44c5a.jpg",
+   "nombre": "Camisa umbro",
+   "precio": 9.99,
+   "edad": "XL 14/16",
+   "orden_edad": 168,
+   "genero": "Niña",
+   "fecha": "2026-10-27"
+  },
+  {
+   "id": "600fcab7f789",
+   "foto": "fotos/600fcab7f789.jpg",
+   "nombre": "Camisa manga larga ROXY",
+   "precio": 10.99,
+   "edad": "L 12/14",
+   "orden_edad": 144,
+   "genero": "Niña",
+   "fecha": "2026-10-27"
+  },
+  {
+   "id": "523dbe35749f",
+   "foto": "fotos/523dbe35749f.jpg",
+   "nombre": "Blusa thereabouts",
+   "precio": 10.99,
+   "edad": "L 14/16",
+   "orden_edad": 168,
+   "genero": "Niña",
+   "fecha": "2026-10-27"
+  },
+  {
+   "id": "12212a32af19",
+   "foto": "fotos/12212a32af19.jpg",
+   "nombre": "Camisa Self Steem",
+   "precio": 9.99,
+   "edad": "L 14/16",
+   "orden_edad": 168,
+   "genero": "Niña",
+   "fecha": "2026-10-27"
+  },
+  {
+   "id": "f9c2c4fcb94f",
+   "foto": "fotos/f9c2c4fcb94f.jpg",
+   "nombre": "Licra Vigoss",
+   "precio": 11.99,
+   "edad": "L 14/16",
+   "orden_edad": 168,
+   "genero": "Niña",
+   "fecha": "2026-10-27"
+  },
+  {
+   "id": "2db90d182a58",
+   "foto": "fotos/2db90d182a58.jpg",
+   "nombre": "Blusa Thereabouts",
+   "precio": 10.99,
+   "edad": "XL 14/16",
+   "orden_edad": 168,
+   "genero": "Niña",
+   "fecha": "2026-10-27"
+  },
+  {
+   "id": "04cb7328b8a8",
+   "foto": "fotos/04cb7328b8a8.jpg",
+   "nombre": "Vestido Merry Day",
+   "precio": 24.99,
+   "edad": "S 6/8",
+   "orden_edad": 84,
+   "genero": "Niña",
+   "fecha": "2026-10-27"
   }
  ]
 }
