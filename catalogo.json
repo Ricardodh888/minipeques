@@ -143,7 +143,7 @@
    "precio": 9.99,
    "edad": "5T",
    "orden_edad": 60,
-   "genero": "Niño",
+   "genero": "Niña",
    "fecha": "2026-10-23"
   },
   {
@@ -153,7 +153,7 @@
    "precio": 9.99,
    "edad": "2T",
    "orden_edad": 24,
-   "genero": "Niño",
+   "genero": "Niña",
    "fecha": "2026-10-23"
   },
   {
@@ -273,7 +273,7 @@
    "precio": 10.99,
    "edad": "14-16",
    "orden_edad": 168,
-   "genero": "Niña",
+   "genero": "Niño",
    "fecha": "2026-10-23"
   },
   {
@@ -283,7 +283,7 @@
    "precio": 9.99,
    "edad": "14-16",
    "orden_edad": 168,
-   "genero": "Niña",
+   "genero": "Niño",
    "fecha": "2026-10-23"
   },
   {
@@ -293,7 +293,7 @@
    "precio": 13.99,
    "edad": "18T",
    "orden_edad": 216,
-   "genero": "Niña",
+   "genero": "Niño",
    "fecha": "2026-10-23"
   },
   {
@@ -303,7 +303,7 @@
    "precio": 10.99,
    "edad": "8-10",
    "orden_edad": 96,
-   "genero": "Niña",
+   "genero": "Niño",
    "fecha": "2026-10-23"
   },
   {
@@ -323,7 +323,7 @@
    "precio": 9.99,
    "edad": "M",
    "orden_edad": 108,
-   "genero": "Niña",
+   "genero": "Niño",
    "fecha": "2026-10-23"
   },
   {
@@ -333,7 +333,7 @@
    "precio": 10.99,
    "edad": "12",
    "orden_edad": 144,
-   "genero": "Niña",
+   "genero": "Niño",
    "fecha": "2026-10-23"
   },
   {
@@ -353,7 +353,7 @@
    "precio": 9.99,
    "edad": "L",
    "orden_edad": 132,
-   "genero": "Niña",
+   "genero": "Niño",
    "fecha": "2026-10-23"
   },
   {
@@ -363,7 +363,7 @@
    "precio": 12.99,
    "edad": "L 14/16",
    "orden_edad": 168,
-   "genero": "Niña",
+   "genero": "Niño",
    "fecha": "2026-10-23"
   },
   {
@@ -373,7 +373,7 @@
    "precio": 12.99,
    "edad": "14-16",
    "orden_edad": 168,
-   "genero": "Niña",
+   "genero": "Niño",
    "fecha": "2026-10-23"
   },
   {
@@ -383,7 +383,7 @@
    "precio": 10.99,
    "edad": "14-16",
    "orden_edad": 168,
-   "genero": "Niña",
+   "genero": "Niño",
    "fecha": "2026-10-23"
   },
   {
@@ -393,7 +393,7 @@
    "precio": 9.99,
    "edad": "M",
    "orden_edad": 108,
-   "genero": "Niña",
+   "genero": "Niño",
    "fecha": "2026-10-23"
   },
   {
@@ -403,7 +403,7 @@
    "precio": 9.99,
    "edad": "XL",
    "orden_edad": 168,
-   "genero": "Niña",
+   "genero": "Niño",
    "fecha": "2026-10-23"
   },
   {
@@ -413,7 +413,7 @@
    "precio": 15.99,
    "edad": "M",
    "orden_edad": 108,
-   "genero": "Niña",
+   "genero": "Niño",
    "fecha": "2026-10-23"
   },
   {
@@ -563,7 +563,7 @@
    "precio": 9.99,
    "edad": "2T/2/A",
    "orden_edad": 24,
-   "genero": "Niña",
+   "genero": "Niño",
    "fecha": "2026-10-23"
   },
   {
@@ -783,7 +783,7 @@
    "precio": 9.99,
    "edad": "18M",
    "orden_edad": 18,
-   "genero": "Niña",
+   "genero": "Niño",
    "fecha": "2026-10-23"
   },
   {
@@ -803,7 +803,7 @@
    "precio": 9.99,
    "edad": "12M",
    "orden_edad": 12,
-   "genero": "Niña",
+   "genero": "Niño",
    "fecha": "2026-10-23"
   },
   {
@@ -813,7 +813,7 @@
    "precio": 9.99,
    "edad": "NB",
    "orden_edad": 0,
-   "genero": "Niña",
+   "genero": "Niño",
    "fecha": "2026-10-23"
   },
   {
@@ -833,7 +833,7 @@
    "precio": 9.99,
    "edad": "12M",
    "orden_edad": 12,
-   "genero": "Niña",
+   "genero": "Niño",
    "fecha": "2026-10-23"
   },
   {
@@ -863,7 +863,7 @@
    "precio": 9.99,
    "edad": "3M",
    "orden_edad": 3,
-   "genero": "Niña",
+   "genero": "Niño",
    "fecha": "2026-10-23"
   },
   {
@@ -893,7 +893,7 @@
    "precio": 9.99,
    "edad": "12M",
    "orden_edad": 12,
-   "genero": "Niña",
+   "genero": "Niño",
    "fecha": "2026-10-23"
   },
   {
@@ -933,7 +933,7 @@
    "precio": 9.99,
    "edad": "18M",
    "orden_edad": 18,
-   "genero": "Niña",
+   "genero": "Niño",
    "fecha": "2026-10-23"
   },
   {
@@ -963,7 +963,7 @@
    "precio": 9.99,
    "edad": "3M",
    "orden_edad": 3,
-   "genero": "Niña",
+   "genero": "Niño",
    "fecha": "2026-10-23"
   },
   {
@@ -973,7 +973,7 @@
    "precio": 12.99,
    "edad": "6M",
    "orden_edad": 6,
-   "genero": "Niña",
+   "genero": "Niño",
    "fecha": "2026-10-23"
   },
   {
@@ -983,7 +983,7 @@
    "precio": 9.99,
    "edad": "12M",
    "orden_edad": 12,
-   "genero": "Niña",
+   "genero": "Niño",
    "fecha": "2026-10-23"
   },
   {
@@ -1013,7 +1013,7 @@
    "precio": 9.99,
    "edad": "12M",
    "orden_edad": 12,
-   "genero": "Niña",
+   "genero": "Niño",
    "fecha": "2026-10-23"
   },
   {
@@ -1023,7 +1023,7 @@
    "precio": 9.99,
    "edad": "18M",
    "orden_edad": 18,
-   "genero": "Niña",
+   "genero": "Niño",
    "fecha": "2026-10-23"
   },
   {
@@ -1063,7 +1063,7 @@
    "precio": 12.99,
    "edad": "3-6M",
    "orden_edad": 3,
-   "genero": "Niña",
+   "genero": "Niño",
    "fecha": "2026-10-23"
   },
   {
@@ -1073,7 +1073,7 @@
    "precio": 10,
    "edad": "9M",
    "orden_edad": 9,
-   "genero": "Niña",
+   "genero": "Niño",
    "fecha": "2026-10-23"
   },
   {
@@ -1133,7 +1133,7 @@
    "precio": 9.99,
    "edad": "3M",
    "orden_edad": 3,
-   "genero": "Niña",
+   "genero": "Niño",
    "fecha": "2026-10-26"
   },
   {
@@ -1303,7 +1303,7 @@
    "precio": 14.99,
    "edad": "12/18",
    "orden_edad": 12,
-   "genero": "Niña",
+   "genero": "Niño",
    "fecha": "2026-10-26"
   },
   {
@@ -1363,7 +1363,7 @@
    "precio": 10.99,
    "edad": "18-24M",
    "orden_edad": 18,
-   "genero": "Niña",
+   "genero": "Niño",
    "fecha": "2026-10-26"
   },
   {
@@ -1753,7 +1753,7 @@
    "precio": 9.99,
    "edad": "24M",
    "orden_edad": 24,
-   "genero": "Niño",
+   "genero": "Niña",
    "fecha": "2026-10-26"
   },
   {
@@ -1803,7 +1803,7 @@
    "precio": 9.99,
    "edad": "M",
    "orden_edad": 108,
-   "genero": "Niño",
+   "genero": "Niña",
    "fecha": "2026-10-26"
   },
   {
