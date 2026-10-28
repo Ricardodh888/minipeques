@@ -2985,6 +2985,1216 @@
    "orden_edad": 84,
    "genero": "Niña",
    "fecha": "2026-10-27"
+  },
+  {
+   "id": "04e8bfca607d",
+   "foto": "fotos/04e8bfca607d.jpg",
+   "nombre": "Camisa Thereabouts",
+   "precio": 9.99,
+   "edad": "S 6/8",
+   "orden_edad": 84,
+   "genero": "Niña",
+   "fecha": "2026-10-27"
+  },
+  {
+   "id": "b3d450500910",
+   "foto": "fotos/b3d450500910.jpg",
+   "nombre": "Camisa No Boundaries",
+   "precio": 9.99,
+   "edad": "S 6/7",
+   "orden_edad": 84,
+   "genero": "Niña",
+   "fecha": "2026-10-27"
+  },
+  {
+   "id": "f8346561252f",
+   "foto": "fotos/f8346561252f.jpg",
+   "nombre": "Pantalón Hurley",
+   "precio": 9.99,
+   "edad": "M 8/10",
+   "orden_edad": 108,
+   "genero": "Niño",
+   "fecha": "2026-10-27"
+  },
+  {
+   "id": "f551b41a5713",
+   "foto": "fotos/f551b41a5713.jpg",
+   "nombre": "Camisa Thereabouts",
+   "precio": 9.99,
+   "edad": "XL 14/16",
+   "orden_edad": 168,
+   "genero": "Niño",
+   "fecha": "2026-10-27"
+  },
+  {
+   "id": "e880be7a86d6",
+   "foto": "fotos/e880be7a86d6.jpg",
+   "nombre": "Camisa tipo polo Port Authority",
+   "precio": 10.99,
+   "edad": "S 6/7",
+   "orden_edad": 84,
+   "genero": "Niño",
+   "fecha": "2026-10-27"
+  },
+  {
+   "id": "217b3a259086",
+   "foto": "fotos/217b3a259086.jpg",
+   "nombre": "Camisa Adidas",
+   "precio": 9.99,
+   "edad": "M 8/10",
+   "orden_edad": 108,
+   "genero": "Niño",
+   "fecha": "2026-10-27"
+  },
+  {
+   "id": "50fac0aedac5",
+   "foto": "fotos/50fac0aedac5.jpg",
+   "nombre": "Short New Balance",
+   "precio": 11.99,
+   "edad": "XL 14/16",
+   "orden_edad": 168,
+   "genero": "Niño",
+   "fecha": "2026-10-27"
+  },
+  {
+   "id": "766dd76f8bb0",
+   "foto": "fotos/766dd76f8bb0.jpg",
+   "nombre": "Camisa Bendy",
+   "precio": 11.99,
+   "edad": "XL 14/16",
+   "orden_edad": 168,
+   "genero": "Niño",
+   "fecha": "2026-10-27"
+  },
+  {
+   "id": "3bdb39e2dc76",
+   "foto": "fotos/3bdb39e2dc76.jpg",
+   "nombre": "Camisa Grom",
+   "precio": 11.99,
+   "edad": "XXL 18/20",
+   "orden_edad": 216,
+   "genero": "Niño",
+   "fecha": "2026-10-27"
+  },
+  {
+   "id": "65ea1057b8a9",
+   "foto": "fotos/65ea1057b8a9.jpg",
+   "nombre": "Camisa tipo polo Izod",
+   "precio": 9.99,
+   "edad": "M 8/10",
+   "orden_edad": 108,
+   "genero": "Niño",
+   "fecha": "2026-10-27"
+  },
+  {
+   "id": "3d3c584ba382",
+   "foto": "fotos/3d3c584ba382.jpg",
+   "nombre": "Camisa Thereabouts",
+   "precio": 10.99,
+   "edad": "L 12/14",
+   "orden_edad": 144,
+   "genero": "Niño",
+   "fecha": "2026-10-27"
+  },
+  {
+   "id": "b4c965b2cab9",
+   "foto": "fotos/b4c965b2cab9.jpg",
+   "nombre": "Short Eddie Bauer",
+   "precio": 11.99,
+   "edad": "M 8/10",
+   "orden_edad": 108,
+   "genero": "Niño",
+   "fecha": "2026-10-27"
+  },
+  {
+   "id": "2f5c159888cf",
+   "foto": "fotos/2f5c159888cf.jpg",
+   "nombre": "Camisa Umbro",
+   "precio": 10.99,
+   "edad": "M 8/10",
+   "orden_edad": 108,
+   "genero": "Niño",
+   "fecha": "2026-10-27"
+  },
+  {
+   "id": "93442f2edd63",
+   "foto": "fotos/93442f2edd63.jpg",
+   "nombre": "Short Thereabouts",
+   "precio": 11.99,
+   "edad": "M 8/10",
+   "orden_edad": 108,
+   "genero": "Niño",
+   "fecha": "2026-10-27"
+  },
+  {
+   "id": "628bb136eb22",
+   "foto": "fotos/628bb136eb22.jpg",
+   "nombre": "Camisa Grom",
+   "precio": 9.99,
+   "edad": "L 12/14",
+   "orden_edad": 144,
+   "genero": "Niño",
+   "fecha": "2026-10-27"
+  },
+  {
+   "id": "f7b9b2f2b4a8",
+   "foto": "fotos/f7b9b2f2b4a8.jpg",
+   "nombre": "Short Thereabouts",
+   "precio": 10.99,
+   "edad": "XL 14/16",
+   "orden_edad": 168,
+   "genero": "Niño",
+   "fecha": "2026-10-27"
+  },
+  {
+   "id": "8a9708169789",
+   "foto": "fotos/8a9708169789.jpg",
+   "nombre": "Licra deportiva Umbro",
+   "precio": 9.99,
+   "edad": "S 6/7",
+   "orden_edad": 84,
+   "genero": "Niño",
+   "fecha": "2026-10-27"
+  },
+  {
+   "id": "41fbdf64ab1a",
+   "foto": "fotos/41fbdf64ab1a.jpg",
+   "nombre": "Short thereabouts",
+   "precio": 11.99,
+   "edad": "XL 14/16",
+   "orden_edad": 168,
+   "genero": "Niño",
+   "fecha": "2026-10-27"
+  },
+  {
+   "id": "c58f9cc2dad3",
+   "foto": "fotos/c58f9cc2dad3.jpg",
+   "nombre": "Camisa Puma",
+   "precio": 10.99,
+   "edad": "XL 14/16",
+   "orden_edad": 168,
+   "genero": "Niño",
+   "fecha": "2026-10-27"
+  },
+  {
+   "id": "0045a0131ed7",
+   "foto": "fotos/0045a0131ed7.jpg",
+   "nombre": "Camisa Xersion",
+   "precio": 9.99,
+   "edad": "XL 14/16",
+   "orden_edad": 168,
+   "genero": "Niño",
+   "fecha": "2026-10-27"
+  },
+  {
+   "id": "361c729f55c6",
+   "foto": "fotos/361c729f55c6.jpg",
+   "nombre": "Camisa Pink Floyd",
+   "precio": 9.99,
+   "edad": "M 8/10",
+   "orden_edad": 108,
+   "genero": "Niño",
+   "fecha": "2026-10-27"
+  },
+  {
+   "id": "b3e9722cc006",
+   "foto": "fotos/b3e9722cc006.jpg",
+   "nombre": "Camisa High five",
+   "precio": 10.99,
+   "edad": "M 8/10",
+   "orden_edad": 108,
+   "genero": "Niño",
+   "fecha": "2026-10-27"
+  },
+  {
+   "id": "50a072d96855",
+   "foto": "fotos/50a072d96855.jpg",
+   "nombre": "Camisa Roxy",
+   "precio": 9.99,
+   "edad": "S 6/7",
+   "orden_edad": 84,
+   "genero": "Niño",
+   "fecha": "2026-10-27"
+  },
+  {
+   "id": "663afce6d18e",
+   "foto": "fotos/663afce6d18e.jpg",
+   "nombre": "Camisa manga larga Thereabouts",
+   "precio": 10.99,
+   "edad": "XL 14/16",
+   "orden_edad": 168,
+   "genero": "Niño",
+   "fecha": "2026-10-27"
+  },
+  {
+   "id": "bac010a14fcf",
+   "foto": "fotos/bac010a14fcf.jpg",
+   "nombre": "Camisa Genuine Merchandise",
+   "precio": 9.99,
+   "edad": "S 6/7",
+   "orden_edad": 84,
+   "genero": "Niño",
+   "fecha": "2026-10-27"
+  },
+  {
+   "id": "22521337b64a",
+   "foto": "fotos/22521337b64a.jpg",
+   "nombre": "Pants Adidas",
+   "precio": 13.99,
+   "edad": "S 6/7",
+   "orden_edad": 84,
+   "genero": "Niño",
+   "fecha": "2026-10-27"
+  },
+  {
+   "id": "b1d88cdc9a23",
+   "foto": "fotos/b1d88cdc9a23.jpg",
+   "nombre": "Pantalón For All Mankind",
+   "precio": 10.99,
+   "edad": "S 6/7",
+   "orden_edad": 84,
+   "genero": "Niño",
+   "fecha": "2026-10-27"
+  },
+  {
+   "id": "b536c7b284d9",
+   "foto": "fotos/b536c7b284d9.jpg",
+   "nombre": "Pantalón Thereabouts",
+   "precio": 14.99,
+   "edad": "XXL 18/20",
+   "orden_edad": 216,
+   "genero": "Niño",
+   "fecha": "2026-10-27"
+  },
+  {
+   "id": "66f5d5b73762",
+   "foto": "fotos/66f5d5b73762.jpg",
+   "nombre": "Camisa tipo polo Genuine",
+   "precio": 11.99,
+   "edad": "XXL 18/20",
+   "orden_edad": 216,
+   "genero": "Niño",
+   "fecha": "2026-10-27"
+  },
+  {
+   "id": "48dc7d5cfb55",
+   "foto": "fotos/48dc7d5cfb55.jpg",
+   "nombre": "Short Champion",
+   "precio": 10.99,
+   "edad": "XL 14/16",
+   "orden_edad": 168,
+   "genero": "Niño",
+   "fecha": "2026-10-27"
+  },
+  {
+   "id": "dca7d8d6722f",
+   "foto": "fotos/dca7d8d6722f.jpg",
+   "nombre": "Suéter Champions",
+   "precio": 11.99,
+   "edad": "XL 14/16",
+   "orden_edad": 168,
+   "genero": "Niño",
+   "fecha": "2026-10-27"
+  },
+  {
+   "id": "295aca5f244b",
+   "foto": "fotos/295aca5f244b.jpg",
+   "nombre": "Camisa 3 Brand",
+   "precio": 9.99,
+   "edad": "M 8/10",
+   "orden_edad": 108,
+   "genero": "Niño",
+   "fecha": "2026-10-27"
+  },
+  {
+   "id": "7f2302b2a350",
+   "foto": "fotos/7f2302b2a350.jpg",
+   "nombre": "Camisa sin mangas Umbro",
+   "precio": 9.99,
+   "edad": "S 6/7",
+   "orden_edad": 84,
+   "genero": "Niño",
+   "fecha": "2026-10-27"
+  },
+  {
+   "id": "3e2eefc949d8",
+   "foto": "fotos/3e2eefc949d8.jpg",
+   "nombre": "Pantalón Thereabouts",
+   "precio": 12.99,
+   "edad": "L 12/14",
+   "orden_edad": 144,
+   "genero": "Niño",
+   "fecha": "2026-10-27"
+  },
+  {
+   "id": "28f3c7719363",
+   "foto": "fotos/28f3c7719363.jpg",
+   "nombre": "Camisa Adidas",
+   "precio": 9.99,
+   "edad": "M 8/10",
+   "orden_edad": 108,
+   "genero": "Niño",
+   "fecha": "2026-10-27"
+  },
+  {
+   "id": "48d126c35c2c",
+   "foto": "fotos/48d126c35c2c.jpg",
+   "nombre": "Camisa sin mangas New Balance",
+   "precio": 9.99,
+   "edad": "M 8/10",
+   "orden_edad": 108,
+   "genero": "Niño",
+   "fecha": "2026-10-27"
+  },
+  {
+   "id": "9e5476462495",
+   "foto": "fotos/9e5476462495.jpg",
+   "nombre": "Pantalón Thereabouts",
+   "precio": 14.99,
+   "edad": "XXL 18/20",
+   "orden_edad": 216,
+   "genero": "Niño",
+   "fecha": "2026-10-27"
+  },
+  {
+   "id": "2eb2318cbeda",
+   "foto": "fotos/2eb2318cbeda.jpg",
+   "nombre": "Camisa Xersion",
+   "precio": 9.99,
+   "edad": "S 6/7",
+   "orden_edad": 84,
+   "genero": "Niño",
+   "fecha": "2026-10-27"
+  },
+  {
+   "id": "fd31c52447b7",
+   "foto": "fotos/fd31c52447b7.jpg",
+   "nombre": "Short Thereabouts",
+   "precio": 11.99,
+   "edad": "M 8/10",
+   "orden_edad": 108,
+   "genero": "Niño",
+   "fecha": "2026-10-27"
+  },
+  {
+   "id": "c416326c29f8",
+   "foto": "fotos/c416326c29f8.jpg",
+   "nombre": "Camisa manga larga de cuello Bixby",
+   "precio": 11.99,
+   "edad": "L 10/12",
+   "orden_edad": 132,
+   "genero": "Niño",
+   "fecha": "2026-10-27"
+  },
+  {
+   "id": "786d44af7a00",
+   "foto": "fotos/786d44af7a00.jpg",
+   "nombre": "Short Open Edits",
+   "precio": 9.99,
+   "edad": "S 6/7",
+   "orden_edad": 84,
+   "genero": "Niño",
+   "fecha": "2026-10-27"
+  },
+  {
+   "id": "d7b9603e2158",
+   "foto": "fotos/d7b9603e2158.jpg",
+   "nombre": "Short For All Mankind",
+   "precio": 11.99,
+   "edad": "XL 14/16",
+   "orden_edad": 168,
+   "genero": "Niño",
+   "fecha": "2026-10-27"
+  },
+  {
+   "id": "d73f8e3ab8b0",
+   "foto": "fotos/d73f8e3ab8b0.jpg",
+   "nombre": "Short Umbro",
+   "precio": 10.99,
+   "edad": "S 6/7",
+   "orden_edad": 84,
+   "genero": "Niño",
+   "fecha": "2026-10-27"
+  },
+  {
+   "id": "b456c9f71057",
+   "foto": "fotos/b456c9f71057.jpg",
+   "nombre": "Chaleco JC Penney",
+   "precio": 14.99,
+   "edad": "S 6/7",
+   "orden_edad": 84,
+   "genero": "Niño",
+   "fecha": "2026-10-27"
+  },
+  {
+   "id": "760e1da29333",
+   "foto": "fotos/760e1da29333.jpg",
+   "nombre": "Chumpa Eddie Bauer",
+   "precio": 14.99,
+   "edad": "XS 4/5",
+   "orden_edad": 72,
+   "genero": "Niño",
+   "fecha": "2026-10-27"
+  },
+  {
+   "id": "27347b2c5b69",
+   "foto": "fotos/27347b2c5b69.jpg",
+   "nombre": "Camisa New Balance",
+   "precio": 9.99,
+   "edad": "XL 14/16",
+   "orden_edad": 168,
+   "genero": "Niño",
+   "fecha": "2026-10-27"
+  },
+  {
+   "id": "b8b2e1a60a2f",
+   "foto": "fotos/b8b2e1a60a2f.jpg",
+   "nombre": "Camisa Grom",
+   "precio": 9.99,
+   "edad": "S 6/7",
+   "orden_edad": 84,
+   "genero": "Niño",
+   "fecha": "2026-10-27"
+  },
+  {
+   "id": "03333c1063cc",
+   "foto": "fotos/03333c1063cc.jpg",
+   "nombre": "Camisa con gorro Xersion",
+   "precio": 12.99,
+   "edad": "M 8/10",
+   "orden_edad": 108,
+   "genero": "Niño",
+   "fecha": "2026-10-27"
+  },
+  {
+   "id": "ca7b8bd83798",
+   "foto": "fotos/ca7b8bd83798.jpg",
+   "nombre": "Short Thereabouts",
+   "precio": 9.99,
+   "edad": "XS 5/6",
+   "orden_edad": 72,
+   "genero": "Niño",
+   "fecha": "2026-10-27"
+  },
+  {
+   "id": "9d7ae712685f",
+   "foto": "fotos/9d7ae712685f.jpg",
+   "nombre": "Camisa de cuello Quiksilver",
+   "precio": 11.99,
+   "edad": "M 8/10",
+   "orden_edad": 108,
+   "genero": "Niño",
+   "fecha": "2026-10-27"
+  },
+  {
+   "id": "4f7e2ee783d9",
+   "foto": "fotos/4f7e2ee783d9.jpg",
+   "nombre": "Saco JC Penney",
+   "precio": 19.99,
+   "edad": "S 6/7",
+   "orden_edad": 84,
+   "genero": "Niño",
+   "fecha": "2026-10-27"
+  },
+  {
+   "id": "d75557b05888",
+   "foto": "fotos/d75557b05888.jpg",
+   "nombre": "Short Eddie Bauer",
+   "precio": 11.99,
+   "edad": "XL 14/16",
+   "orden_edad": 168,
+   "genero": "Niño",
+   "fecha": "2026-10-27"
+  },
+  {
+   "id": "a15922afa77c",
+   "foto": "fotos/a15922afa77c.jpg",
+   "nombre": "Short Thereabouts",
+   "precio": 11.99,
+   "edad": "XL 14/16",
+   "orden_edad": 168,
+   "genero": "Niño",
+   "fecha": "2026-10-27"
+  },
+  {
+   "id": "5a4ef103d688",
+   "foto": "fotos/5a4ef103d688.jpg",
+   "nombre": "Pantalón Arizona",
+   "precio": 14.99,
+   "edad": "Sin edad",
+   "orden_edad": 9999,
+   "genero": "Niño",
+   "fecha": "2026-10-27"
+  },
+  {
+   "id": "3c09a271b655",
+   "foto": "fotos/3c09a271b655.jpg",
+   "nombre": "Pants Umbro",
+   "precio": 12.99,
+   "edad": "L 12/14",
+   "orden_edad": 144,
+   "genero": "Niño",
+   "fecha": "2026-10-27"
+  },
+  {
+   "id": "3ba981e4b00b",
+   "foto": "fotos/3ba981e4b00b.jpg",
+   "nombre": "Short Umbro",
+   "precio": 10.99,
+   "edad": "L 12/14",
+   "orden_edad": 144,
+   "genero": "Niño",
+   "fecha": "2026-10-27"
+  },
+  {
+   "id": "4c5f006c679d",
+   "foto": "fotos/4c5f006c679d.jpg",
+   "nombre": "Short Cat & Jack",
+   "precio": 11.99,
+   "edad": "S 6/7",
+   "orden_edad": 84,
+   "genero": "Niño",
+   "fecha": "2026-10-27"
+  },
+  {
+   "id": "a0c08e105a20",
+   "foto": "fotos/a0c08e105a20.jpg",
+   "nombre": "Suéter Quiksilver",
+   "precio": 14.99,
+   "edad": "XL 14/16",
+   "orden_edad": 168,
+   "genero": "Niño",
+   "fecha": "2026-10-27"
+  },
+  {
+   "id": "69c2fdb1a86a",
+   "foto": "fotos/69c2fdb1a86a.jpg",
+   "nombre": "Camisa Grom",
+   "precio": 9.99,
+   "edad": "M 8/10",
+   "orden_edad": 108,
+   "genero": "Niño",
+   "fecha": "2026-10-27"
+  },
+  {
+   "id": "29c1f4979f38",
+   "foto": "fotos/29c1f4979f38.jpg",
+   "nombre": "Short thereabouts",
+   "precio": 11.99,
+   "edad": "XL 14/16",
+   "orden_edad": 168,
+   "genero": "Niño",
+   "fecha": "2026-10-27"
+  },
+  {
+   "id": "57bfd9fd4c1a",
+   "foto": "fotos/57bfd9fd4c1a.jpg",
+   "nombre": "Short New Balance",
+   "precio": 11.99,
+   "edad": "XL 14/16",
+   "orden_edad": 168,
+   "genero": "Niño",
+   "fecha": "2026-10-27"
+  },
+  {
+   "id": "0dc3d6f50538",
+   "foto": "fotos/0dc3d6f50538.jpg",
+   "nombre": "Camisa manga larga Thereabouts",
+   "precio": 10.99,
+   "edad": "3XL 20+",
+   "orden_edad": 240,
+   "genero": "Niña",
+   "fecha": "2026-10-27"
+  },
+  {
+   "id": "b58f6d68ba44",
+   "foto": "fotos/b58f6d68ba44.jpg",
+   "nombre": "Short Xersion",
+   "precio": 9.99,
+   "edad": "L 12/14",
+   "orden_edad": 144,
+   "genero": "Niña",
+   "fecha": "2026-10-27"
+  },
+  {
+   "id": "1fce20229624",
+   "foto": "fotos/1fce20229624.jpg",
+   "nombre": "Camisa Xersion",
+   "precio": 9.99,
+   "edad": "S 7/8",
+   "orden_edad": 84,
+   "genero": "Niña",
+   "fecha": "2026-10-27"
+  },
+  {
+   "id": "aaecebf001ac",
+   "foto": "fotos/aaecebf001ac.jpg",
+   "nombre": "Camisa manga larga Dazy",
+   "precio": 10.99,
+   "edad": "M 8/10",
+   "orden_edad": 108,
+   "genero": "Niña",
+   "fecha": "2026-10-27"
+  },
+  {
+   "id": "d3f138ecfc0a",
+   "foto": "fotos/d3f138ecfc0a.jpg",
+   "nombre": "Pantalón Royalty for me",
+   "precio": 12.99,
+   "edad": "L 12/14",
+   "orden_edad": 144,
+   "genero": "Niña",
+   "fecha": "2026-10-27"
+  },
+  {
+   "id": "1cac942fd841",
+   "foto": "fotos/1cac942fd841.jpg",
+   "nombre": "Camisa tipo polo IZOD",
+   "precio": 10.99,
+   "edad": "S 7/8",
+   "orden_edad": 84,
+   "genero": "Niña",
+   "fecha": "2026-10-27"
+  },
+  {
+   "id": "545a826cc200",
+   "foto": "fotos/545a826cc200.jpg",
+   "nombre": "Short Xersion",
+   "precio": 10.99,
+   "edad": "L 12/14",
+   "orden_edad": 144,
+   "genero": "Niña",
+   "fecha": "2026-10-27"
+  },
+  {
+   "id": "f5b0a426a0ea",
+   "foto": "fotos/f5b0a426a0ea.jpg",
+   "nombre": "Pantalón Joe's",
+   "precio": 13.99,
+   "edad": "20",
+   "orden_edad": 240,
+   "genero": "Niña",
+   "fecha": "2026-10-27"
+  },
+  {
+   "id": "be0cf652f65a",
+   "foto": "fotos/be0cf652f65a.jpg",
+   "nombre": "Camisa All in Motion",
+   "precio": 9.99,
+   "edad": "XS 4/5",
+   "orden_edad": 72,
+   "genero": "Niña",
+   "fecha": "2026-10-27"
+  },
+  {
+   "id": "ed6760491938",
+   "foto": "fotos/ed6760491938.jpg",
+   "nombre": "Short Thereabouts",
+   "precio": 11.99,
+   "edad": "20.5 Plus",
+   "orden_edad": 246,
+   "genero": "Niña",
+   "fecha": "2026-10-27"
+  },
+  {
+   "id": "f4fe7970c658",
+   "foto": "fotos/f4fe7970c658.jpg",
+   "nombre": "Falda Weekend Academy",
+   "precio": 12.99,
+   "edad": "XXL 18/20",
+   "orden_edad": 216,
+   "genero": "Niña",
+   "fecha": "2026-10-27"
+  },
+  {
+   "id": "c06871f3b207",
+   "foto": "fotos/c06871f3b207.jpg",
+   "nombre": "Licra Xersion",
+   "precio": 10.99,
+   "edad": "XL 16/18",
+   "orden_edad": 192,
+   "genero": "Niña",
+   "fecha": "2026-10-27"
+  },
+  {
+   "id": "1039d47136c9",
+   "foto": "fotos/1039d47136c9.jpg",
+   "nombre": "Falda Thereabouts",
+   "precio": 12.99,
+   "edad": "XL 14/16",
+   "orden_edad": 168,
+   "genero": "Niña",
+   "fecha": "2026-10-27"
+  },
+  {
+   "id": "c0a68828a06c",
+   "foto": "fotos/c0a68828a06c.jpg",
+   "nombre": "Licra Vigoss",
+   "precio": 10.99,
+   "edad": "S 6/8",
+   "orden_edad": 84,
+   "genero": "Niña",
+   "fecha": "2026-10-27"
+  },
+  {
+   "id": "0a3237bcf55f",
+   "foto": "fotos/0a3237bcf55f.jpg",
+   "nombre": "Camisa manga larga Vigoss",
+   "precio": 10.99,
+   "edad": "S 6/8",
+   "orden_edad": 84,
+   "genero": "Niña",
+   "fecha": "2026-10-27"
+  },
+  {
+   "id": "840cd4629936",
+   "foto": "fotos/840cd4629936.jpg",
+   "nombre": "Short Thereabouts",
+   "precio": 10.99,
+   "edad": "S 6/7",
+   "orden_edad": 84,
+   "genero": "Niña",
+   "fecha": "2026-10-27"
+  },
+  {
+   "id": "f0a168519422",
+   "foto": "fotos/f0a168519422.jpg",
+   "nombre": "Camisa sin mangas wild fable",
+   "precio": 9.99,
+   "edad": "XXL 18/20",
+   "orden_edad": 216,
+   "genero": "Niña",
+   "fecha": "2026-10-27"
+  },
+  {
+   "id": "bf3e58718cb1",
+   "foto": "fotos/bf3e58718cb1.jpg",
+   "nombre": "Suéter Lilit",
+   "precio": 12.99,
+   "edad": "M 8/10",
+   "orden_edad": 108,
+   "genero": "Niña",
+   "fecha": "2026-10-27"
+  },
+  {
+   "id": "8b15ce9bdc8e",
+   "foto": "fotos/8b15ce9bdc8e.jpg",
+   "nombre": "Blusa sin mangas Thereabouts",
+   "precio": 10.99,
+   "edad": "S 8/10",
+   "orden_edad": 96,
+   "genero": "Niña",
+   "fecha": "2026-10-27"
+  },
+  {
+   "id": "17fb5ec7c619",
+   "foto": "fotos/17fb5ec7c619.jpg",
+   "nombre": "Licra deportiva Umbro",
+   "precio": 10.99,
+   "edad": "M 10/12",
+   "orden_edad": 120,
+   "genero": "Niña",
+   "fecha": "2026-10-27"
+  },
+  {
+   "id": "0a3ce1f71c49",
+   "foto": "fotos/0a3ce1f71c49.jpg",
+   "nombre": "Short Champion",
+   "precio": 10.99,
+   "edad": "M 10/12",
+   "orden_edad": 120,
+   "genero": "Niña",
+   "fecha": "2026-10-27"
+  },
+  {
+   "id": "fd0d9d5c0cf5",
+   "foto": "fotos/fd0d9d5c0cf5.jpg",
+   "nombre": "Camisa sin mangas Wild Fable",
+   "precio": 9.99,
+   "edad": "XXL",
+   "orden_edad": 192,
+   "genero": "Niña",
+   "fecha": "2026-10-27"
+  },
+  {
+   "id": "6dc5251d9dc2",
+   "foto": "fotos/6dc5251d9dc2.jpg",
+   "nombre": "Licra Vigoss",
+   "precio": 11.99,
+   "edad": "XL 14/16",
+   "orden_edad": 168,
+   "genero": "Niña",
+   "fecha": "2026-10-27"
+  },
+  {
+   "id": "c252e5551f13",
+   "foto": "fotos/c252e5551f13.jpg",
+   "nombre": "Enterizo Cat & Jack",
+   "precio": 17.99,
+   "edad": "S 6/8",
+   "orden_edad": 84,
+   "genero": "Niña",
+   "fecha": "2026-10-27"
+  },
+  {
+   "id": "fc0413c1149c",
+   "foto": "fotos/fc0413c1149c.jpg",
+   "nombre": "Set camisas Young Hearts",
+   "precio": 15.99,
+   "edad": "M 8/10",
+   "orden_edad": 108,
+   "genero": "Niña",
+   "fecha": "2026-10-27"
+  },
+  {
+   "id": "9d6c67c7c0dd",
+   "foto": "fotos/9d6c67c7c0dd.jpg",
+   "nombre": "Camisa manga larga Sleep on it",
+   "precio": 9.99,
+   "edad": "XL 14/16",
+   "orden_edad": 168,
+   "genero": "Niña",
+   "fecha": "2026-10-27"
+  },
+  {
+   "id": "1f12cb89f25c",
+   "foto": "fotos/1f12cb89f25c.jpg",
+   "nombre": "Licra deportiva Puma",
+   "precio": 10.99,
+   "edad": "L 14/16",
+   "orden_edad": 168,
+   "genero": "Niña",
+   "fecha": "2026-10-27"
+  },
+  {
+   "id": "cfce5d3eff1e",
+   "foto": "fotos/cfce5d3eff1e.jpg",
+   "nombre": "Camisa thereabouts",
+   "precio": 9.99,
+   "edad": "XL 16",
+   "orden_edad": 192,
+   "genero": "Niña",
+   "fecha": "2026-10-27"
+  },
+  {
+   "id": "778e68d2bd82",
+   "foto": "fotos/778e68d2bd82.jpg",
+   "nombre": "Camisa sin mangas Xersion",
+   "precio": 9.99,
+   "edad": "S 6/8",
+   "orden_edad": 84,
+   "genero": "Niña",
+   "fecha": "2026-10-27"
+  },
+  {
+   "id": "3668e94df4bd",
+   "foto": "fotos/3668e94df4bd.jpg",
+   "nombre": "Licra Thereabouts",
+   "precio": 10.99,
+   "edad": "M 10/12",
+   "orden_edad": 120,
+   "genero": "Niña",
+   "fecha": "2026-10-27"
+  },
+  {
+   "id": "9431431198a5",
+   "foto": "fotos/9431431198a5.jpg",
+   "nombre": "Camisa manga larga Roxy",
+   "precio": 10.99,
+   "edad": "L 12/14",
+   "orden_edad": 144,
+   "genero": "Niña",
+   "fecha": "2026-10-27"
+  },
+  {
+   "id": "5d8f8dbc38f5",
+   "foto": "fotos/5d8f8dbc38f5.jpg",
+   "nombre": "Suéter Disney",
+   "precio": 17.99,
+   "edad": "M 8/10",
+   "orden_edad": 108,
+   "genero": "Niña",
+   "fecha": "2026-10-27"
+  },
+  {
+   "id": "f3fd47ffc1c2",
+   "foto": "fotos/f3fd47ffc1c2.jpg",
+   "nombre": "Vestido Sweet Heart Rose",
+   "precio": 14.99,
+   "edad": "S 6/8",
+   "orden_edad": 84,
+   "genero": "Niña",
+   "fecha": "2026-10-27"
+  },
+  {
+   "id": "26562fa3ae97",
+   "foto": "fotos/26562fa3ae97.jpg",
+   "nombre": "Short Thereabouts",
+   "precio": 10.99,
+   "edad": "XL 16/18",
+   "orden_edad": 192,
+   "genero": "Niña",
+   "fecha": "2026-10-27"
+  },
+  {
+   "id": "a0ef2626e6dc",
+   "foto": "fotos/a0ef2626e6dc.jpg",
+   "nombre": "Blusa Thereabouts",
+   "precio": 10.99,
+   "edad": "L 12/14",
+   "orden_edad": 144,
+   "genero": "Niña",
+   "fecha": "2026-10-27"
+  },
+  {
+   "id": "797484151682",
+   "foto": "fotos/797484151682.jpg",
+   "nombre": "Romper Thereabouts",
+   "precio": 11.99,
+   "edad": "S 4/6",
+   "orden_edad": 84,
+   "genero": "Niña",
+   "fecha": "2026-10-27"
+  },
+  {
+   "id": "44faee7545ce",
+   "foto": "fotos/44faee7545ce.jpg",
+   "nombre": "Traje de baño 7 X Swim",
+   "precio": 14.99,
+   "edad": "S 7/8",
+   "orden_edad": 84,
+   "genero": "Niña",
+   "fecha": "2026-10-27"
+  },
+  {
+   "id": "ead86c78d120",
+   "foto": "fotos/ead86c78d120.jpg",
+   "nombre": "Camisa manga larga Thereabouts",
+   "precio": 11.99,
+   "edad": "XL 14/16",
+   "orden_edad": 168,
+   "genero": "Niño",
+   "fecha": "2026-10-27"
+  },
+  {
+   "id": "198293ecdc72",
+   "foto": "fotos/198293ecdc72.jpg",
+   "nombre": "Pantalón Nike",
+   "precio": 14.99,
+   "edad": "XL 14/16",
+   "orden_edad": 168,
+   "genero": "Niño",
+   "fecha": "2026-10-27"
+  },
+  {
+   "id": "21b10f507c76",
+   "foto": "fotos/21b10f507c76.jpg",
+   "nombre": "Short thereabouts",
+   "precio": 11.99,
+   "edad": "M 10/12",
+   "orden_edad": 120,
+   "genero": "Niño",
+   "fecha": "2026-10-27"
+  },
+  {
+   "id": "35273927d2d6",
+   "foto": "fotos/35273927d2d6.jpg",
+   "nombre": "Short Thereabouts",
+   "precio": 10.99,
+   "edad": "S 7/8",
+   "orden_edad": 84,
+   "genero": "Niño",
+   "fecha": "2026-10-27"
+  },
+  {
+   "id": "a382884700bc",
+   "foto": "fotos/a382884700bc.jpg",
+   "nombre": "Short Thereabouts",
+   "precio": 11.99,
+   "edad": "L 12/14",
+   "orden_edad": 144,
+   "genero": "Niño",
+   "fecha": "2026-10-27"
+  },
+  {
+   "id": "4dbd7eaa9af4",
+   "foto": "fotos/4dbd7eaa9af4.jpg",
+   "nombre": "Pants deportivo Alpinestars",
+   "precio": 14.99,
+   "edad": "S 6/7",
+   "orden_edad": 84,
+   "genero": "Niño",
+   "fecha": "2026-10-27"
+  },
+  {
+   "id": "0ef4926443e3",
+   "foto": "fotos/0ef4926443e3.jpg",
+   "nombre": "Camisa sin mangas Umbro",
+   "precio": 10.99,
+   "edad": "XL 14/16",
+   "orden_edad": 168,
+   "genero": "Niño",
+   "fecha": "2026-10-27"
+  },
+  {
+   "id": "9d839ee9ab5a",
+   "foto": "fotos/9d839ee9ab5a.jpg",
+   "nombre": "Short Art Class",
+   "precio": 12.99,
+   "edad": "XL 14/16",
+   "orden_edad": 168,
+   "genero": "Niño",
+   "fecha": "2026-10-27"
+  },
+  {
+   "id": "0f0a80ac26c1",
+   "foto": "fotos/0f0a80ac26c1.jpg",
+   "nombre": "Short umbro",
+   "precio": 11.99,
+   "edad": "XL 14/16",
+   "orden_edad": 168,
+   "genero": "Niño",
+   "fecha": "2026-10-27"
+  },
+  {
+   "id": "75e04a4844c9",
+   "foto": "fotos/75e04a4844c9.jpg",
+   "nombre": "Short Thereabouts",
+   "precio": 12.99,
+   "edad": "XL 14/16",
+   "orden_edad": 168,
+   "genero": "Niño",
+   "fecha": "2026-10-27"
+  },
+  {
+   "id": "9a80d13f9a09",
+   "foto": "fotos/9a80d13f9a09.jpg",
+   "nombre": "Short Thereabouts",
+   "precio": 10.99,
+   "edad": "M 10/12",
+   "orden_edad": 120,
+   "genero": "Niño",
+   "fecha": "2026-10-27"
+  },
+  {
+   "id": "553e223ea9b9",
+   "foto": "fotos/553e223ea9b9.jpg",
+   "nombre": "Short Umbro",
+   "precio": 9.99,
+   "edad": "XL 14/16",
+   "orden_edad": 168,
+   "genero": "Niño",
+   "fecha": "2026-10-27"
+  },
+  {
+   "id": "a5af5f4860a2",
+   "foto": "fotos/a5af5f4860a2.jpg",
+   "nombre": "Short Sol Swim",
+   "precio": 10.99,
+   "edad": "L 12/14",
+   "orden_edad": 144,
+   "genero": "Niño",
+   "fecha": "2026-10-27"
+  },
+  {
+   "id": "d3b2cdac7bab",
+   "foto": "fotos/d3b2cdac7bab.jpg",
+   "nombre": "Camisa manga larga Carter's",
+   "precio": 10.99,
+   "edad": "L 12/14",
+   "orden_edad": 144,
+   "genero": "Niño",
+   "fecha": "2026-10-27"
+  },
+  {
+   "id": "83bd1b892075",
+   "foto": "fotos/83bd1b892075.jpg",
+   "nombre": "Set pijama Eddie Bauer",
+   "precio": 14.99,
+   "edad": "M 10/12",
+   "orden_edad": 120,
+   "genero": "Niño",
+   "fecha": "2026-10-27"
+  },
+  {
+   "id": "dae15ea17f38",
+   "foto": "fotos/dae15ea17f38.jpg",
+   "nombre": "Short Adidas",
+   "precio": 10.99,
+   "edad": "XL 14/16",
+   "orden_edad": 168,
+   "genero": "Niño",
+   "fecha": "2026-10-27"
+  },
+  {
+   "id": "389210078da6",
+   "foto": "fotos/389210078da6.jpg",
+   "nombre": "Set pijama Eddie Bauer",
+   "precio": 14.99,
+   "edad": "M 10/12",
+   "orden_edad": 120,
+   "genero": "Niño",
+   "fecha": "2026-10-27"
+  },
+  {
+   "id": "632be88eb3a9",
+   "foto": "fotos/632be88eb3a9.jpg",
+   "nombre": "Camisa Xersion",
+   "precio": 9.99,
+   "edad": "L 12/14",
+   "orden_edad": 144,
+   "genero": "Niño",
+   "fecha": "2026-10-27"
+  },
+  {
+   "id": "8f875a9d3c41",
+   "foto": "fotos/8f875a9d3c41.jpg",
+   "nombre": "Camisa manga larga Xersion",
+   "precio": 9.99,
+   "edad": "M 8/10",
+   "orden_edad": 108,
+   "genero": "Niño",
+   "fecha": "2026-10-27"
+  },
+  {
+   "id": "c62342d1ddde",
+   "foto": "fotos/c62342d1ddde.jpg",
+   "nombre": "Camisa Dragon Ball",
+   "precio": 14.99,
+   "edad": "M 10/12",
+   "orden_edad": 120,
+   "genero": "Niño",
+   "fecha": "2026-10-27"
+  },
+  {
+   "id": "2276fe8371a0",
+   "foto": "fotos/2276fe8371a0.jpg",
+   "nombre": "Short Thereabouts",
+   "precio": 10.99,
+   "edad": "M 7/8",
+   "orden_edad": 108,
+   "genero": "Niño",
+   "fecha": "2026-10-27"
+  },
+  {
+   "id": "26f235626c6c",
+   "foto": "fotos/26f235626c6c.jpg",
+   "nombre": "Short thereabouts",
+   "precio": 12.99,
+   "edad": "XXL 22",
+   "orden_edad": 264,
+   "genero": "Niño",
+   "fecha": "2026-10-27"
+  },
+  {
+   "id": "ecc07d8981ee",
+   "foto": "fotos/ecc07d8981ee.jpg",
+   "nombre": "Pantalón Thereabouts",
+   "precio": 19.99,
+   "edad": "M 10/12",
+   "orden_edad": 120,
+   "genero": "Niño",
+   "fecha": "2026-10-27"
   }
  ]
 }
