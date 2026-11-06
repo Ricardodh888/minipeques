@@ -94,7 +94,9 @@
    "edad": "4",
    "orden_edad": 48,
    "genero": "Niño",
-   "fecha": "2026-10-23"
+   "fecha": "2026-10-23",
+   "estado": "vendida",
+   "vendida": "2026-11-05"
   },
   {
    "id": "10861d5f2b8a",
@@ -2167,17 +2169,6 @@
    "fecha": "2026-10-27"
   },
   {
-   "id": "5bcc9511caef",
-   "foto": "fotos/5bcc9511caef.jpg",
-   "nombre": "Pantalón thereabouts",
-   "precio": 12.99,
-   "edad": "S 6/7",
-   "orden_edad": 84,
-   "genero": "Niño",
-   "fecha": "2026-10-27",
-   "estado": "apartada"
-  },
-  {
    "id": "e519490bdba1",
    "foto": "fotos/e519490bdba1.jpg",
    "nombre": "Short billabonic",
@@ -2975,7 +2966,9 @@
    "edad": "XL 14/16",
    "orden_edad": 168,
    "genero": "Niña",
-   "fecha": "2026-10-27"
+   "fecha": "2026-10-27",
+   "estado": "vendida",
+   "vendida": "2026-11-05"
   },
   {
    "id": "04cb7328b8a8",
@@ -3015,7 +3008,9 @@
    "edad": "M 8/10",
    "orden_edad": 108,
    "genero": "Niño",
-   "fecha": "2026-10-27"
+   "fecha": "2026-10-27",
+   "estado": "vendida",
+   "vendida": "2026-11-05"
   },
   {
    "id": "f551b41a5713",
@@ -3255,7 +3250,9 @@
    "edad": "S 6/7",
    "orden_edad": 84,
    "genero": "Niño",
-   "fecha": "2026-10-27"
+   "fecha": "2026-10-27",
+   "estado": "vendida",
+   "vendida": "2026-11-05"
   },
   {
    "id": "b536c7b284d9",
@@ -3915,7 +3912,9 @@
    "edad": "M 8/10",
    "orden_edad": 108,
    "genero": "Niña",
-   "fecha": "2026-10-27"
+   "fecha": "2026-10-27",
+   "estado": "vendida",
+   "vendida": "2026-11-05"
   },
   {
    "id": "f3fd47ffc1c2",
