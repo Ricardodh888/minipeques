@@ -87,18 +87,6 @@
    "fecha": "2026-10-23"
   },
   {
-   "id": "f9b8166ad356",
-   "foto": "fotos/f9b8166ad356.jpg",
-   "nombre": "Pantalón Cat & Jack",
-   "precio": 10,
-   "edad": "4",
-   "orden_edad": 48,
-   "genero": "Niño",
-   "fecha": "2026-10-23",
-   "estado": "vendida",
-   "vendida": "2026-11-05"
-  },
-  {
    "id": "10861d5f2b8a",
    "foto": "fotos/10861d5f2b8a.jpg",
    "nombre": "Conjunto de verano Eddie Bauer",
@@ -2959,18 +2947,6 @@
    "fecha": "2026-10-27"
   },
   {
-   "id": "2db90d182a58",
-   "foto": "fotos/2db90d182a58.jpg",
-   "nombre": "Blusa Thereabouts",
-   "precio": 10.99,
-   "edad": "XL 14/16",
-   "orden_edad": 168,
-   "genero": "Niña",
-   "fecha": "2026-10-27",
-   "estado": "vendida",
-   "vendida": "2026-11-05"
-  },
-  {
    "id": "04cb7328b8a8",
    "foto": "fotos/04cb7328b8a8.jpg",
    "nombre": "Vestido Merry Day",
@@ -2999,18 +2975,6 @@
    "orden_edad": 84,
    "genero": "Niña",
    "fecha": "2026-10-27"
-  },
-  {
-   "id": "f8346561252f",
-   "foto": "fotos/f8346561252f.jpg",
-   "nombre": "Pantalón Hurley",
-   "precio": 9.99,
-   "edad": "M 8/10",
-   "orden_edad": 108,
-   "genero": "Niño",
-   "fecha": "2026-10-27",
-   "estado": "vendida",
-   "vendida": "2026-11-05"
   },
   {
    "id": "f551b41a5713",
@@ -3241,18 +3205,6 @@
    "orden_edad": 84,
    "genero": "Niño",
    "fecha": "2026-10-27"
-  },
-  {
-   "id": "b1d88cdc9a23",
-   "foto": "fotos/b1d88cdc9a23.jpg",
-   "nombre": "Pantalón For All Mankind",
-   "precio": 10.99,
-   "edad": "S 6/7",
-   "orden_edad": 84,
-   "genero": "Niño",
-   "fecha": "2026-10-27",
-   "estado": "vendida",
-   "vendida": "2026-11-05"
   },
   {
    "id": "b536c7b284d9",
@@ -3903,18 +3855,6 @@
    "orden_edad": 144,
    "genero": "Niña",
    "fecha": "2026-10-27"
-  },
-  {
-   "id": "5d8f8dbc38f5",
-   "foto": "fotos/5d8f8dbc38f5.jpg",
-   "nombre": "Suéter Disney",
-   "precio": 17.99,
-   "edad": "M 8/10",
-   "orden_edad": 108,
-   "genero": "Niña",
-   "fecha": "2026-10-27",
-   "estado": "vendida",
-   "vendida": "2026-11-05"
   },
   {
    "id": "f3fd47ffc1c2",
