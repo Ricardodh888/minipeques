@@ -53,10 +53,19 @@ details.panel summary small{font-family:var(--body);font-size:13px;color:var(--m
 .chklist{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:4px}
 .chklist li{display:flex;gap:8px;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line);padding:6px 0;font-size:15px}
 .summary{display:flex;gap:16px;flex-wrap:wrap;font-size:14px;color:var(--muted)}
+#login{max-width:380px;margin:12vh auto 0}#login h1{margin-bottom:6px}.who{display:flex;justify-content:space-between;align-items:center;gap:8px;font-size:14px;color:var(--muted)}
 .summary b{font-family:var(--display);font-size:24px;color:var(--ink);display:block;line-height:1}
 @media (prefers-reduced-motion:reduce){*{transition:none!important}}
 </style></head><body>
-<div class="wrap">
+<form class="panel" id="login" hidden>
+  <h1>Control de Carros</h1><p class="sub" style="margin:0 0 6px">Entra con tu usuario y contraseña.</p>
+  <input type="text" id="lu" placeholder="Usuario" aria-label="Usuario" autocomplete="username" autocapitalize="none" required>
+  <input type="password" id="lp" placeholder="Contraseña" aria-label="Contraseña" autocomplete="current-password" required style="width:100%;border:1px solid var(--line);border-radius:8px;padding:10px;background:var(--bg);color:var(--ink);font-size:16px;min-height:44px">
+  <button class="primary" type="submit" id="lb">Entrar</button>
+  <p class="msg" id="lmsg" aria-live="polite"></p>
+</form>
+<div class="wrap" id="app" hidden>
+  <div class="who"><span id="who"></span><button class="ghost" type="button" id="logout">Cerrar sesión</button></div>
   <header><h1>Control de Carros</h1><p class="sub">Partes que faltan por carro y revisión final antes de vender. Se actualiza solo cada 15 segundos.</p></header>
   <section class="panel"><h2 style="font-size:20px">Agregar carro</h2>
     <form class="row" id="carForm"><input type="text" id="carName" placeholder="Carro (ej. Toyota Corolla 2015)" aria-label="Carro" required>
@@ -76,14 +85,24 @@ const $=id=>document.getElementById(id);
 let CHECKS=[],CARS=[],ITEMS=[],filter="todos",open=new Set(),confirmDel=null,confirmChk=null,busy=0,loaded=false,queue=Promise.resolve();
 const esc=s=>String(s??"").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 const fecha=t=>t?new Date(t).toLocaleDateString("es-SV",{day:"numeric",month:"short",year:"numeric"}):"";
-async function api(fn,args){
-  const r=await fetch(API,{method:"POST",body:JSON.stringify({fn,args:args||[]}),credentials:"omit",redirect:"follow"});
-  const d=await r.json();if(!d||d.error)throw new Error(d&&d.error||"error");return d;}
+let CRED=null;try{CRED=JSON.parse(localStorage.getItem("cc_cred")||"null")}catch(e){}
+async function api(fn,args,cred){const c=cred||CRED||{};
+  const r=await fetch(API,{method:"POST",body:JSON.stringify({u:c.u,p:c.p,fn,args:args||[]}),credentials:"omit",redirect:"follow"});
+  const d=await r.json();if(!d||d.error){if(d&&d.error==="AUTH"&&!cred)showLogin("Tu sesión ya no es válida. Entra de nuevo.");throw new Error(d&&d.error||"error")}return d;}
+let timer=null;
+function showLogin(t){CRED=null;try{localStorage.removeItem("cc_cred")}catch(e){}clearInterval(timer);$("app").hidden=true;$("login").hidden=false;$("lmsg").textContent=t||"";$("lmsg").className="msg"+(t?" err":"");}
+function startApp(){$("login").hidden=true;$("app").hidden=false;$("who").textContent="Usuario: "+CRED.u;loaded=false;load();clearInterval(timer);timer=setInterval(load,15000);}
+$("login").addEventListener("submit",async e=>{e.preventDefault();const c={u:$("lu").value.trim().toLowerCase(),p:$("lp").value};if(!c.u||!c.p)return;
+  $("lb").disabled=true;$("lmsg").className="msg";$("lmsg").textContent="Entrando…";
+  try{await api("login",[],c);CRED=c;try{localStorage.setItem("cc_cred",JSON.stringify(c))}catch(e){}$("lp").value="";startApp()}
+  catch(err){$("lmsg").className="msg err";$("lmsg").textContent=err.message==="AUTH"?"Usuario o contraseña incorrectos.":"No se pudo conectar. Revisa tu internet."}
+  $("lb").disabled=false});
+$("logout").addEventListener("click",()=>showLogin());
 function stats(car){const it=ITEMS.filter(i=>i.carro===car.id);const done=it.filter(i=>i.hecho).length;const rev=car.rev||{};
   return {it,done,total:it.length,faltan:it.length-done,revOk:CHECKS.every(([k])=>rev[k])};}
 function apply(d){CARS=d.carros;ITEMS=d.items;CHECKS=d.checks.map(c=>[c.k,c.label]);loaded=true;renderChecks();render();}
 function msg(t,err){const m=$("carMsg");m.className="msg"+(err?" err":"");m.textContent=t||"";}
-function load(){if(busy)return;api("getData").then(d=>{if(!busy)apply(d)}).catch(()=>{if(!loaded)$("cars").innerHTML='<p class="empty">No se pudieron cargar los carros. Revisa tu internet y recarga la página.</p>'});}
+function load(){if(busy||!CRED)return;api("getData").then(d=>{if(!busy)apply(d)}).catch(()=>{if(!loaded)$("cars").innerHTML='<p class="empty">No se pudieron cargar los carros. Revisa tu internet y recarga la página.</p>'});}
 function call(fn,...a){busy++;msg("Guardando…");render();renderChecks();
   queue=queue.then(()=>api(fn,a)).then(d=>{busy--;if(!busy){apply(d);msg("Guardado.")}})
    .catch(()=>{busy--;msg("No se pudo guardar. Revisa tu internet e intenta de nuevo.",true);if(!busy)load()});}
@@ -163,7 +182,7 @@ $("cars").addEventListener("click",e=>{const el=e.target.closest("[data-act]");i
 $("cars").addEventListener("change",e=>{const el=e.target;if(!el.dataset.act||String(el.dataset.id).startsWith("tmp"))return;
   if(el.dataset.act==="toggle"){const it=ITEMS.find(i=>i.id===el.dataset.id);if(!it)return;it.hecho=el.checked;const car=CARS.find(c=>c.id===it.carro);if(!it.hecho&&car)car.listo=false;call("setItem",it.id,it.hecho)}
   if(el.dataset.act==="rev"){const car=CARS.find(c=>c.id===el.dataset.id);if(!car)return;const v=el.checked;car.rev={...car.rev,[el.dataset.k]:v};if(!v)car.listo=false;call("setRev",car.id,el.dataset.k,v)}});
-load();setInterval(load,15000);document.addEventListener("visibilitychange",()=>{if(!document.hidden)load()});
+if(CRED)startApp();else showLogin();document.addEventListener("visibilitychange",()=>{if(!document.hidden)load()});
 }
 </script>
 </body></html>
