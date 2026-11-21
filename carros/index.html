@@ -108,10 +108,10 @@ function call(fn,...a){busy++;msg("Guardando…");render();renderChecks();
   queue=queue.then(()=>api(fn,a)).then(d=>{busy--;if(!busy){apply(d);msg("Guardado.")}})
    .catch(()=>{busy--;msg("No se pudo guardar. Revisa tu internet e intenta de nuevo.",true);if(!busy)load()});}
 function render(){const box=$("cars");const keep={};const act=document.activeElement;let focus=null;
-  box.querySelectorAll('form[data-form="item"]').forEach(f=>{keep[f.dataset.id]=[f.parte.value,f.pendiente.value];if(f.contains(act))focus=[f.dataset.id,act.name]});
+  box.querySelectorAll('form[data-form="item"]').forEach(f=>{keep[f.dataset.id+"|"+f.dataset.tipo]=[f.parte.value,f.pendiente.value];if(f.contains(act))focus=[f.dataset.id,f.dataset.tipo,act.name]});
   draw(box);
-  box.querySelectorAll('form[data-form="item"]').forEach(f=>{const k=keep[f.dataset.id];if(k){f.parte.value=k[0];f.pendiente.value=k[1]}});
-  if(focus){const el=box.querySelector(`form[data-id="${focus[0]}"] input[name="${focus[1]}"]`);if(el)el.focus()}}
+  box.querySelectorAll('form[data-form="item"]').forEach(f=>{const k=keep[f.dataset.id+"|"+f.dataset.tipo];if(k){f.parte.value=k[0];f.pendiente.value=k[1]}});
+  if(focus){const el=box.querySelector(`form[data-id="${focus[0]}"][data-tipo="${focus[1]}"] input[name="${focus[2]}"]`);if(el)el.focus()}}
 function draw(box){
   const listos=CARS.filter(c=>c.listo).length;
   $("summary").innerHTML=`<span><b>${CARS.length}</b>carros</span><span><b>${CARS.length-listos}</b>en proceso</span><span><b>${listos}</b>listos para vender</span><span><b>${ITEMS.filter(i=>!i.hecho).length}</b>pendientes</span>`;
@@ -123,25 +123,28 @@ function draw(box){
   box.innerHTML=list.map(car=>{
     const s=stats(car),isOpen=open.has(car.id),rev=car.rev||{};const pct=s.total?Math.round(s.done/s.total*100):0;
     const pill=car.listo?'<span class="pill ok">Listo para vender</span>':`<span class="pill pend">${s.faltan} pendiente${s.faltan===1?"":"s"}</span>`;
-    const rows=s.it.sort((a,b)=>(a.creado||0)-(b.creado||0)).map(i=>`<tr class="${i.hecho?"done":""}">
+    const tipoDe=i=>i.tipo==="tarea"?"tarea":"parte";
+    const block=(tipo,titulo,col2,ph1,ph2,vacio)=>{const rows=s.it.filter(i=>tipoDe(i)===tipo).sort((a,b)=>(a.creado||0)-(b.creado||0)).map(i=>`<tr class="${i.hecho?"done":""}">
       <td class="chk"><input type="checkbox" data-act="toggle" data-id="${i.id}" ${i.hecho?"checked":""} aria-label="Marcar ${esc(i.parte)} como hecho"></td>
       <td class="txt">${esc(i.parte)}</td><td class="txt">${esc(i.pendiente)||'<span style="color:var(--muted)">—</span>'}</td>
       <td class="del"><button class="ghost danger" data-act="delItem" data-id="${i.id}" aria-label="Borrar ${esc(i.parte)}">✕</button></td></tr>`).join("");
+      return `<div class="tbl"><table><thead><tr><th></th><th>${titulo}</th><th>${col2}</th><th></th></tr></thead><tbody>
+          ${rows||`<tr><td colspan="4" class="empty">${vacio}</td></tr>`}</tbody></table></div>
+        <form class="row" data-form="item" data-id="${car.id}" data-tipo="${tipo}">
+          <input type="text" name="parte" placeholder="${ph1}" aria-label="${titulo}" required>
+          <input type="text" name="pendiente" placeholder="${ph2}" aria-label="${col2}">
+          <button class="primary" type="submit">Agregar</button></form>`};
     const canReady=s.revOk&&s.faltan===0;
     const del=confirmDel===car.id?`<div class="confirm">¿Borrar este carro y sus pendientes? <button class="danger" data-act="delCarYes" data-id="${car.id}">Sí, borrar</button><button data-act="delCarNo">Cancelar</button></div>`:`<button class="ghost danger" data-act="delCar" data-id="${car.id}">Borrar carro</button>`;
     return `<article class="car">
       <button class="car-head" data-act="open" data-id="${car.id}" aria-expanded="${isOpen}">
         <h3>${esc(car.nombre)}</h3>${pill}
-        <span class="meta">${car.placa?esc(car.placa)+" · ":""}${s.done} de ${s.total} partes listas · agregado ${fecha(car.creado)}</span>
+        <span class="meta">${car.placa?esc(car.placa)+" · ":""}${s.done} de ${s.total} listos · agregado ${fecha(car.creado)}</span>
       </button>
       <div class="bar"><i style="width:${car.listo?100:pct}%"></i></div>
       ${isOpen?`<div class="car-body">
-        <div class="tbl"><table><thead><tr><th></th><th>Partes</th><th>Pendientes</th><th></th></tr></thead><tbody>
-          ${rows||'<tr><td colspan="4" class="empty">Sin partes anotadas. Agrega lo que le falta abajo.</td></tr>'}</tbody></table></div>
-        <form class="row" data-form="item" data-id="${car.id}">
-          <input type="text" name="parte" placeholder="Parte (ej. Frenos delanteros)" aria-label="Parte" required>
-          <input type="text" name="pendiente" placeholder="Qué falta (ej. cambiar pastillas)" aria-label="Pendiente">
-          <button class="primary" type="submit">Agregar</button></form>
+        ${block("parte","Partes","Pendientes","Parte (ej. Frenos delanteros)","Qué falta (ej. cambiar pastillas)","Sin partes anotadas.")}
+        ${block("tarea","Tareas","Detalle","Tarea (ej. Pulir faros)","Detalle (opcional)","Sin tareas anotadas.")}
         <section class="review" aria-label="Revisión para venta">
           <h4>Revisión para venta</h4>
           ${CHECKS.map(([k,l])=>`<label><input type="checkbox" data-act="rev" data-id="${car.id}" data-k="${k}" ${rev[k]?"checked":""}>${esc(l)}</label>`).join("")}
@@ -168,9 +171,9 @@ document.querySelector(".filters").addEventListener("click",e=>{const b=e.target
   document.querySelectorAll(".filters button").forEach(x=>x.setAttribute("aria-pressed",x===b));render()});
 $("cars").addEventListener("submit",e=>{const c=e.target.closest('form[data-form="chk"]');if(c){e.preventDefault();const label=c.label.value.trim();if(!label)return;c.reset();addCheck(label);return}
   const f=e.target.closest('form[data-form="item"]');if(!f)return;e.preventDefault();
-  const parte=f.parte.value.trim(),pendiente=f.pendiente.value.trim();if(!parte)return;f.reset();const carro=f.dataset.id;
-  ITEMS.push({id:"tmp"+Date.now(),carro,parte,pendiente,hecho:false,creado:Date.now()});const car=CARS.find(x=>x.id===carro);if(car)car.listo=false;
-  call("addItem",carro,parte,pendiente);setTimeout(()=>{const nf=document.querySelector(`form[data-id="${carro}"] input[name=parte]`);if(nf)nf.focus()},50)});
+  const parte=f.parte.value.trim(),pendiente=f.pendiente.value.trim();if(!parte)return;f.reset();const carro=f.dataset.id,tipo=f.dataset.tipo||"parte";
+  ITEMS.push({id:"tmp"+Date.now(),carro,parte,pendiente,tipo,hecho:false,creado:Date.now()});const car=CARS.find(x=>x.id===carro);if(car)car.listo=false;
+  call("addItem",carro,parte,pendiente,tipo);setTimeout(()=>{const nf=document.querySelector(`form[data-id="${carro}"][data-tipo="${tipo}"] input[name=parte]`);if(nf)nf.focus()},50)});
 $("cars").addEventListener("click",e=>{const el=e.target.closest("[data-act]");if(!el||el.tagName==="INPUT")return;const id=el.dataset.id,a=el.dataset.act,car=CARS.find(c=>c.id===id);
   if(a==="open"){open.has(id)?open.delete(id):open.add(id);render();return}
   if(String(id).startsWith("tmp"))return;
