@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="es"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Control de Carros</title>
+<meta name="theme-color" content="#0f6e5c">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Inter:wght@400;500;600&display=swap">
+<style>
+:root{--bg:#f3f4f2;--card:#fff;--ink:#1c2321;--muted:#5f6b66;--line:#d9ddd9;--accent:#0f6e5c;--accent-ink:#fff;--warn:#b4570c;--warn-bg:#fdf0e3;--ok:#1d7a3e;--ok-bg:#e5f4ea;--danger:#b3261e;--display:"Barlow Condensed","Arial Narrow",system-ui,sans-serif;--body:"Inter",system-ui,-apple-system,"Segoe UI",sans-serif}
+@media (prefers-color-scheme:dark){:root{--bg:#121615;--card:#1b201f;--ink:#e8ece9;--muted:#9aa6a0;--line:#2e3533;--accent:#3fbf9f;--accent-ink:#06201a;--warn:#f0a35e;--warn-bg:#33240f;--ok:#6fd294;--ok-bg:#15301f;--danger:#f2867e;color-scheme:dark}}
+*{box-sizing:border-box;min-width:0}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.45}
+.wrap{max-width:760px;margin:0 auto;padding:20px 16px 48px;display:flex;flex-direction:column;gap:16px}
+h1{font-family:var(--display);font-weight:700;font-size:34px;margin:0;line-height:1}
+h2,h3{font-family:var(--display);font-weight:600;letter-spacing:.02em;margin:0}
+.sub{color:var(--muted);margin:4px 0 0;font-size:14px}
+button,input{font:inherit}
+button{cursor:pointer;border-radius:8px;border:1px solid var(--line);background:var(--card);color:var(--ink);padding:10px 14px;font-weight:600;font-size:15px;min-height:44px}
+button.primary{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+button.ghost{background:none;border-color:transparent;color:var(--muted);padding:6px 10px}
+button.danger{color:var(--danger)}
+button:disabled{opacity:.45;cursor:not-allowed}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+input[type=text]{width:100%;border:1px solid var(--line);border-radius:8px;padding:10px;background:var(--bg);color:var(--ink);font-size:16px;min-height:44px}
+.row{display:flex;gap:8px;flex-wrap:wrap;align-items:center}.row>input{flex:1 1 140px}
+.panel{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px;display:flex;flex-direction:column;gap:10px}
+.filters{display:flex;gap:6px;flex-wrap:wrap}.filters button{border-radius:999px;padding:6px 14px;font-weight:500}
+.filters button[aria-pressed="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.cars{display:flex;flex-direction:column;gap:12px}
+.car{background:var(--card);border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.car-head{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:4px 10px;padding:12px 14px;width:100%;text-align:left;border:0;border-radius:0;background:none}
+.car-head h3{font-size:24px;line-height:1.1;overflow-wrap:anywhere}
+.car-head .meta{grid-column:1/-1;color:var(--muted);font-size:13px;font-weight:400}
+.pill{align-self:start;font-size:12px;font-weight:600;padding:3px 9px;border-radius:999px;white-space:nowrap;text-transform:uppercase;letter-spacing:.04em}
+.pill.pend{background:var(--warn-bg);color:var(--warn)}.pill.ok{background:var(--ok-bg);color:var(--ok)}
+.bar{height:4px;background:var(--line)}.bar i{display:block;height:100%;background:var(--accent);transition:width .3s}
+.car-body{padding:14px;display:flex;flex-direction:column;gap:14px;border-top:1px solid var(--line)}
+.tbl{overflow-x:auto}table{border-collapse:collapse;width:100%;font-size:15px}
+th{font-family:var(--display);font-size:15px;font-weight:600;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);text-align:left;padding:6px 8px;border-bottom:2px solid var(--line)}
+td{padding:8px;border-bottom:1px solid var(--line);vertical-align:top;overflow-wrap:anywhere}
+td.chk{width:40px;text-align:center}td.del{width:40px;text-align:right}
+tr.done td.txt{color:var(--muted);text-decoration:line-through}
+input[type=checkbox]{width:22px;height:22px;accent-color:var(--accent)}
+.empty{color:var(--muted);font-size:14px;margin:0}
+.review{background:var(--bg);border:1px dashed var(--line);border-radius:10px;padding:12px;display:flex;flex-direction:column;gap:8px}
+.review h4{font-family:var(--display);font-size:19px;font-weight:600;margin:0}
+.review label{display:flex;gap:10px;align-items:center;font-size:15px;padding:6px 0}
+.review .why{font-size:13px;color:var(--muted);margin:0}
+.ready{background:var(--ok-bg);color:var(--ok);border-radius:8px;padding:10px 12px;font-weight:600;font-size:14px}
+.confirm{display:flex;gap:8px;flex-wrap:wrap;align-items:center;font-size:14px}
+.msg{font-size:13px;color:var(--muted);min-height:1em;margin:0}.msg.err{color:var(--danger)}
+details.panel summary{cursor:pointer;font-family:var(--display);font-weight:600;font-size:20px}
+details.panel summary small{font-family:var(--body);font-size:13px;color:var(--muted);font-weight:400}
+.chklist{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:4px}
+.chklist li{display:flex;gap:8px;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line);padding:6px 0;font-size:15px}
+.summary{display:flex;gap:16px;flex-wrap:wrap;font-size:14px;color:var(--muted)}
+.summary b{font-family:var(--display);font-size:24px;color:var(--ink);display:block;line-height:1}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style></head><body>
+<div class="wrap">
+  <header><h1>Control de Carros</h1><p class="sub">Partes que faltan por carro y revisión final antes de vender. Se actualiza solo cada 15 segundos.</p></header>
+  <section class="panel"><h2 style="font-size:20px">Agregar carro</h2>
+    <form class="row" id="carForm"><input type="text" id="carName" placeholder="Carro (ej. Toyota Corolla 2015)" aria-label="Carro" required>
+      <input type="text" id="carPlate" placeholder="Placa o VIN (opcional)" aria-label="Placa o VIN"><button class="primary" type="submit">Agregar</button></form>
+    <p class="msg" id="carMsg" aria-live="polite"></p></section>
+  <details class="panel"><summary>Lista de revisión para venta <small id="chkCount"></small></summary>
+    <p class="sub" style="margin:0">Estas casillas aparecen en todos los carros.</p><ul class="chklist" id="chkList"></ul>
+    <form class="row" id="chkForm"><input type="text" id="chkIn" placeholder="Nueva revisión (ej. Llantas en buen estado)" aria-label="Nueva revisión" required><button class="primary" type="submit">Agregar</button></form></details>
+  <div class="summary" id="summary"></div>
+  <div class="filters" role="group" aria-label="Filtrar carros"><button type="button" data-f="todos" aria-pressed="true">Todos</button><button type="button" data-f="proceso" aria-pressed="false">En proceso</button><button type="button" data-f="listos" aria-pressed="false">Listos para vender</button></div>
+  <div class="cars" id="cars"><p class="empty">Cargando carros…</p></div>
+</div>
+<script>
+{
+const API="https://script.google.com/macros/s/AKfycbyrO8PthBtbonz8G-YZhub0cYhVd-ut06MyvTCvd1_4b1mS8s67f83tCuFl9CoOjRug/exec";
+const $=id=>document.getElementById(id);
+let CHECKS=[],CARS=[],ITEMS=[],filter="todos",open=new Set(),confirmDel=null,confirmChk=null,busy=0,loaded=false,queue=Promise.resolve();
+const esc=s=>String(s??"").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const fecha=t=>t?new Date(t).toLocaleDateString("es-SV",{day:"numeric",month:"short",year:"numeric"}):"";
+async function api(fn,args){
+  const r=await fetch(API,{method:"POST",body:JSON.stringify({fn,args:args||[]}),credentials:"omit",redirect:"follow"});
+  const d=await r.json();if(!d||d.error)throw new Error(d&&d.error||"error");return d;}
+function stats(car){const it=ITEMS.filter(i=>i.carro===car.id);const done=it.filter(i=>i.hecho).length;const rev=car.rev||{};
+  return {it,done,total:it.length,faltan:it.length-done,revOk:CHECKS.every(([k])=>rev[k])};}
+function apply(d){CARS=d.carros;ITEMS=d.items;CHECKS=d.checks.map(c=>[c.k,c.label]);loaded=true;renderChecks();render();}
+function msg(t,err){const m=$("carMsg");m.className="msg"+(err?" err":"");m.textContent=t||"";}
+function load(){if(busy)return;api("getData").then(d=>{if(!busy)apply(d)}).catch(()=>{if(!loaded)$("cars").innerHTML='<p class="empty">No se pudieron cargar los carros. Revisa tu internet y recarga la página.</p>'});}
+function call(fn,...a){busy++;msg("Guardando…");render();renderChecks();
+  queue=queue.then(()=>api(fn,a)).then(d=>{busy--;if(!busy){apply(d);msg("Guardado.")}})
+   .catch(()=>{busy--;msg("No se pudo guardar. Revisa tu internet e intenta de nuevo.",true);if(!busy)load()});}
+function render(){const box=$("cars");const keep={};const act=document.activeElement;let focus=null;
+  box.querySelectorAll('form[data-form="item"]').forEach(f=>{keep[f.dataset.id]=[f.parte.value,f.pendiente.value];if(f.contains(act))focus=[f.dataset.id,act.name]});
+  draw(box);
+  box.querySelectorAll('form[data-form="item"]').forEach(f=>{const k=keep[f.dataset.id];if(k){f.parte.value=k[0];f.pendiente.value=k[1]}});
+  if(focus){const el=box.querySelector(`form[data-id="${focus[0]}"] input[name="${focus[1]}"]`);if(el)el.focus()}}
+function draw(box){
+  const listos=CARS.filter(c=>c.listo).length;
+  $("summary").innerHTML=`<span><b>${CARS.length}</b>carros</span><span><b>${CARS.length-listos}</b>en proceso</span><span><b>${listos}</b>listos para vender</span><span><b>${ITEMS.filter(i=>!i.hecho).length}</b>pendientes</span>`;
+  if(!loaded)return;
+  let list=CARS.slice().sort((a,b)=>(a.listo-b.listo)||((b.creado||0)-(a.creado||0)));
+  if(filter==="proceso")list=list.filter(c=>!c.listo);if(filter==="listos")list=list.filter(c=>c.listo);
+  if(!CARS.length){box.innerHTML='<p class="empty">Todavía no hay carros. Agrega el primero arriba con su nombre y placa.</p>';return}
+  if(!list.length){box.innerHTML='<p class="empty">No hay carros en este filtro.</p>';return}
+  box.innerHTML=list.map(car=>{
+    const s=stats(car),isOpen=open.has(car.id),rev=car.rev||{};const pct=s.total?Math.round(s.done/s.total*100):0;
+    const pill=car.listo?'<span class="pill ok">Listo para vender</span>':`<span class="pill pend">${s.faltan} pendiente${s.faltan===1?"":"s"}</span>`;
+    const rows=s.it.sort((a,b)=>(a.creado||0)-(b.creado||0)).map(i=>`<tr class="${i.hecho?"done":""}">
+      <td class="chk"><input type="checkbox" data-act="toggle" data-id="${i.id}" ${i.hecho?"checked":""} aria-label="Marcar ${esc(i.parte)} como hecho"></td>
+      <td class="txt">${esc(i.parte)}</td><td class="txt">${esc(i.pendiente)||'<span style="color:var(--muted)">—</span>'}</td>
+      <td class="del"><button class="ghost danger" data-act="delItem" data-id="${i.id}" aria-label="Borrar ${esc(i.parte)}">✕</button></td></tr>`).join("");
+    const canReady=s.revOk&&s.faltan===0;
+    const del=confirmDel===car.id?`<div class="confirm">¿Borrar este carro y sus pendientes? <button class="danger" data-act="delCarYes" data-id="${car.id}">Sí, borrar</button><button data-act="delCarNo">Cancelar</button></div>`:`<button class="ghost danger" data-act="delCar" data-id="${car.id}">Borrar carro</button>`;
+    return `<article class="car">
+      <button class="car-head" data-act="open" data-id="${car.id}" aria-expanded="${isOpen}">
+        <h3>${esc(car.nombre)}</h3>${pill}
+        <span class="meta">${car.placa?esc(car.placa)+" · ":""}${s.done} de ${s.total} partes listas · agregado ${fecha(car.creado)}</span>
+      </button>
+      <div class="bar"><i style="width:${car.listo?100:pct}%"></i></div>
+      ${isOpen?`<div class="car-body">
+        <div class="tbl"><table><thead><tr><th></th><th>Partes</th><th>Pendientes</th><th></th></tr></thead><tbody>
+          ${rows||'<tr><td colspan="4" class="empty">Sin partes anotadas. Agrega lo que le falta abajo.</td></tr>'}</tbody></table></div>
+        <form class="row" data-form="item" data-id="${car.id}">
+          <input type="text" name="parte" placeholder="Parte (ej. Frenos delanteros)" aria-label="Parte" required>
+          <input type="text" name="pendiente" placeholder="Qué falta (ej. cambiar pastillas)" aria-label="Pendiente">
+          <button class="primary" type="submit">Agregar</button></form>
+        <section class="review" aria-label="Revisión para venta">
+          <h4>Revisión para venta</h4>
+          ${CHECKS.map(([k,l])=>`<label><input type="checkbox" data-act="rev" data-id="${car.id}" data-k="${k}" ${rev[k]?"checked":""}>${esc(l)}</label>`).join("")}
+          <form class="row" data-form="chk"><input type="text" name="label" placeholder="Agregar otra revisión a la lista" aria-label="Agregar otra revisión" required><button type="submit">+ Agregar</button></form>
+          ${car.listo?`<div class="ready">Listo para vender desde el ${fecha(car.listoFecha)}.</div><button data-act="unready" data-id="${car.id}">Volver a "en proceso"</button>`
+            :`<button class="primary" data-act="ready" data-id="${car.id}" ${canReady?"":"disabled"}>Marcar listo para vender</button>
+            ${canReady?"":`<p class="why">Para marcarlo: ${[s.faltan?`termina ${s.faltan} pendiente${s.faltan===1?"":"s"}`:"",s.revOk?"":`marca las ${CHECKS.length} revisiones`].filter(Boolean).join(" y ")}.</p>`}`}
+        </section>
+        <div>${del}</div>
+      </div>`:""}
+    </article>`}).join("");}
+function renderChecks(){
+  $("chkCount").textContent=`· ${CHECKS.length} revisiones`;
+  $("chkList").innerHTML=CHECKS.map(([k,l])=>`<li><span>${esc(l)}</span>${confirmChk===k?`<span class="confirm">¿Quitar? <button class="danger" data-k="${k}" data-c="yes">Sí</button><button data-c="no">No</button></span>`:`<button class="ghost danger" data-k="${k}" data-c="ask" aria-label="Quitar ${esc(l)}">✕</button>`}</li>`).join("");}
+function addCheck(label){CHECKS.push(["tmp"+Date.now(),label]);call("addCheck",label)}
+$("chkForm").addEventListener("submit",e=>{e.preventDefault();const label=$("chkIn").value.trim();if(!label)return;$("chkIn").value="";addCheck(label)});
+$("chkList").addEventListener("click",e=>{const b=e.target.closest("button");if(!b)return;
+  if(b.dataset.c==="ask"){confirmChk=b.dataset.k;renderChecks()}
+  if(b.dataset.c==="no"){confirmChk=null;renderChecks()}
+  if(b.dataset.c==="yes"){const k=b.dataset.k;confirmChk=null;CHECKS=CHECKS.filter(c=>c[0]!==k);call("delCheck",k)}});
+$("carForm").addEventListener("submit",e=>{e.preventDefault();const nombre=$("carName").value.trim(),placa=$("carPlate").value.trim();if(!nombre)return;
+  CARS.push({id:"tmp"+Date.now(),nombre,placa,creado:Date.now(),listo:false,rev:{}});$("carName").value="";$("carPlate").value="";call("addCar",nombre,placa)});
+document.querySelector(".filters").addEventListener("click",e=>{const b=e.target.closest("button");if(!b)return;filter=b.dataset.f;
+  document.querySelectorAll(".filters button").forEach(x=>x.setAttribute("aria-pressed",x===b));render()});
+$("cars").addEventListener("submit",e=>{const c=e.target.closest('form[data-form="chk"]');if(c){e.preventDefault();const label=c.label.value.trim();if(!label)return;c.reset();addCheck(label);return}
+  const f=e.target.closest('form[data-form="item"]');if(!f)return;e.preventDefault();
+  const parte=f.parte.value.trim(),pendiente=f.pendiente.value.trim();if(!parte)return;f.reset();const carro=f.dataset.id;
+  ITEMS.push({id:"tmp"+Date.now(),carro,parte,pendiente,hecho:false,creado:Date.now()});const car=CARS.find(x=>x.id===carro);if(car)car.listo=false;
+  call("addItem",carro,parte,pendiente);setTimeout(()=>{const nf=document.querySelector(`form[data-id="${carro}"] input[name=parte]`);if(nf)nf.focus()},50)});
+$("cars").addEventListener("click",e=>{const el=e.target.closest("[data-act]");if(!el||el.tagName==="INPUT")return;const id=el.dataset.id,a=el.dataset.act,car=CARS.find(c=>c.id===id);
+  if(a==="open"){open.has(id)?open.delete(id):open.add(id);render();return}
+  if(String(id).startsWith("tmp"))return;
+  if(a==="delItem"){ITEMS=ITEMS.filter(i=>i.id!==id);call("delItem",id)}
+  if(a==="ready"&&car){car.listo=true;car.listoFecha=Date.now();call("setListo",id,true)}
+  if(a==="unready"&&car){car.listo=false;call("setListo",id,false)}
+  if(a==="delCar"){confirmDel=id;render()}
+  if(a==="delCarNo"){confirmDel=null;render()}
+  if(a==="delCarYes"){confirmDel=null;CARS=CARS.filter(c=>c.id!==id);ITEMS=ITEMS.filter(i=>i.carro!==id);call("delCar",id)}});
+$("cars").addEventListener("change",e=>{const el=e.target;if(!el.dataset.act||String(el.dataset.id).startsWith("tmp"))return;
+  if(el.dataset.act==="toggle"){const it=ITEMS.find(i=>i.id===el.dataset.id);if(!it)return;it.hecho=el.checked;const car=CARS.find(c=>c.id===it.carro);if(!it.hecho&&car)car.listo=false;call("setItem",it.id,it.hecho)}
+  if(el.dataset.act==="rev"){const car=CARS.find(c=>c.id===el.dataset.id);if(!car)return;const v=el.checked;car.rev={...car.rev,[el.dataset.k]:v};if(!v)car.listo=false;call("setRev",car.id,el.dataset.k,v)}});
+load();setInterval(load,15000);document.addEventListener("visibilitychange",()=>{if(!document.hidden)load()});
+}
+</script>
+</body></html>
