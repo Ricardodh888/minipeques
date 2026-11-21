@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="es"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Control de Carros</title>
+<title>Iniciar sesión</title>
 <meta name="theme-color" content="#0f6e5c">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Inter:wght@400;500;600&display=swap">
 <style>
@@ -58,7 +58,6 @@ details.panel summary small{font-family:var(--body);font-size:13px;color:var(--m
 @media (prefers-reduced-motion:reduce){*{transition:none!important}}
 </style></head><body>
 <form class="panel" id="login" hidden>
-  <h1>Control de Carros</h1><p class="sub" style="margin:0 0 6px">Entra con tu usuario y contraseña.</p>
   <input type="text" id="lu" placeholder="Usuario" aria-label="Usuario" autocomplete="username" autocapitalize="none" required>
   <input type="password" id="lp" placeholder="Contraseña" aria-label="Contraseña" autocomplete="current-password" required style="width:100%;border:1px solid var(--line);border-radius:8px;padding:10px;background:var(--bg);color:var(--ink);font-size:16px;min-height:44px">
   <button class="primary" type="submit" id="lb">Entrar</button>
@@ -90,8 +89,8 @@ async function api(fn,args,cred){const c=cred||CRED||{};
   const r=await fetch(API,{method:"POST",body:JSON.stringify({u:c.u,p:c.p,fn,args:args||[]}),credentials:"omit",redirect:"follow"});
   const d=await r.json();if(!d||d.error){if(d&&d.error==="AUTH"&&!cred)showLogin("Tu sesión ya no es válida. Entra de nuevo.");throw new Error(d&&d.error||"error")}return d;}
 let timer=null;
-function showLogin(t){CRED=null;try{localStorage.removeItem("cc_cred")}catch(e){}clearInterval(timer);$("app").hidden=true;$("login").hidden=false;$("lmsg").textContent=t||"";$("lmsg").className="msg"+(t?" err":"");}
-function startApp(){$("login").hidden=true;$("app").hidden=false;$("who").textContent="Usuario: "+CRED.u;loaded=false;load();clearInterval(timer);timer=setInterval(load,15000);}
+function showLogin(t){document.title="Iniciar sesión";CRED=null;try{localStorage.removeItem("cc_cred")}catch(e){}clearInterval(timer);$("app").hidden=true;$("login").hidden=false;$("lmsg").textContent=t||"";$("lmsg").className="msg"+(t?" err":"");}
+function startApp(){document.title="Control de Carros";$("login").hidden=true;$("app").hidden=false;$("who").textContent="Usuario: "+CRED.u;loaded=false;load();clearInterval(timer);timer=setInterval(load,15000);}
 $("login").addEventListener("submit",async e=>{e.preventDefault();const c={u:$("lu").value.trim().toLowerCase(),p:$("lp").value};if(!c.u||!c.p)return;
   $("lb").disabled=true;$("lmsg").className="msg";$("lmsg").textContent="Entrando…";
   try{await api("login",[],c);CRED=c;try{localStorage.setItem("cc_cred",JSON.stringify(c))}catch(e){}$("lp").value="";startApp()}
