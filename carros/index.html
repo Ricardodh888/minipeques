@@ -56,6 +56,11 @@ details.panel summary small{font-family:var(--body);font-size:13px;color:var(--m
 .chklist li{display:flex;gap:8px;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line);padding:6px 0;font-size:15px}
 .summary{display:flex;gap:16px;flex-wrap:wrap;font-size:14px;color:var(--muted)}
 #login{max-width:380px;margin:12vh auto 0}#login h1{margin-bottom:6px}.who{display:flex;justify-content:space-between;align-items:center;gap:8px;font-size:14px;color:var(--muted)}
+.tabs{display:flex;border-bottom:2px solid var(--line);gap:4px}.tabs button{border:0;border-radius:8px 8px 0 0;background:none;color:var(--muted);font-family:var(--display);font-size:19px;padding:8px 16px;margin-bottom:-2px;border-bottom:3px solid transparent}
+.tabs button[aria-selected="true"]{color:var(--ink);border-bottom-color:var(--accent)}
+.res{display:flex;flex-direction:column;gap:12px}.res .car{padding:12px 14px}.res h3{font-size:22px;line-height:1.1}.res .meta{color:var(--muted);font-size:13px;margin:2px 0 8px}
+.res h5{font-size:13px;color:var(--muted);text-transform:uppercase;letter-spacing:.05em;margin:10px 0 4px;font-weight:600}.res ul{margin:0;padding-left:20px}.res li{padding:2px 0;overflow-wrap:anywhere}
+.res .ok-line{color:var(--ok);font-weight:600;font-size:14px}
 .summary b{font-family:var(--display);font-size:24px;color:var(--ink);display:block;line-height:1}
 @media (prefers-reduced-motion:reduce){*{transition:none!important}}
 </style></head><body>
@@ -67,6 +72,9 @@ details.panel summary small{font-family:var(--body);font-size:13px;color:var(--m
 </form>
 <div class="wrap" id="app" hidden>
   <div class="who"><span id="who"></span><button class="ghost" type="button" id="logout">Cerrar sesión</button></div>
+  <div class="tabs" role="tablist"><button type="button" role="tab" data-tab="carros" aria-selected="true">Carros</button><button type="button" role="tab" data-tab="resumen" aria-selected="false">Resumen de lo que falta</button></div>
+  <div id="tabResumen" hidden><div class="row" style="justify-content:space-between;margin-bottom:12px"><p class="sub" style="margin:0" id="resInfo"></p><button type="button" id="resCopy">Copiar resumen</button></div><div class="res" id="res"></div></div>
+  <div id="tabCarros" style="display:flex;flex-direction:column;gap:16px">
   <header><h1>Control de Carros</h1><p class="sub">Partes que faltan por carro y revisión final antes de vender. Se actualiza solo cada 15 segundos.</p></header>
   <section class="panel"><h2 style="font-size:20px">Agregar carro</h2>
     <form class="row" id="carForm"><input type="text" id="carName" placeholder="Carro (ej. Toyota Corolla 2015)" aria-label="Carro" required>
@@ -78,6 +86,7 @@ details.panel summary small{font-family:var(--body);font-size:13px;color:var(--m
   <div class="summary" id="summary"></div>
   <div class="filters" role="group" aria-label="Filtrar carros"><button type="button" data-f="todos" aria-pressed="true">Todos</button><button type="button" data-f="proceso" aria-pressed="false">En proceso</button><button type="button" data-f="listos" aria-pressed="false">Listos para vender</button></div>
   <div class="cars" id="cars"><p class="empty">Cargando carros…</p></div>
+  </div>
 </div>
 <script>
 {
@@ -107,7 +116,27 @@ function load(){if(busy||!CRED)return;api("getData").then(d=>{if(!busy)apply(d)}
 function call(fn,...a){busy++;msg("Guardando…");render();renderChecks();
   queue=queue.then(()=>api(fn,a)).then(d=>{busy--;if(!busy){apply(d);msg("Guardado.")}})
    .catch(()=>{busy--;msg("No se pudo guardar. Revisa tu internet e intenta de nuevo.",true);if(!busy)load()});}
-function render(){const box=$("cars");const keep={};const act=document.activeElement;let focus=null;
+function faltas(car){const it=ITEMS.filter(i=>i.carro===car.id&&!i.hecho).sort((a,b)=>(a.creado||0)-(b.creado||0));const rev=car.rev||{};
+  return {partes:it.filter(i=>i.tipo!=="tarea"),tareas:it.filter(i=>i.tipo==="tarea"),revs:CHECKS.filter(([k])=>!rev[k]).map(c=>c[1])};}
+function renderResumen(){if(!loaded)return;const pend=CARS.filter(c=>!c.listo).sort((a,b)=>(b.creado||0)-(a.creado||0)),listos=CARS.length-pend.length;
+  $("resInfo").textContent=`${pend.length} carro${pend.length===1?"":"s"} en proceso · ${listos} listo${listos===1?"":"s"} para vender`;
+  const li=i=>`<li>${esc(i.parte)}${i.pendiente?` — ${esc(i.pendiente)}`:""}</li>`;
+  $("res").innerHTML=pend.length?pend.map(car=>{const f=faltas(car);const n=f.partes.length+f.tareas.length+f.revs.length;
+    return `<article class="car"><h3>${esc(car.nombre)}</h3><p class="meta">${car.placa?esc(car.placa)+" · ":""}${n} cosa${n===1?"":"s"} por hacer</p>
+    ${f.partes.length?`<h5>Partes (${f.partes.length})</h5><ul>${f.partes.map(li).join("")}</ul>`:""}
+    ${f.tareas.length?`<h5>Tareas (${f.tareas.length})</h5><ul>${f.tareas.map(li).join("")}</ul>`:""}
+    ${f.revs.length?`<h5>Revisión para venta (${f.revs.length})</h5><ul>${f.revs.map(r=>`<li>${esc(r)}</li>`).join("")}</ul>`:""}
+    ${n?"":`<p class="ok-line">Todo completo: ya se puede marcar listo para vender.</p>`}</article>`}).join(""):'<p class="empty">No hay carros en proceso.</p>';}
+function resumenTexto(){return CARS.filter(c=>!c.listo).map(car=>{const f=faltas(car);const L=[`*${car.nombre}*${car.placa?" ("+car.placa+")":""}`];
+  if(f.partes.length)L.push("Partes:",...f.partes.map(i=>"- "+i.parte+(i.pendiente?": "+i.pendiente:"")));
+  if(f.tareas.length)L.push("Tareas:",...f.tareas.map(i=>"- "+i.parte+(i.pendiente?": "+i.pendiente:"")));
+  if(f.revs.length)L.push("Revisión:",...f.revs.map(r=>"- "+r));
+  if(L.length===1)L.push("Todo completo");return L.join("\n")}).join("\n\n")||"No hay carros en proceso.";}
+document.querySelector(".tabs").addEventListener("click",e=>{const b=e.target.closest("button");if(!b)return;
+  document.querySelectorAll(".tabs button").forEach(x=>x.setAttribute("aria-selected",x===b));
+  const r=b.dataset.tab==="resumen";$("tabResumen").hidden=!r;$("tabCarros").hidden=r;renderResumen()});
+$("resCopy").addEventListener("click",async()=>{const b=$("resCopy");try{await navigator.clipboard.writeText(resumenTexto());b.textContent="¡Copiado!"}catch(e){b.textContent="No se pudo copiar"}setTimeout(()=>b.textContent="Copiar resumen",2000)});
+function render(){renderResumen();const box=$("cars");const keep={};const act=document.activeElement;let focus=null;
   box.querySelectorAll('form[data-form="item"]').forEach(f=>{keep[f.dataset.id+"|"+f.dataset.tipo]=[f.parte.value,f.pendiente.value];if(f.contains(act))focus=[f.dataset.id,f.dataset.tipo,act.name]});
   draw(box);
   box.querySelectorAll('form[data-form="item"]').forEach(f=>{const k=keep[f.dataset.id+"|"+f.dataset.tipo];if(k){f.parte.value=k[0];f.pendiente.value=k[1]}});
