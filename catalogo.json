@@ -654,7 +654,9 @@
    "edad": "2T/2A",
    "orden_edad": 24,
    "genero": "Niña",
-   "fecha": "2026-10-23"
+   "fecha": "2026-10-23",
+   "estado": "vendida",
+   "vendida": "2026-11-24"
   },
   {
    "id": "2f553f3a0301",
@@ -924,7 +926,9 @@
    "edad": "18M",
    "orden_edad": 18,
    "genero": "Niño",
-   "fecha": "2026-10-23"
+   "fecha": "2026-10-23",
+   "estado": "vendida",
+   "vendida": "2026-11-24"
   },
   {
    "id": "28b4bcda18d7",
@@ -934,7 +938,9 @@
    "edad": "12M",
    "orden_edad": 12,
    "genero": "Niña",
-   "fecha": "2026-10-23"
+   "fecha": "2026-10-23",
+   "estado": "vendida",
+   "vendida": "2026-11-24"
   },
   {
    "id": "91f3dd0ec792",
@@ -964,7 +970,9 @@
    "edad": "6M",
    "orden_edad": 6,
    "genero": "Niño",
-   "fecha": "2026-10-23"
+   "fecha": "2026-10-23",
+   "estado": "vendida",
+   "vendida": "2026-11-24"
   },
   {
    "id": "4caf6482f715",
@@ -1064,7 +1072,9 @@
    "edad": "9M",
    "orden_edad": 9,
    "genero": "Niño",
-   "fecha": "2026-10-23"
+   "fecha": "2026-10-23",
+   "estado": "vendida",
+   "vendida": "2026-11-24"
   },
   {
    "id": "4de71653f854",
@@ -1084,7 +1094,9 @@
    "edad": "3M",
    "orden_edad": 3,
    "genero": "Niña",
-   "fecha": "2026-10-26"
+   "fecha": "2026-10-26",
+   "estado": "vendida",
+   "vendida": "2026-11-24"
   },
   {
    "id": "46b49689c3e1",
@@ -1234,7 +1246,9 @@
    "edad": "18M",
    "orden_edad": 18,
    "genero": "Niña",
-   "fecha": "2026-10-26"
+   "fecha": "2026-10-26",
+   "estado": "vendida",
+   "vendida": "2026-11-24"
   },
   {
    "id": "f0fd7cc4aa88",
@@ -1274,7 +1288,9 @@
    "edad": "9M",
    "orden_edad": 9,
    "genero": "Niña",
-   "fecha": "2026-10-26"
+   "fecha": "2026-10-26",
+   "estado": "vendida",
+   "vendida": "2026-11-24"
   },
   {
    "id": "e32e30d27135",
@@ -1334,7 +1350,9 @@
    "edad": "18-24M",
    "orden_edad": 18,
    "genero": "Niña",
-   "fecha": "2026-10-26"
+   "fecha": "2026-10-26",
+   "estado": "vendida",
+   "vendida": "2026-11-24"
   },
   {
    "id": "aa410d14c9e8",
@@ -1434,7 +1452,9 @@
    "edad": "9M",
    "orden_edad": 9,
    "genero": "Niño",
-   "fecha": "2026-10-26"
+   "fecha": "2026-10-26",
+   "estado": "vendida",
+   "vendida": "2026-11-24"
   },
   {
    "id": "51458d4659f9",
@@ -1484,7 +1504,9 @@
    "edad": "18M",
    "orden_edad": 18,
    "genero": "Niño",
-   "fecha": "2026-10-26"
+   "fecha": "2026-10-26",
+   "estado": "vendida",
+   "vendida": "2026-11-24"
   },
   {
    "id": "6c81a5260558",
@@ -1534,7 +1556,9 @@
    "edad": "12-18M",
    "orden_edad": 12,
    "genero": "Niño",
-   "fecha": "2026-10-26"
+   "fecha": "2026-10-26",
+   "estado": "vendida",
+   "vendida": "2026-11-24"
   },
   {
    "id": "0de29fc03d8d",
@@ -1564,7 +1588,9 @@
    "edad": "12-18M",
    "orden_edad": 12,
    "genero": "Niño",
-   "fecha": "2026-10-26"
+   "fecha": "2026-10-26",
+   "estado": "vendida",
+   "vendida": "2026-11-24"
   },
   {
    "id": "d460e976fd4f",
@@ -1694,7 +1720,9 @@
    "edad": "12M",
    "orden_edad": 12,
    "genero": "Niño",
-   "fecha": "2026-10-26"
+   "fecha": "2026-10-26",
+   "estado": "vendida",
+   "vendida": "2026-11-24"
   },
   {
    "id": "ad2bb4117d51",
@@ -1724,7 +1752,9 @@
    "edad": "9M",
    "orden_edad": 9,
    "genero": "Niño",
-   "fecha": "2026-10-26"
+   "fecha": "2026-10-26",
+   "estado": "vendida",
+   "vendida": "2026-11-24"
   },
   {
    "id": "966782d7319f",
@@ -1734,7 +1764,9 @@
    "edad": "24M",
    "orden_edad": 24,
    "genero": "Niño",
-   "fecha": "2026-10-26"
+   "fecha": "2026-10-26",
+   "estado": "vendida",
+   "vendida": "2026-11-24"
   },
   {
    "id": "0e84b70a3482",
@@ -1764,7 +1796,9 @@
    "edad": "24M",
    "orden_edad": 24,
    "genero": "Niño",
-   "fecha": "2026-10-26"
+   "fecha": "2026-10-26",
+   "estado": "vendida",
+   "vendida": "2026-11-24"
   },
   {
    "id": "6da32e4f761b",
@@ -1774,7 +1808,9 @@
    "edad": "0-3M",
    "orden_edad": 0,
    "genero": "Niño",
-   "fecha": "2026-10-26"
+   "fecha": "2026-10-26",
+   "estado": "vendida",
+   "vendida": "2026-11-24"
   },
   {
    "id": "870ba061e63f",
@@ -2884,7 +2920,9 @@
    "edad": "S 6/8",
    "orden_edad": 84,
    "genero": "Niña",
-   "fecha": "2026-10-27"
+   "fecha": "2026-10-27",
+   "estado": "vendida",
+   "vendida": "2026-11-24"
   },
   {
    "id": "9d7e56268124",
