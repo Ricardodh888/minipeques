@@ -646,7 +646,8 @@
    "edad": "2T",
    "orden_edad": 24,
    "genero": "Niña",
-   "fecha": "2026-10-23"
+   "fecha": "2026-10-23",
+   "estado": "apartada"
   },
   {
    "id": "c7c799094ff9",
@@ -688,7 +689,8 @@
    "edad": "3T",
    "orden_edad": 36,
    "genero": "Niña",
-   "fecha": "2026-10-23"
+   "fecha": "2026-10-23",
+   "estado": "apartada"
   },
   {
    "id": "ea77d5516e9d",
@@ -1368,7 +1370,8 @@
    "edad": "24M",
    "orden_edad": 24,
    "genero": "Niña",
-   "fecha": "2026-10-26"
+   "fecha": "2026-10-26",
+   "estado": "apartada"
   },
   {
    "id": "cfc3cfde90eb",
@@ -1408,7 +1411,8 @@
    "edad": "24M",
    "orden_edad": 24,
    "genero": "Niña",
-   "fecha": "2026-10-26"
+   "fecha": "2026-10-26",
+   "estado": "apartada"
   },
   {
    "id": "a123e2fc5041",
