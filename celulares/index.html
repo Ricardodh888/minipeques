@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<meta name="theme-color" content="#2563eb">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Celulares">
+<title>Control de Celulares</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E📱%3C/text%3E%3C/svg%3E">
+<style>
+*{box-sizing:border-box}
+body{margin:0;min-height:100vh;display:flex;align-items:center;justify-content:center;font:15px/1.45 system-ui,Segoe UI,Roboto,sans-serif;background:#f4f6f9;color:#1b2430;padding:16px}
+@media (prefers-color-scheme:dark){body{background:#0f141b;color:#e8edf3}.box{background:#18202a!important;border-color:#2a3644!important}input{background:#0f141b!important;color:#e8edf3!important;border-color:#2a3644!important}}
+.box{background:#fff;border:1px solid #e3e8ef;border-radius:14px;padding:24px;width:100%;max-width:340px}
+h1{font-size:20px;margin:0 0 16px;text-align:center}
+label{display:block;font-size:13px;font-weight:600;color:#6b7686;margin:10px 0 4px}
+input{width:100%;font:inherit;padding:10px;border:1px solid #e3e8ef;border-radius:8px;background:#f4f6f9;color:#1b2430}
+button{width:100%;margin-top:16px;border:0;background:#2563eb;color:#fff;padding:11px;border-radius:8px;font:inherit;font-weight:600;cursor:pointer}
+button:disabled{opacity:.6}
+#err{color:#b91c1c;font-size:14px;margin-top:10px;min-height:1em;text-align:center}
+[hidden]{display:none!important}
+</style>
+</head>
+<body>
+<form class="box" id="login" hidden>
+  <h1>📱 Control de Celulares</h1>
+  <label for="u">Usuario</label><input id="u" autocomplete="username" autocapitalize="none" required>
+  <label for="p">Clave</label><input id="p" type="password" autocomplete="current-password" required>
+  <button id="go">Entrar</button>
+  <div id="err"></div>
+</form>
+<div class="box" id="wait" hidden><h1>📱 Cargando…</h1></div>
+<script>
+(function(){
+"use strict";
+var API="https://script.google.com/macros/s/AKfycbwF3ebRacQLFFux8utGYUHyRhu5sVrTx1wULHNczY0DN71iCzATNVcExE1CQfkl-f9g/exec";
+var KEY="celulares_login";
+function creds(){try{return JSON.parse(localStorage.getItem(KEY)||"null")}catch(e){return null}}
+function setCreds(c){try{c?localStorage.setItem(KEY,JSON.stringify(c)):localStorage.removeItem(KEY)}catch(e){}}
+
+function call(fn,args){
+  var c=creds()||{};
+  return fetch(API,{method:"POST",body:JSON.stringify({u:c.u,p:c.p,fn:fn,args:args||[]}),credentials:"omit",redirect:"follow"})
+    .then(function(r){return r.json()})
+    .then(function(d){
+      if(!d.ok&&d.err==="auth"){setCreds(null);location.reload();throw new Error("Sesión vencida")}
+      if(!d.ok)throw new Error(d.err||"Error");
+      return d.r;
+    });
+}
+
+/* Imita google.script.run para que la app original funcione igual fuera de Google */
+function runner(ok,fail){
+  return new Proxy({},{get:function(_,name){
+    if(name==="withSuccessHandler")return function(f){return runner(f,fail)};
+    if(name==="withFailureHandler")return function(f){return runner(ok,f)};
+    return function(){
+      var a=[].slice.call(arguments);
+      call(name,a).then(function(r){ok&&ok(r)},function(e){fail?fail(e):alert(e.message)});
+    };
+  }});
+}
+window.google={script:{run:runner(null,null)}};
+
+function show(id){document.getElementById("login").hidden=id!=="login";document.getElementById("wait").hidden=id!=="wait"}
+
+function start(){
+  show("wait");
+  call("ui").then(function(html){
+    document.open();document.write(html);document.close();
+    var add=function(){
+      var top=document.querySelector("header .top");if(!top)return setTimeout(add,100);
+      var b=document.createElement("button");b.className="btn sec sm";b.textContent="Salir";b.title="Cerrar sesión";
+      b.onclick=function(){setCreds(null);location.reload()};top.appendChild(b);
+      var meta=document.createElement("meta");meta.name="robots";meta.content="noindex,nofollow";document.head.appendChild(meta);
+    };
+    add();
+  }).catch(function(e){
+    show("login");document.getElementById("err").textContent="No se pudo abrir: "+e.message;
+  });
+}
+
+document.getElementById("login").addEventListener("submit",function(ev){
+  ev.preventDefault();
+  var go=document.getElementById("go"),err=document.getElementById("err");
+  var u=document.getElementById("u").value.trim(),p=document.getElementById("p").value;
+  go.disabled=true;err.textContent="";
+  setCreds({u:u,p:p});
+  fetch(API,{method:"POST",body:JSON.stringify({u:u,p:p,fn:"ping"}),credentials:"omit",redirect:"follow"})
+    .then(function(r){return r.json()})
+    .then(function(d){
+      go.disabled=false;
+      if(d.ok)start();else{setCreds(null);err.textContent=d.err==="auth"?"Usuario o clave incorrectos":d.err}
+    })
+    .catch(function(){go.disabled=false;setCreds(null);err.textContent="Sin conexión. Intenta de nuevo."});
+});
+
+if(creds())start();else show("login");
+})();
+</script>
+</body>
+</html>
