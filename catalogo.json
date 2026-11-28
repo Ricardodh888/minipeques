@@ -647,7 +647,8 @@
    "orden_edad": 24,
    "genero": "Niña",
    "fecha": "2026-10-23",
-   "estado": "apartada"
+   "estado": "vendida",
+   "vendida": "2026-11-27"
   },
   {
    "id": "c7c799094ff9",
@@ -690,7 +691,8 @@
    "orden_edad": 36,
    "genero": "Niña",
    "fecha": "2026-10-23",
-   "estado": "apartada"
+   "estado": "vendida",
+   "vendida": "2026-11-27"
   },
   {
    "id": "ea77d5516e9d",
@@ -1371,7 +1373,8 @@
    "orden_edad": 24,
    "genero": "Niña",
    "fecha": "2026-10-26",
-   "estado": "apartada"
+   "estado": "vendida",
+   "vendida": "2026-11-27"
   },
   {
    "id": "cfc3cfde90eb",
@@ -1412,7 +1415,8 @@
    "orden_edad": 24,
    "genero": "Niña",
    "fecha": "2026-10-26",
-   "estado": "apartada"
+   "estado": "vendida",
+   "vendida": "2026-11-27"
   },
   {
    "id": "a123e2fc5041",
@@ -1817,7 +1821,8 @@
    "orden_edad": 0,
    "genero": "Niño",
    "fecha": "2026-10-26",
-   "estado": "apartada"
+   "estado": "vendida",
+   "vendida": "2026-11-27"
   },
   {
    "id": "870ba061e63f",
@@ -3911,7 +3916,8 @@
    "edad": "S 6/8",
    "orden_edad": 84,
    "genero": "Niña",
-   "fecha": "2026-10-27"
+   "fecha": "2026-10-27",
+   "estado": "apartada"
   },
   {
    "id": "26562fa3ae97",
